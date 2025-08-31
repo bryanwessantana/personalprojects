@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{% block title %}Emily Feitosa - Fotógrafa{% endblock %}</title>
+
+    <meta name="description" content="Fotografia profissional para casamentos, ensaios e eventos." />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWvS2fT2F+KJpYfZ4ZCkxzgv2Fne5+5ZTCDYFzVz1nwK6JqqPiFZ+6A0b+Y1fY8+4z+6JQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}" class="logo">Emily Feitosa - Fotógrafa</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Início</a></li>
+                <li><a href="{{ url_for('portfolio') }}">Portfólio</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+
+            <div class="menu-toggle" aria-label="Abrir menu" role="button">☰</div>
+
+            <button id="theme-toggle" aria-label="Alternar tema" aria-pressed="false" title="Tema escuro">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="{{ url_for('home') }}">Emily Feitosa - Fotógrafa</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="{{ url_for('home') }}">Início</a>
+                <a href="{{ url_for('portfolio') }}">Portfólio</a>
+                <a href="{{ url_for('sobre') }}">Sobre</a>
+                <a href="{{ url_for('contato') }}">Contato</a>
+            </div>
+
+            <div class="footer-redes">
+                <a href="https://www.instagram.com/emilyfeitosa.ph/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.threads.com/@emilyfeitosa.ph" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-hashtag"></i> Threads
+                </a>
+                <a href="https://wa.me/41987286273" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            &copy; {{ current_year }} Emily Feitosa. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Portfólio - Fotógrafa{% endblock %}
+
+{% block content %}
+
+<section class="filtros">
+    <h2>Categorias</h2>
+    <div class="filtros-btns">
+        <button class="btn ativo" data-filter="todos">Todos</button>
+        <button class="btn" data-filter="casal">Casal</button>
+        <button class="btn" data-filter="familia">Família</button>
+        <button class="btn" data-filter="gestante">Gestante</button>
+        <button class="btn" data-filter="urbano">Urbano</button>
+        <button class="btn" data-filter="eventos">Eventos</button>
+    </div>
+</section>
+
+<section class="portfolio">
+    <div class="portfolio-grid">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto1.jpg') }}" alt="Casal"
+            data-category="casal">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto2.jpg') }}" alt="Família"
+            data-category="familia">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto3.jpg') }}" alt="Gestante"
+            data-category="gestante">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto4.jpg') }}" alt="Urbano"
+            data-category="urbano">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto5.jpg') }}" alt="Casal"
+            data-category="casal">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto6.jpg') }}" alt="Família"
+            data-category="familia">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto7.jpg') }}" alt="Urbano"
+            data-category="urbano">
+        <img data-src="{{ url_for('static', filename='images/portfolio/foto8.jpg') }}" alt="Evento"
+            data-category="eventos">
+    </div>
+</section>
+
+<section class="ensaio-destaque">
+    <div class="ensaio-texto">
+        <h2>Ensaio em Destaque</h2>
+        <p>Um dos trabalhos mais marcantes que já realizei: um ensaio de casal ao pôr do sol, cheio de emoção e
+            espontaneidade.</p>
+        <a href="{{ url_for('contato') }}" class="btn">Agende o seu</a>
+    </div>
+    <div class="ensaio-imagem">
+        <img src="{{ url_for('static', filename='images/portfolio/destaque.jpg') }}" alt="Ensaio em destaque">
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Gostou do meu trabalho?</h2>
+    <p>Entre em contato e vamos planejar seu ensaio dos sonhos.</p>
+    <a href="{{ url_for('contato') }}" class="btn">Fale Comigo</a>
+</section>
+
+{% endblock %}

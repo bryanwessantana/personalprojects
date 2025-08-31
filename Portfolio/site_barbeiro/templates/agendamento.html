@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% set active_page = 'agendamento' %}
+
+{% block title %}Agendamento - Thon Barbearia{% endblock %}
+
+{% block content %}
+<section class="appointment">
+    <h2>Agende seu horário</h2>
+    <form action="{{ url_for('agendamento') }}" method="POST" class="form">
+        <label for="name">Nome completo:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="service">Serviço:</label>
+        <select id="service" name="service" required>
+            <option value="">Selecione</option>
+        </select>
+
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Horário:</label>
+        <input type="time" id="time" name="time" min="09:00" max="19:00" required>
+
+        <button type="submit" class="btn-primary">Agendar</button>
+    </form>
+</section>
+{% endblock %}

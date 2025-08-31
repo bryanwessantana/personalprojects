@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set active_page = 'home' %}
+
+{% block title %}Thon Barbearia{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Bem-vindo à Thon Barbearia</h1>
+    <p>Seu estilo é nossa paixão; juntos, vamos criar um visual que reflete sua essência.</p>
+    <a href="{{ url_for('agendamento') }}" class="btn-primary">Agende seu horário</a>
+</section>
+
+<section class="services">
+    <h2>Nossos Serviços</h2>
+    <section class="services-list"></section>
+</section>
+
+<section class="courses">
+    <div class="courses-content">
+        <h2>Curso para Barbeiro</h2>
+        <p>
+            Torne-se um barbeiro profissional! Aprenda técnicas modernas de corte, barba e atendimento ao cliente em
+            nosso
+            curso completo e comece sua carreira de sucesso na barbearia.
+        </p>
+        <a href="https://wa.me/41995422355" target="_blank" class="btn-primary">
+            Entre em contato
+        </a>
+    </div>
+
+    <div class="courses-image">
+        <img src="{{ url_for('static', filename='images/curso_barbeiro.jpg') }}" alt="Curso de barbeiro">
+    </div>
+</section>
+
+{% endblock %}
