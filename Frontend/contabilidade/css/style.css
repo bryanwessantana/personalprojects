@@ -80,7 +80,7 @@ ul {
 
 /* ------------------ HERO ------------------ */
 .hero {
-    background: url('../assets/imagens/hero.jpg') center/cover no-repeat;
+    background: url('../images/hero.png') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 120px 20px;
