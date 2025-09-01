@@ -59,3 +59,19 @@ function selectService(serviceId) {
     localStorage.setItem("selectedService", serviceId);
     window.location.href = "/agendamento"; // rota direta do Flask
 }
+
+// Seleciona o botão pelo ID
+const okBtn = document.getElementById('okBtn');
+
+// Pega a URL da página inicial do atributo data
+const homeUrl = document.getElementById('homeUrl').dataset.url;
+
+// Redirecionamento ao clicar no botão
+okBtn.addEventListener('click', () => {
+    window.location.href = homeUrl;
+});
+
+// Redirecionamento automático após 5 segundos (5000 ms)
+setTimeout(() => {
+    window.location.href = homeUrl;
+}, 5000);

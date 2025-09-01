@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Cadastro - Thon Barbearia{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Criar Conta</h2>
+    <form method="POST" action="{{ url_for('cadastro') }}" class="login-form">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    <p>Já tem conta? <a href="{{ url_for('login') }}">Faça login</a></p>
+</div>
+{% endblock %}

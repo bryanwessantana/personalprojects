@@ -33,4 +33,40 @@
     </div>
 </section>
 
+{% if avg_stars %}
+<section class="reviews">
+    <h2>Avaliações</h2>
+    <p style="text-align:center;margin-bottom:1rem;">
+        ⭐ {{ avg_stars }} / 5 ({{ feedback_count }} avaliações)
+    </p>
+    <div class="services-list">
+        {% for f in feedbacks %}
+        <div class="card">
+            <p style="margin-bottom:.5rem;">"{{ f.comment }}"</p>
+            <small>⭐ {{ f.stars }}/5 — {{ f.author.username }}</small>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% if current_user.is_authenticated %}
+<section class="feedback-form">
+    <h3>Deixe seu feedback</h3>
+    <form action="{{ url_for('feedback') }}" method="POST">
+        <label for="stars">Sua nota (1 a 5):</label>
+        <select id="stars" name="stars" required>
+            <option value="">Selecione</option>
+            {% for n in [1,2,3,4,5] %}
+            <option value="{{ n }}">{{ n }}</option>
+            {% endfor %}
+        </select>
+        <label for="comment">Comentário:</label>
+        <input type="text" id="comment" name="comment" required>
+        <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+</section>
+{% endif %}
+
+
 {% endblock %}
