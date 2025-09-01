@@ -351,3 +351,69 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # garante as tabelas em dev
     app.run(debug=True)
+
+# ------------------------------
+# Rotas adicionais implementadas
+# ------------------------------
+
+@app.route('/')
+def home():
+    feedbacks = Feedback.query.all()
+    media_estrelas = 0
+    if feedbacks:
+        media_estrelas = sum([f.stars for f in feedbacks]) / len(feedbacks)
+    return render_template('home.html', feedbacks=feedbacks, media_estrelas=media_estrelas)
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+@app.route('/feedback', methods=['POST'])
+@login_required
+def feedback():
+    stars = int(request.form['stars'])
+    comment = request.form['comment']
+    fb = Feedback(user_id=current_user.id, stars=stars, comment=comment)
+    db.session.add(fb)
+    db.session.commit()
+    flash("Feedback enviado!")
+    return redirect(url_for('home'))
+
+@app.route('/agendar', methods=['POST'])
+@login_required
+def agendar():
+    date = datetime.strptime(request.form['date'], "%Y-%m-%d").date()
+    time = datetime.strptime(request.form['time'], "%H:%M").time()
+
+    if date.weekday() > 5:
+        flash("Agendamento apenas de segunda a sábado.")
+        return redirect(url_for('agendamento'))
+
+    if not (dtime(9,0) <= time <= dtime(19,0)):
+        flash("Agendamento apenas entre 9h e 19h.")
+        return redirect(url_for('agendamento'))
+
+    agendamento = Appointment(
+        user_id=current_user.id,
+        name=current_user.username,
+        email=current_user.email,
+        service=request.form['service'],
+        barber=request.form['barber'],
+        people=int(request.form.get('people', 1)),
+        date=date,
+        time=time
+    )
+    db.session.add(agendamento)
+    db.session.commit()
+
+    msg = Message("Agendamento confirmado",
+                  recipients=[current_user.email])
+    msg.body = f"Olá {current_user.username}, seu agendamento foi confirmado para {date} às {time}."
+    try:
+        mail.send(msg)
+    except Exception as e:
+        print("Erro ao enviar email:", e)
+
+    flash("Agendamento confirmado com sucesso!")
+    return redirect(url_for('home'))

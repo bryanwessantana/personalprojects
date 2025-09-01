@@ -10,23 +10,36 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="{{ url_for('home') }}">
-                    <img src="{{ url_for('static', filename='images/thonbarbearia2.png') }}" alt="Thon Barbearia" class="logo-img">
-                </a>
-                <a href="{{ url_for('home') }}">Thon Barbearia</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="{{ url_for('home') }}" class="{% if active_page=='home' %}active{% endif %}">Início</a></li>
-                <li><a href="{{ url_for('agendamento') }}"
-                        class="{% if active_page=='agendamento' %}active{% endif %}">Agendamento</a></li>
-                <li><a href="{{ url_for('sobre') }}" class="{% if active_page=='sobre' %}active{% endif %}">Sobre</a></li>
-                <li><a href="{{ url_for('login') }}" class="{% if active_page=='login' %}active{% endif %}">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="{{ url_for('home') }}" class="logo-link">
+        <img src="{{ url_for('static', filename='images/thonbarbearia2.png') }}" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="{{ url_for('home') }}" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}" class="{% if active_page=='home' %}active{% endif %}">Início</a></li>
+        <li><a href="{{ url_for('agendamento') }}" class="{% if active_page=='agendamento' %}active{% endif %}">Agendamento</a></li>
+        <li><a href="{{ url_for('sobre') }}" class="{% if active_page=='sobre' %}active{% endif %}">Sobre</a></li>
+        {% if current_user.is_authenticated %}
+          <li><a href="{{ url_for('meus_agendamentos') }}" class="{% if active_page=='meus_ag' %}active{% endif %}">Meus agendamentos</a></li>
+          {% if current_user.role == 'barbeiro' %}
+          <li><a href="{{ url_for('agenda_barbeiro') }}" class="{% if active_page=='agenda' %}active{% endif %}">Agenda</a></li>
+          {% endif %}
+          <li><a href="{{ url_for('logout') }}">Sair</a></li>
+        {% else %}
+          <li><a href="{{ url_for('login') }}" class="{% if active_page=='login' %}active{% endif %}">Login</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+</header>
+
 
 
     <div id="page-container">

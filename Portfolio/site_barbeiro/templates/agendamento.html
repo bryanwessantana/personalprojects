@@ -6,7 +6,7 @@
 {% block content %}
 <section class="appointment">
     <h2>Agende seu horário</h2>
-    <form action="{{ url_for('agendamento') }}" method="POST" class="form">
+    <form action="{{ url_for('agendamento') }}" method="POST" class="form" id="agendamento-form">
         <label for="name">Nome completo:</label>
         <input type="text" id="name" name="name" required>
     
@@ -37,6 +37,6 @@
         <input type="time" id="time" name="time" min="09:00" max="19:00" required>
     
         <button type="submit" class="btn-primary">Agendar</button>
-    </form>
+</form>
 </section>
 {% endblock %}

@@ -33,40 +33,53 @@
     </div>
 </section>
 
-{% if avg_stars %}
+
+{% if avg_stars is not none %}
 <section class="reviews">
-    <h2>Avaliações</h2>
-    <p style="text-align:center;margin-bottom:1rem;">
-        ⭐ {{ avg_stars }} / 5 ({{ feedback_count }} avaliações)
-    </p>
-    <div class="services-list">
-        {% for f in feedbacks %}
-        <div class="card">
-            <p style="margin-bottom:.5rem;">"{{ f.comment }}"</p>
-            <small>⭐ {{ f.stars }}/5 — {{ f.author.username }}</small>
+  <h2>Avaliações</h2>
+  <p class="reviews-summary">⭐ {{ avg_stars }} / 5 ({{ feedback_count }} avaliações)</p>
+  {% if feedbacks %}
+  <ul class="reviews-list">
+    {% for f in feedbacks %}
+      <li class="review-item">
+        <div class="review-header">
+          <strong>{{ f.author.username }}</strong>
+          <span class="stars">{{ f.stars }}⭐</span>
         </div>
-        {% endfor %}
-    </div>
+        <p class="review-comment">{{ f.comment }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </section>
 {% endif %}
 
 {% if current_user.is_authenticated %}
 <section class="feedback-form">
-    <h3>Deixe seu feedback</h3>
-    <form action="{{ url_for('feedback') }}" method="POST">
-        <label for="stars">Sua nota (1 a 5):</label>
-        <select id="stars" name="stars" required>
-            <option value="">Selecione</option>
-            {% for n in [1,2,3,4,5] %}
-            <option value="{{ n }}">{{ n }}</option>
-            {% endfor %}
-        </select>
-        <label for="comment">Comentário:</label>
-        <input type="text" id="comment" name="comment" required>
-        <button type="submit" class="btn-primary">Enviar</button>
-    </form>
+  <h3>Deixe seu feedback</h3>
+  <form action="{{ url_for('feedback') }}" method="POST" class="form">
+    <label for="stars">Sua nota (1 a 5):</label>
+    <select id="stars" name="stars" required>
+      <option value="">Selecione</option>
+      {% for n in [1,2,3,4,5] %}
+      <option value="{{ n }}">{{ n }}</option>
+      {% endfor %}
+    </select>
+    <label for="comment">Comentário:</label>
+    <input type="text" id="comment" name="comment" required>
+    <button type="submit" class="btn-primary">Enviar</button>
+  </form>
 </section>
 {% endif %}
 
+<section class="map">
+  <h2>Localização</h2>
+  <div class="map-responsive">
+    <iframe
+      src="https://www.google.com/maps?q=Thon%20Barbearia%20Curitiba&output=embed"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
 
 {% endblock %}

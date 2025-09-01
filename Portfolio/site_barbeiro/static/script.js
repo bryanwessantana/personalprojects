@@ -75,3 +75,33 @@ okBtn.addEventListener('click', () => {
 setTimeout(() => {
     window.location.href = homeUrl;
 }, 5000);
+
+// Client-side validation for agendamento: only Mon-Sat and between 09:00 and 19:00
+const agendamentoForm = document.getElementById('agendamento-form');
+if (agendamentoForm) {
+    agendamentoForm.addEventListener('submit', (e) => {
+        const dateInput = agendamentoForm.querySelector('input[name="date"]');
+        const timeInput = agendamentoForm.querySelector('input[name="time"]');
+        if (dateInput && timeInput) {
+            const dateVal = dateInput.value;
+            const timeVal = timeInput.value;
+            if (!dateVal || !timeVal) return; // let backend handle required
+            const d = new Date(dateVal + 'T' + timeVal);
+            const weekday = d.getDay(); // 0=Sun,6=Sat
+            // block Sundays (0) and allow Mon(1)-Sat(6) but not Sunday
+            if (weekday === 0) {
+                e.preventDefault();
+                alert('Agendamentos permitidos apenas de segunda a sábado.');
+                return;
+            }
+            // check time between 09:00 and 19:00 inclusive
+            const [h, m] = timeVal.split(':').map(Number);
+            const minutes = h * 60 + m;
+            if (minutes < 9*60 || minutes > 19*60) {
+                e.preventDefault();
+                alert('Escolha um horário entre 09:00 e 19:00.');
+                return;
+            }
+        }
+    });
+}
