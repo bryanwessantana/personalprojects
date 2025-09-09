@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% set active_page = 'home' %}
+
+{% block title %}Thon Barbearia{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Bem-vindo à Thon Barbearia</h1>
+    <p>Seu estilo é nossa paixão; juntos, vamos criar um visual que reflete sua essência.</p>
+    <a href="{{ url_for('agendamento') }}" class="btn-primary">Agende seu horário</a>
+</section>
+
+<section class="services">
+    <h2>Nossos Serviços</h2>
+    <section class="services-list"></section>
+</section>
+
+<section class="courses">
+    <div class="courses-content">
+        <h2>Curso para Barbeiro</h2>
+        <p>
+            Torne-se um barbeiro profissional! Aprenda técnicas modernas de corte, barba e atendimento ao cliente em
+            nosso
+            curso completo e comece sua carreira de sucesso na barbearia.
+        </p>
+        <a href="https://wa.me/41995422355" target="_blank" class="btn-primary">
+            Entre em contato
+        </a>
+    </div>
+
+    <div class="courses-image">
+        <img src="{{ url_for('static', filename='images/curso_barbeiro.jpg') }}" alt="Curso de barbeiro">
+    </div>
+</section>
+
+
+{% if avg_stars is not none %}
+<section class="reviews">
+  <h2>Avaliações</h2>
+  <p class="reviews-summary">⭐ {{ avg_stars }} / 5 ({{ feedback_count }} avaliações)</p>
+  {% if feedbacks %}
+  <ul class="reviews-list">
+    {% for f in feedbacks %}
+      <li class="review-item">
+        <div class="review-header">
+          <strong>{{ f.author.username }}</strong>
+          <span class="stars">{{ f.stars }}⭐</span>
+        </div>
+        <p class="review-comment">{{ f.comment }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>
+{% endif %}
+
+{% if current_user.is_authenticated %}
+<section class="feedback-form">
+  <h3>Deixe seu feedback</h3>
+  <form action="{{ url_for('feedback') }}" method="POST" class="form">
+    <label for="stars">Sua nota (1 a 5):</label>
+    <select id="stars" name="stars" required>
+      <option value="">Selecione</option>
+      {% for n in [1,2,3,4,5] %}
+      <option value="{{ n }}">{{ n }}</option>
+      {% endfor %}
+    </select>
+    <label for="comment">Comentário:</label>
+    <input type="text" id="comment" name="comment" required>
+    <button type="submit" class="btn-primary">Enviar</button>
+  </form>
+</section>
+{% endif %}
+
+<section class="map">
+  <h2>Localização</h2>
+  <div class="map-responsive">
+    <iframe
+      src="https://www.google.com/maps?q=Thon%20Barbearia%20Curitiba&output=embed"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+{% endblock %}

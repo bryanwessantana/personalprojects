@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}Início - Fotógrafa{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Momentos que duram para sempre</h1>
+        <p>Fotografia profissional para casamentos, ensaios e eventos</p>
+        <a href="{{ url_for('portfolio') }}" class="btn">Ver Portfólio</a>
+    </div>
+</section>
+
+<section class="sobre">
+    <div class="sobre-container">
+        <img src="{{ url_for('static', filename='images/emily.png') }}" alt="Fotógrafa" class="sobre-img">
+        <div class="sobre-texto">
+            <h2>Sobre mim</h2>
+            <p>Sou apaixonada por capturar histórias através da fotografia. Cada ensaio é uma oportunidade única de
+                registrar emoções autênticas e momentos que se tornam eternos.</p>
+            <a href="{{ url_for('sobre') }}" class="btn">Saiba Mais</a>
+        </div>
+    </div>
+</section>
+
+<section class="ensaios">
+    <h2>Ideias de Ensaios</h2>
+    <div class="ensaios-grid">
+        <div class="ensaio-card">
+            <img src="{{ url_for('static', filename='images/casal.png') }}" alt="Ensaio de Casal">
+            <h3>Casal</h3>
+            <p>Momentos românticos e espontâneos que celebram o amor.</p>
+        </div>
+        <div class="ensaio-card">
+            <img src="{{ url_for('static', filename='images/familia.png') }}" alt="Ensaio de Família">
+            <h3>Família</h3>
+            <p>Registros cheios de carinho para guardar em família.</p>
+        </div>
+        <div class="ensaio-card">
+            <img src="{{ url_for('static', filename='images/urbano.png') }}" alt="Ensaio Gestante">
+            <h3>Urbano</h3>
+            <p>A beleza da espera em imagens emocionantes.</p>
+        </div>
+        <div class="ensaio-card">
+            <img src="{{ url_for('static', filename='images/eventos.png') }}" alt="Fotografia de Eventos">
+            <h3>Eventos</h3>
+            <p>Momentos únicos de celebrações, formaturas e festas.</p>
+        </div>
+    </div>
+</section>
+
+<section class="destaque">
+    <h2>Últimos Trabalhos</h2>
+    <div class="portfolio-grid">
+        <img src="{{ url_for('static', filename='images/portfolio/foto1.png') }}" alt="Foto 1">
+        <img src="{{ url_for('static', filename='images/portfolio/foto2.png') }}" alt="Foto 2">
+        <img src="{{ url_for('static', filename='images/portfolio/foto3.png') }}" alt="Foto 3">
+        <img src="{{ url_for('static', filename='images/portfolio/foto4.png') }}" alt="Foto 4">
+    </div>
+    <a href="{{ url_for('portfolio') }}" class="btn">Ver Mais</a>
+</section>
+
+<section class="depoimentos">
+    <h2>O que dizem os clientes</h2>
+    <div class="depoimentos-grid">
+        <div class="depoimento">
+            <p>"As fotos do nosso casamento ficaram maravilhosas! Captou cada detalhe e emoção."</p>
+            <span>- Brenda & João</span>
+        </div>
+        <div class="depoimento">
+            <p>"O ensaio de família foi incrível, ela conseguiu deixar todos à vontade. Recomendo demais!"</p>
+            <span>- Família Arruda</span>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Agende seu Ensaio</h2>
+    <p>Vamos registrar juntos momentos que vão durar para sempre.</p>
+    <a href="{{ url_for('contato') }}" class="btn">Entre em Contato</a>
+</section>
+
+{% endblock %}

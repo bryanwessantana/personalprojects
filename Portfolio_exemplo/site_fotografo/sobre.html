@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre - Fotógrafa{% endblock %}
+
+{% block content %}
+
+<section class="sobre">
+    <div class="sobre-container">
+        <img src="{{ url_for('static', filename='images/emily2.png') }}" alt="Fotógrafa" class="sobre-img">
+        <div class="sobre-texto">
+            <h2>Minha História</h2>
+            <p>Olá! Sou apaixonada por eternizar momentos através da fotografia. Há mais de 5 anos atuo em casamentos,
+                ensaios e eventos especiais.</p>
+            <p>Meu objetivo é capturar emoções reais e transformar memórias em arte. Cada foto é única, assim como cada
+                cliente. Quero que você se sinta parte dessa história.</p>
+            <p>Além de fotógrafa, sou uma contadora de histórias visuais. Acredito que a fotografia tem o poder de
+                eternizar sentimentos e guardar lembranças para sempre.</p>
+            <a href="{{ url_for('contato') }}" class="btn">Agende Seu Ensaio</a>
+        </div>
+    </div>
+</section>
+
+<section class="diferenciais">
+    <h2>Por que me escolher?</h2>
+    <div class="diferenciais-grid">
+        <div class="card">
+            <h3>+5 anos de experiência</h3>
+            <p>Centenas de ensaios e eventos registrados com sensibilidade e dedicação.</p>
+        </div>
+        <div class="card">
+            <h3>Estilo Autêntico</h3>
+            <p>Fotos naturais, espontâneas e que refletem sua verdadeira essência.</p>
+        </div>
+        <div class="card">
+            <h3>Atendimento Personalizado</h3>
+            <p>Cada cliente recebe atenção exclusiva para que o resultado seja único.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Vamos contar sua história?</h2>
+    <p>Entre em contato e planeje o ensaio perfeito para você.</p>
+    <a href="{{ url_for('contato') }}" class="btn">Fale Comigo</a>
+</section>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+[
+    {
+        "id": "pezinho",
+        "name": "Acabamento (Pezinho)",
+        "duration": "20min",
+        "price": 15,
+        "image": "/static/images/services/pezinho.png"
+    },
+    {
+        "id": "maquina",
+        "name": "Corte a Máquina",
+        "duration": "30min",
+        "price": 25,
+        "image": "/static/images/services/maquina.png"
+    },
+    {
+        "id": "cabelo",
+        "name": "Corte de Cabelo",
+        "duration": "30min",
+        "price": 50,
+        "image": "/static/images/services/cabelo.png"
+    },
+    {
+        "id": "combo_barba_cabelo_sobrancelha",
+        "name": "Barba + Cabelo + Sobrancelha",
+        "duration": "1h",
+        "price": 90,
+        "image": "/static/images/services/combo_barba_cabelo_sobrancelha.png"
+    },
+    {
+        "id": "combo_cabelo_barba",
+        "name": "Cabelo + Barba",
+        "duration": "1h",
+        "price": 85,
+        "image": "/static/images/services/combo_cabelo_barba.png"
+    },
+    {
+        "id": "combo_sobrancelha_cabelo",
+        "name": "Sobrancelha e Cabelo",
+        "duration": "40min",
+        "price": 60,
+        "image": "/static/images/services/combo_sobrancelha_cabelo.png"
+    },
+    {
+        "id": "pezinho_barba",
+        "name": "Pezinho + Barba",
+        "duration": "40min",
+        "price": 60,
+        "image": "/static/images/services/pezinho_barba.png"
+    },
+    {
+        "id": "raspado_barba",
+        "name": "Raspado (1 Pente) + Barba",
+        "duration": "50min",
+        "price": 65,
+        "image": "/static/images/services/raspado_barba.png"
+    },
+    {
+        "id": "barba",
+        "name": "Barba",
+        "duration": "30min",
+        "price": 50,
+        "image": "/static/images/services/barba.png"
+    }
+]

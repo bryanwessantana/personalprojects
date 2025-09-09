@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Agendamento confirmado{% endblock %}
+
+{% block content %}
+<section class="appointment" style="text-align:center; padding:2rem;">
+    <h2>Agendamento confirmado!</h2>
+    <p>Olá <strong>{{ nome }}</strong>, seu horário foi marcado para <b>{{ data }}</b> às <b>{{ horario }}</b>.</p>
+    <p>Você será redirecionado para a página inicial.</p>
+
+    <!-- Botão sem JS inline -->
+    <button id="okBtn" class="btn-primary" style="max-width:260px; margin-top:1rem;">Ok</button>
+
+    <!-- Passamos a URL para o script via atributo data -->
+    <span id="homeUrl" data-url="{{ url_for('home') }}"></span>
+</section>
+{% endblock %}
