@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Contato - Fotógrafa{% endblock %}
+
+{% block content %}
+
+<section class="contato">
+    <div class="contato-container">
+        <div class="contato-info">
+            <h2>Informações de Contato</h2>
+            <p><strong>Email:</strong> emilyfotografa@gmail.com</p>
+            <p><strong>Telefone/WhatsApp:</strong> (41) 98728-6273</p>
+            <p><strong>Localização:</strong> Curitiba - PR</p>
+            <p>Siga também nas redes sociais para ver os bastidores e novidades:</p>
+            <div class="redes">
+                <a href="https://www.instagram.com/emilyfeitosa.ph/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.threads.com/@emilyfeitosa.ph"><i class="fa-brands fa-thread"></i> Thread</a>
+                <a href="https://wa.me/41987286273"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="contato-form">
+            <h2>Envie sua Mensagem</h2>
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="flash-msg">
+                {% for msg in messages %}
+                <p>{{ msg }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('contato') }}">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="mapa">
+    <h2>Onde Atendo</h2>
+    <div class="mapa-container">
+        <iframe
+            src="https://maps.app.goo.gl"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+{% endblock %}

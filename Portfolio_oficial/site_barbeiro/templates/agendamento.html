@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% set active_page = 'agendamento' %}
+
+{% block title %}Agendamento - Thon Barbearia{% endblock %}
+
+{% block content %}
+<section class="appointment">
+    <h2>Agende seu horário</h2>
+    <form action="{{ url_for('agendamento') }}" method="POST" class="form" id="agendamento-form">
+        <label for="name">Nome completo:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="service">Serviço:</label>
+        <select id="service" name="service" required>
+            <option value="">Selecione</option>
+            <!-- o script.js preenche a lista a partir do services.json -->
+        </select>
+    
+        <label for="barber">Barbeiro:</label>
+        <select id="barber" name="barber" required>
+            <option value="">Selecione</option>
+            <option value="everthon">Everthon</option>
+            <option value="dudu">Dudu</option>
+            <option value="qualquer">Sem preferência</option>
+        </select>
+    
+        <label for="pessoas">Número de pessoas:</label>
+        <input type="number" id="pessoas" name="pessoas" min="1" max="5" value="1">
+    
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required>
+    
+        <label for="time">Horário:</label>
+        <input type="time" id="time" name="time" min="09:00" max="19:00" required>
+    
+        <button type="submit" class="btn-primary">Agendar</button>
+</form>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Meus Agendamentos - Thon Barbearia{% endblock %}
+
+{% block content %}
+<section class="appointments">
+    <h2>Meus Agendamentos</h2>
+    {% if agendamentos %}
+    <ul class="appointments-list">
+        {% for appt in agendamentos %}
+        <li class="appointment-card {% if appt.status == 'cancelado' %}cancelado{% endif %}">
+            <p><strong>Serviço:</strong> {{ appt.service }}</p>
+            <p><strong>Barbeiro:</strong> {{ appt.barber }}</p>
+            <p><strong>Data:</strong> {{ appt.date.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Hora:</strong> {{ appt.time.strftime('%H:%M') }}</p>
+            <p><strong>Status:</strong> {{ appt.status }}</p>
+            {% if appt.status == 'confirmado' %}
+            <form method="POST" action="{{ url_for('cancelar_agendamento', appt_id=appt.id) }}">
+                <button type="submit" class="btn btn-danger">Cancelar</button>
+            </form>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Você ainda não tem agendamentos.</p>
+    {% endif %}
+</section>
+{% endblock %}
