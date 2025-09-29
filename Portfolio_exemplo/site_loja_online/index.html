@@ -5,104 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Biju</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Link to CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Box Icons -->
      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
+
 <body>
     <!-- HEADER -->
-    <header class="top-bar">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Logo Casa Biju">
-            </a>
-        </div>
-
-        <div class="search-box">
-            <input type="text" placeholder="Procure o que deseja...">
-            <button><i class='bx bx-search'></i></button>
-        </div>
-
-        <div class="top-info">
-            <div class="user-login">
-                <p>Bem vindo;</p>
-                <a href="#">Entre ou cadastre-se</a>
-            </div>
-        </div>
-
-        <div class="icons">
-            <a href="#" class="icon">
-                <i class='bx bxs-heart'></i>
-                <span class="badge">0</span>
-            </a>
-            <a href="#" class="icon">
-                <i class='bx bxs-shopping-bag'></i>
-                <span class="badge">0</span>
-            </a>
-        </div>
-    </header>
-
-    <!-- MENU -->
-    <nav class="menu">
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Anéis</a></li>
-            <li><a href="#">Brincos</a></li>
-            <li><a href="#">Colares</a></li>
-            <li><a href="#">Kits</a></li>
-            <li><a href="#">Pingentes</a></li>
-            <li><a href="#">Pulseiras</a></li>
-            <li><a href="#">Lançamentos</a></li>
-            <li><a href="#">Promoções</a></li>
-        </ul>
-    </nav>
+    <div id="header"></div>
 
     <!-- MAIN CONTENT -->
     <main>
         <!-- Hero image -->
         <section class="hero"></section>
         
-        <!-- Product categories -->
-        <!-- <div class="top-products">
-            <h2>Produtos em destaque</h2>
-            <div class="top-products">
-                <div class="category">
-                    <img src="images/aneis.jpg" alt="Anéis">
-                    <h3>Anéis</h3>
+        <!-- Best sellers -->
+        <div class="bestsellers">
+            <h2>Os mais vendidos</h2>
+            <div class="carousel-container">
+                <button class="prev">&#10094;</button>
+                <div class="carousel">
+                    <!-- Products will be showed with JS by pulling the products from the .json file -->
                 </div>
-                <div class="category">
-                    <img src="images/brincos.jpg" alt="Brincos">
-                    <h3>Brincos</h3>
-                </div>
-                <div class="category">
-                    <img src="images/colares.jpg" alt="Colares">
-                    <h3>Colares</h3>
-                </div>
-                <div class="category">
-                    <img src="images/kits.jpg" alt="Kits">
-                    <h3>Kits</h3>
-                </div>
-                <div class="category">
-                    <img src="images/pingentes.jpg" alt="Pingentes">
-                    <h3>Pingentes</h3>
-                </div>
-                <div class="category">
-                    <img src="images/pulseiras.jpg" alt="Pulseiras">
-                    <h3>Pulseiras</h3>
-                </div>
+                <button class="next">&#10095;</button>
             </div>
-        </div> -->
+        </div>
 
         <!-- Hero image 2 -->
         <section class="hero2"></section>
+
+        <!-- Promotions -->
+        <div class="promotions">
+            <h2>Promoções</h2>
+            <div class="carousel-container">
+                <button class="prev">&#10094;</button>
+                <div class="carousel">
+                    <!-- Products will be showed with JS by pulling the products from the .json file -->
+                </div>
+                <button class="next">&#10095;</button>
+            </div>
+        </div>
+
     </main>
 
-    <footer></footer>
+    <div id="footer"></div>
 
      <!-- Link to JS -->
     <script src="js/script.js"></script>
 </body>
+
 </html>
