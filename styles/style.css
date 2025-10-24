@@ -1,0 +1,62 @@
+body {
+    /* Fonte e cor de fundo */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Um cinza claro suave */
+    color: #333; /* Cor do texto principal */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Container principal para o conteúdo */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para o conteúdo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título principal */
+h1 {
+    color: #007bff; /* Um azul vibrante */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Parágrafo de instrução */
+p {
+    margin-bottom: 30px;
+}
+
+/* Lista de projetos */
+ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0;
+}
+
+/* Itens da lista */
+li {
+    margin-bottom: 15px;
+}
+
+/* Links (os nomes dos projetos) */
+a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #ffffff; /* Cor branca para o texto do link */
+    background-color: #28a745; /* Um verde bonito como botão */
+    padding: 10px 20px;
+    display: inline-block; /* Permite definir padding e largura */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    min-width: 250px; /* Garante que os botões tenham um tamanho mínimo */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+a:hover {
+    background-color: #218838; /* Um verde mais escuro ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}

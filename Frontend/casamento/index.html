@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de casamento de Bryan e Vanessa. Informações sobre a cerimônia, padrinhos, lista de presentes e confirmação de presença.">
+    <meta name="keywords" content="casamento, Bryan, Vanessa, Curitiba, 12 de Setembro 2026, cerimônia, convite">
     <title>Casamento Bryan & Vanessa</title>
 
     <link rel="stylesheet" href="styles/style.css">
-</head>
+    </head>
 
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
+            <div class="couple-name">
+                Bryan & Vanessa
+            </div>
             <ul class="navbar-list">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="templates/confirmacao.html">Confirmação</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
                 <li><a href="templates/padrinhos.html">Padrinhos</a></li>
                 <li><a href="templates/presenca.html">Presença</a></li>
                 <li><a href="templates/presentes.html">Presentes</a></li>
@@ -23,16 +27,16 @@
 
     <main>
         <div class="top-hero-image-container">
-            <img src="images/assinatura.png" alt="Assinaturas" height="350" loading="lazy">
+            <img src="images/assinatura.png" alt="Assinaturas Bryan & Vanessa" loading="lazy">
         </div>
-        <div class="countdown-content">
+        <div class="countdown-content scroll-reveal fade-in-up">
             <h1>12 DE SETEMBRO, 2026</h1>
             <h3>Curitiba, PR</h3>
-            <div id="countdown">
-                <span id="dias">00</span> dias
-                <span id="horas">00</span> horas
-                <span id="minutos">00</span> minutos
-                <span id="segundos">00</span> segundos
+            <div id="countdown" aria-live="polite">
+                <span id="dias" aria-label="dias">00</span> dias
+                <span id="horas" aria-label="horas">00</span> horas
+                <span id="minutos" aria-label="minutos">00</span> minutos
+                <span id="segundos" aria-label="segundos">00</span> segundos
             </div>
         </div>
 
@@ -40,58 +44,30 @@
             <a href="templates/confirmacao.html" class="btn-confirmar">Confirmar Presença</a>
         </div>
         
-        <div class="hero-image">
+        <div class="hero-image scroll-reveal fade-in-up">
             <h2>Um momento para ser lembrado pela eternidade...</h2>
-            <img src="images/pre-wedding.jpg" alt="Bryan & Vanessa" height="350px" loading="lazy">
+            <img src="images/pre-wedding.jpg" alt="Foto de pré-casamento de Bryan e Vanessa" loading="lazy">
         </div>
 
-        <section class="sealing">
-            <div class="left-column">
-                <h2>Selamento</h2>
-                <p class="met-date">12/09/26 / 15:00</p>
-            </div>
-            <div class="right-column">
-                <p class="story-text"> Com imensa alegria em nossos corações, convidamos você que é 
-                    especial em nossas vidas para testemunhar um dos momentos mais sagrados da nossa 
-                    jornada. Nosso selamento eterno no Templo! Neste dia, vamos unir nossas almas 
-                    não apenas para esta vida, mas para toda a eternidade, segundo a promessa do Senhor.
-
-                </p>
-            </div>
-        </section>
-
-        <section class="escritura">
+        <section class="escritura scroll-reveal fade-in-up">
             <div class="escritura-imagem-container">
-                <img src="images/templo.png" alt="Templo" height="200" loading="lazy">
+                <img src="images/templo.png" alt="Silhueta do Templo de A Igreja de Jesus Cristo dos Santos dos Últimos Dias" loading="lazy">
             </div>
             <div class="escritura-texto-container">
                 <p>
                     “E se um homem casar uma mulher pela minha palavra, que é a minha lei, e pelo novo e 
-                    eterno convênio… Eles entrarão na sua exaltação eterna.”  
+                    eterno convênio… Eles entrarão na sua exaltação eterna.”
                     <br><br> — Doutrina e Convênios 132:19
                 </p>
             </div>
         </section>
-
-        <section class="dinner">
-            <div class="left-column">
-                <h2>Recepção</h2>
-                <p class="met-date">12/09/26 / 18:00</p>
-            </div>
-            <div class="right-column">
-                <p class="story-text">Após a cerimônia no Templo, teremos a alegria de celebrar
-                    este novo capítulo com todos vocês em nossa Recepção. Este será o nosso momento 
-                    de abraçar e agradecer a presença de cada um, compartilhando boas comidas, 
-                    músicas e muita alegria.
-                </p>
-            </div>
-        </section>
-    </main>
+        
+        </main>
 
     <footer>
         <div class="links-group">
             <ul class="footer-links">
-                <li><a href="templates/confirmacao.html">Confirmação</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="templates/padrinhos.html">Padrinhos</a></li>
                 <li><a href="templates/presenca.html">Presença</a></li>
                 <li><a href="templates/presentes.html">Presentes</a></li>
@@ -107,14 +83,14 @@
             <p class="duvidas-texto">Dúvidas:</p>
             <ul class="social-links">
                 <li>
-                    <a href="https://wa.me/41988939608" target="_blank" class="whatsapp-link">
-                        <img src="images/whatsapp.png" alt="WhatsApp">
+                    <a href="https://wa.me/41988939608" target="_blank" class="whatsapp-link" aria-label="Enviar mensagem WhatsApp para Bryan">
+                        <img src="images/whatsapp.png" alt="Ícone WhatsApp">
                         Bryan
                     </a>
                 </li>
                 <li>
-                    <a href="https://wa.me/63933005070" target="_blank" class="whatsapp-link">
-                        <img src="images/whatsapp.png" alt="WhatsApp">
+                    <a href="https://wa.me/63933005070" target="_blank" class="whatsapp-link" aria-label="Enviar mensagem WhatsApp para Vanessa">
+                        <img src="images/whatsapp.png" alt="Ícone WhatsApp">
                         Vanessa
                     </a>
                 </li>
