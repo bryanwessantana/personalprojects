@@ -32,6 +32,7 @@ Este espaço reúne experimentos, estudos e soluções que venho criando em dife
 ## 🌟 Portfólio de sites desenvolvidos  
 Aqui estão alguns trabalhos reais que entreguei para clientes:  
 
+- 👰🏻‍♀️ **Site de Casamento** - Moderno e simples, com acesso a uma página para padrinhos e madrinhas, e acesso para marcar a presença.
 - 💈 **Site de Barbearia** – Design moderno e focado em apresentar serviços de forma clara.  
 - 📸 **Site para Fotógrafa** – Portfólio digital com destaque para fotos e identidade visual.  
 - 🛒 **Loja Online com Checkout** – Sistema completo de e-commerce com carrinho e finalização de compras.  
