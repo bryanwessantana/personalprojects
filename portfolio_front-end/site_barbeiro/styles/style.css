@@ -869,10 +869,7 @@ footer .social img:hover {
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para telas de tablets menores e paisagem de celular */
-    
-    /* === NAV: Altera para layout de coluna no mobile === */
-    .main-nav {
+        .main-nav {
         grid-template-columns: auto 1fr; 
         gap: 0.5rem 1rem;
         padding-bottom: 0.5rem;
