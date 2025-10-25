@@ -1,10 +1,6 @@
-{% extends "base.html" %}
-{% block title %}Agenda do Barbeiro - Thon Barbearia{% endblock %}
-
-{% block content %}
+<title>Agenda do Barbeiro - Thon Barbearia</title>
 <section class="appointments">
     <h2>Agenda de Agendamentos</h2>
-    {% if agendamentos %}
     <table class="appointments-table">
         <thead>
             <tr>
@@ -16,19 +12,20 @@
             </tr>
         </thead>
         <tbody>
-            {% for appt in agendamentos %}
             <tr>
-                <td>{{ appt.name }}</td>
-                <td>{{ appt.service }}</td>
-                <td>{{ appt.date.strftime('%d/%m/%Y') }}</td>
-                <td>{{ appt.time.strftime('%H:%M') }}</td>
-                <td>{{ appt.people }}</td>
+                <td>Nome do Cliente 1</td>
+                <td>Corte + Barba</td>
+                <td>26/10/2025</td>
+                <td>09:00</td>
+                <td>1</td>
             </tr>
-            {% endfor %}
+            <tr>
+                <td>Nome do Cliente 2</td>
+                <td>Corte Masculino</td>
+                <td>26/10/2025</td>
+                <td>11:00</td>
+                <td>2</td>
+            </tr>
         </tbody>
     </table>
-    {% else %}
-    <p>Não há agendamentos confirmados.</p>
-    {% endif %}
-</section>
-{% endblock %}
+    </section>

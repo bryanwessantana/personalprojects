@@ -1,28 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("/static/data/services.json")
-        .then(res => res.json())
+
+    fetch("static/data/services.json") 
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
         .then(services => {
             renderServices(services);
             populateSelect(services);
 
-            // === Seleção automática do serviço ===
             const select = document.getElementById("service");
             if (select) {
                 const selectedService = localStorage.getItem("selectedService");
                 if (selectedService) {
                     select.value = selectedService;
                     localStorage.removeItem("selectedService");
-                    select.scrollIntoView({ behavior: "smooth", block: "start" });
+                    setTimeout(() => {
+                        select.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100);
                 }
             }
         })
         .catch(err => console.error("Erro ao carregar serviços:", err));
+
+    const okBtn = document.getElementById('okBtn');
+    const homeUrlElement = document.getElementById('homeUrl');
+    
+    if (okBtn && homeUrlElement) {
+        const homeUrl = homeUrlElement.dataset.url;
+
+        okBtn.addEventListener('click', () => {
+            window.location.href = homeUrl;
+        });
+
+        setTimeout(() => {
+            window.location.href = homeUrl;
+        }, 5000);
+    }
 });
 
-
-// === Renderiza os cards de serviços ===
 function renderServices(services) {
-    const container = document.querySelector(".services-list"); // mudou aqui
+    const container = document.querySelector(".services-list");
     if (!container) return;
 
     container.innerHTML = "";
@@ -30,8 +50,10 @@ function renderServices(services) {
         const card = document.createElement("div");
         card.classList.add("card");
 
+        const imagePath = service.image.startsWith('/') ? service.image.substring(1) : service.image;
+        
         card.innerHTML = `
-            <img src="${service.image}" alt="${service.name}">
+            <img src="${imagePath}" alt="${service.name}">
             <h3>${service.name}</h3>
             <p>${service.duration} - R$ ${service.price}</p>
             <button onclick="selectService('${service.id}')">Agendar</button>
@@ -41,7 +63,6 @@ function renderServices(services) {
     });
 }
 
-// === Preenche o select de serviços ===
 function populateSelect(services) {
     const select = document.getElementById("service");
     if (!select) return;
@@ -54,29 +75,11 @@ function populateSelect(services) {
     });
 }
 
-// === Seleciona serviço e redireciona ===
 function selectService(serviceId) {
     localStorage.setItem("selectedService", serviceId);
-    window.location.href = "/agendamento"; // rota direta do Flask
+    window.location.href = "agendamento.html"; 
 }
 
-// Seleciona o botão pelo ID
-const okBtn = document.getElementById('okBtn');
-
-// Pega a URL da página inicial do atributo data
-const homeUrl = document.getElementById('homeUrl').dataset.url;
-
-// Redirecionamento ao clicar no botão
-okBtn.addEventListener('click', () => {
-    window.location.href = homeUrl;
-});
-
-// Redirecionamento automático após 5 segundos (5000 ms)
-setTimeout(() => {
-    window.location.href = homeUrl;
-}, 5000);
-
-// Client-side validation for agendamento: only Mon-Sat and between 09:00 and 19:00
 const agendamentoForm = document.getElementById('agendamento-form');
 if (agendamentoForm) {
     agendamentoForm.addEventListener('submit', (e) => {
@@ -85,19 +88,22 @@ if (agendamentoForm) {
         if (dateInput && timeInput) {
             const dateVal = dateInput.value;
             const timeVal = timeInput.value;
-            if (!dateVal || !timeVal) return; // let backend handle required
-            const d = new Date(dateVal + 'T' + timeVal);
-            const weekday = d.getDay(); // 0=Sun,6=Sat
-            // block Sundays (0) and allow Mon(1)-Sat(6) but not Sunday
+            if (!dateVal || !timeVal) return;
+            
+            const d = new Date(dateVal + 'T' + timeVal + ':00');
+            
+            const weekday = d.getDay();
+            
             if (weekday === 0) {
                 e.preventDefault();
                 alert('Agendamentos permitidos apenas de segunda a sábado.');
                 return;
             }
-            // check time between 09:00 and 19:00 inclusive
+            
             const [h, m] = timeVal.split(':').map(Number);
-            const minutes = h * 60 + m;
-            if (minutes < 9*60 || minutes > 19*60) {
+            const totalMinutes = h * 60 + m;
+
+            if (totalMinutes < 9 * 60 || totalMinutes > 19 * 60) {
                 e.preventDefault();
                 alert('Escolha um horário entre 09:00 e 19:00.');
                 return;

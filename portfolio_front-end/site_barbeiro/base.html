@@ -1,69 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Thon Barbearia{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" href="{{ url_for('static', filename='images/thonbarbearia.png') }}" type="image/png">
-    {% block extra_head %}{% endblock %}
-</head>
+    <title></title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" href="static/images/thonbarbearia.png" type="image/png">
+    </head>
 
 <body>
-    
+
 <header>
   <nav class="main-nav">
     <div class="nav-left">
-      <a href="{{ url_for('home') }}" class="logo-link">
-        <img src="{{ url_for('static', filename='images/thonbarbearia2.png') }}" alt="Thon Barbearia" class="logo-img">
+      <a href="home.html" class="logo-link">
+        <img src="static/images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
       </a>
     </div>
     <div class="nav-center">
-      <a href="{{ url_for('home') }}" class="brand-name">Thon Barbearia</a>
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
     </div>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="{{ url_for('home') }}" class="{% if active_page=='home' %}active{% endif %}">Início</a></li>
-        <li><a href="{{ url_for('agendamento') }}" class="{% if active_page=='agendamento' %}active{% endif %}">Agendamento</a></li>
-        <li><a href="{{ url_for('sobre') }}" class="{% if active_page=='sobre' %}active{% endif %}">Sobre</a></li>
-        {% if current_user.is_authenticated %}
-          <li><a href="{{ url_for('meus_agendamentos') }}" class="{% if active_page=='meus_ag' %}active{% endif %}">Meus agendamentos</a></li>
-          {% if current_user.role == 'barbeiro' %}
-          <li><a href="{{ url_for('agenda_barbeiro') }}" class="{% if active_page=='agenda' %}active{% endif %}">Agenda</a></li>
-          {% endif %}
-          <li><a href="{{ url_for('logout') }}">Sair</a></li>
-        {% else %}
-          <li><a href="{{ url_for('login') }}" class="{% if active_page=='login' %}active{% endif %}">Login</a></li>
-        {% endif %}
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
+
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:block;"><a href="login.html" id="nav-login">Login</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
-
-
     <div id="page-container">
         <div id="content-wrap">
             <main>
-                {% block content %}{% endblock %}
-            </main>
+                </main>
         </div>
-    
+
         <footer>
-            <p>&copy; {{ current_year }} Thon Barbearia <br> Todos os direitos reservados</p>
+            <p>&copy; <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
             <ul class="social">
                 <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
-                            src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a></li>
+                            src="static/images/instagram.png" alt="Instagram"></a></li>
                 <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
-                            src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a></li>
+                            src="static/images/facebook.png" alt="Facebook"></a></li>
                 <li><a href="https://wa.me/41995422355" target="_blank"><img
-                            src="{{ url_for('static', filename='images/whatsapp.png') }}" alt="WhatsApp"></a></li>
+                            src="static/images/whatsapp.png" alt="WhatsApp"></a></li>
             </ul>
         </footer>
     </div>
-    
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    {% block extra_scripts %}{% endblock %}
-</body>
+
+    <script src="static/script.js"></script>
+    </body>
 
 </html>

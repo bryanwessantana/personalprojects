@@ -1,14 +1,12 @@
-{% extends "base.html" %}
-{% block title %}Redefinir senha - Thon Barbearia{% endblock %}
-
-{% block content %}
+<title>Redefinir senha - Thon Barbearia</title>
 <div class="login-container">
     <h2>Redefinir Senha</h2>
-    <form method="POST" action="">
+    <form method="POST" action="#" onsubmit="alert('Senha redefinida com sucesso!'); return true;">
         <label for="senha">Nova senha:</label>
         <input type="password" id="senha" name="senha" required>
         <button type="submit" class="btn btn-primary">Salvar nova senha</button>
     </form>
-    <p><a href="{{ url_for('login') }}">Voltar para login</a></p>
+    <p>
+        <a href="login.html">Voltar para login</a>
+    </p>
 </div>
-{% endblock %}

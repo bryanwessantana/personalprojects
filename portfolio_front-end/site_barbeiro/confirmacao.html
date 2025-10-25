@@ -1,16 +1,27 @@
-{% extends "base.html" %}
-{% block title %}Agendamento confirmado{% endblock %}
-
-{% block content %}
+<title>Agendamento confirmado</title>
 <section class="appointment" style="text-align:center; padding:2rem;">
     <h2>Agendamento confirmado!</h2>
-    <p>Olá <strong>{{ nome }}</strong>, seu horário foi marcado para <b>{{ data }}</b> às <b>{{ horario }}</b>.</p>
+    <p>Olá <strong>[Nome do Cliente]</strong>, seu horário foi marcado para <b>[Data]</b> às <b>[Horário]</b>.</p>
     <p>Você será redirecionado para a página inicial.</p>
 
-    <!-- Botão sem JS inline -->
     <button id="okBtn" class="btn-primary" style="max-width:260px; margin-top:1rem;">Ok</button>
 
-    <!-- Passamos a URL para o script via atributo data -->
-    <span id="homeUrl" data-url="{{ url_for('home') }}"></span>
+    <span id="homeUrl" data-url="home.html"></span>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const homeUrl = document.getElementById('homeUrl').getAttribute('data-url');
+            const okBtn = document.getElementById('okBtn');
+
+            // Redireciona após 3 segundos
+            setTimeout(() => {
+                window.location.href = homeUrl;
+            }, 3000);
+
+            // Redireciona ao clicar no botão
+            okBtn.addEventListener('click', () => {
+                window.location.href = homeUrl;
+            });
+        });
+    </script>
 </section>
-{% endblock %}

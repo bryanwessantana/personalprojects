@@ -1,18 +1,14 @@
-{% extends "base.html" %}
-{% block title %}Esqueceu sua senha - Thon Barbearia{% endblock %}
-
-{% block content %}
+<title>Esqueceu sua senha - Thon Barbearia</title>
 <div class="login-container">
     <h2>Recuperar senha</h2>
-    <form method="POST" action="{{ url_for('esqueceu_senha') }}" class="login-form">
+    <form method="POST" action="reset_senha.html" class="login-form">
         <label for="email">Digite seu e-mail:</label>
         <input type="email" id="email" name="email" required>
 
         <div class="login-options">
-            <a href="{{ url_for('login') }}">Voltar para o login</a>
+            <a href="login.html">Voltar para o login</a>
         </div>
 
         <button type="submit" class="btn btn-primary">Enviar link de redefinição</button>
     </form>
 </div>
-{% endblock %}

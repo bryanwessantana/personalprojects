@@ -1,18 +1,14 @@
-{% extends "base.html" %}
-{% set active_page = 'home' %}
-
-{% block title %}Thon Barbearia{% endblock %}
-
-{% block content %}
+<title>Thon Barbearia</title>
 <section class="hero">
     <h1>Bem-vindo à Thon Barbearia</h1>
     <p>Seu estilo é nossa paixão; juntos, vamos criar um visual que reflete sua essência.</p>
-    <a href="{{ url_for('agendamento') }}" class="btn-primary">Agende seu horário</a>
+    <a href="agendamento.html" class="btn-primary">Agende seu horário</a>
 </section>
 
 <section class="services">
     <h2>Nossos Serviços</h2>
-    <section class="services-list"></section>
+    <section class="services-list">
+        </section>
 </section>
 
 <section class="courses">
@@ -29,48 +25,49 @@
     </div>
 
     <div class="courses-image">
-        <img src="{{ url_for('static', filename='images/curso_barbeiro.jpg') }}" alt="Curso de barbeiro">
+        <img src="static/images/curso_barbeiro.jpg" alt="Curso de barbeiro">
     </div>
 </section>
 
 
-{% if avg_stars is not none %}
 <section class="reviews">
   <h2>Avaliações</h2>
-  <p class="reviews-summary">⭐ {{ avg_stars }} / 5 ({{ feedback_count }} avaliações)</p>
-  {% if feedbacks %}
+  <p class="reviews-summary">⭐ 4.8 / 5 (125 avaliações)</p>
   <ul class="reviews-list">
-    {% for f in feedbacks %}
-      <li class="review-item">
+    <li class="review-item">
         <div class="review-header">
-          <strong>{{ f.author.username }}</strong>
-          <span class="stars">{{ f.stars }}⭐</span>
+            <strong>João S.</strong>
+            <span class="stars">5⭐</span>
         </div>
-        <p class="review-comment">{{ f.comment }}</p>
-      </li>
-    {% endfor %}
+        <p class="review-comment">Excelente atendimento e corte. Recomendo!</p>
+    </li>
+    <li class="review-item">
+        <div class="review-header">
+            <strong>Maria C.</strong>
+            <span class="stars">4⭐</span>
+        </div>
+        <p class="review-comment">Ótima barbearia, só a espera que foi um pouco longa.</p>
+    </li>
   </ul>
-  {% endif %}
 </section>
-{% endif %}
 
-{% if current_user.is_authenticated %}
 <section class="feedback-form">
   <h3>Deixe seu feedback</h3>
-  <form action="{{ url_for('feedback') }}" method="POST" class="form">
+  <form action="#" method="POST" class="form">
     <label for="stars">Sua nota (1 a 5):</label>
     <select id="stars" name="stars" required>
       <option value="">Selecione</option>
-      {% for n in [1,2,3,4,5] %}
-      <option value="{{ n }}">{{ n }}</option>
-      {% endfor %}
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
     <label for="comment">Comentário:</label>
     <input type="text" id="comment" name="comment" required>
     <button type="submit" class="btn-primary">Enviar</button>
   </form>
 </section>
-{% endif %}
 
 <section class="map">
   <h2>Localização</h2>
@@ -81,5 +78,3 @@
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </section>
-
-{% endblock %}

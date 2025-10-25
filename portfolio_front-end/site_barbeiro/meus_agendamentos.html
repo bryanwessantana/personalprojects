@@ -1,28 +1,23 @@
-{% extends "base.html" %}
-{% block title %}Meus Agendamentos - Thon Barbearia{% endblock %}
-
-{% block content %}
+<title>Meus Agendamentos - Thon Barbearia</title>
 <section class="appointments">
     <h2>Meus Agendamentos</h2>
-    {% if agendamentos %}
     <ul class="appointments-list">
-        {% for appt in agendamentos %}
-        <li class="appointment-card {% if appt.status == 'cancelado' %}cancelado{% endif %}">
-            <p><strong>Serviço:</strong> {{ appt.service }}</p>
-            <p><strong>Barbeiro:</strong> {{ appt.barber }}</p>
-            <p><strong>Data:</strong> {{ appt.date.strftime('%d/%m/%Y') }}</p>
-            <p><strong>Hora:</strong> {{ appt.time.strftime('%H:%M') }}</p>
-            <p><strong>Status:</strong> {{ appt.status }}</p>
-            {% if appt.status == 'confirmado' %}
-            <form method="POST" action="{{ url_for('cancelar_agendamento', appt_id=appt.id) }}">
+        <li class="appointment-card">
+            <p><strong>Serviço:</strong> Corte Masculino</p>
+            <p><strong>Barbeiro:</strong> Everthon</p>
+            <p><strong>Data:</strong> 25/11/2025</p>
+            <p><strong>Hora:</strong> 10:00</p>
+            <p><strong>Status:</strong> confirmado</p>
+            <form method="POST" action="#" onsubmit="alert('Agendamento cancelado!'); return false;">
                 <button type="submit" class="btn btn-danger">Cancelar</button>
             </form>
-            {% endif %}
         </li>
-        {% endfor %}
+        <li class="appointment-card cancelado">
+            <p><strong>Serviço:</strong> Barba Modelada</p>
+            <p><strong>Barbeiro:</strong> Dudu</p>
+            <p><strong>Data:</strong> 15/10/2025</p>
+            <p><strong>Hora:</strong> 14:30</p>
+            <p><strong>Status:</strong> cancelado</p>
+        </li>
     </ul>
-    {% else %}
-    <p>Você ainda não tem agendamentos.</p>
-    {% endif %}
-</section>
-{% endblock %}
+    </section>

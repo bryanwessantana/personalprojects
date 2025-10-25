@@ -1,28 +1,19 @@
-{% extends "base.html" %}
-
-{% block title %}Login{% endblock %}
-
-{% block content %}
+<title>Login</title>
 <div class="login-container">
     <h2>Login</h2>
 
-    {% if erro %}
-    <p class="erro">{{ erro }}</p>
-    {% endif %}
-
-    <form method="POST" action="{{ url_for('login') }}" class="login-form">
+    <form method="POST" action="#" class="login-form">
         <label for="usuario">Usuário</label>
         <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
-    
+
         <label for="senha">Senha</label>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-    
+
         <div class="login-options">
-            <a href="{{ url_for('esqueceu_senha') }}">Esqueceu sua senha?</a>
-            <a href="{{ url_for('cadastro') }}">Ainda não tem cadastro?</a>
+            <a href="esqueceu_senha.html">Esqueceu sua senha?</a>
+            <a href="cadastro.html">Ainda não tem cadastro?</a>
         </div>
-    
+
         <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
 </div>
-{% endblock %}
