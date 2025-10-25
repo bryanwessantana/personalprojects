@@ -1,80 +1,139 @@
-<title>Thon Barbearia</title>
-<section class="hero">
-    <h1>Bem-vindo à Thon Barbearia</h1>
-    <p>Seu estilo é nossa paixão; juntos, vamos criar um visual que reflete sua essência.</p>
-    <a href="agendamento.html" class="btn-primary">Agende seu horário</a>
-</section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thon Barbearia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
 
-<section class="services">
-    <h2>Nossos Serviços</h2>
-    <section class="services-list">
-        </section>
-</section>
+<body>
 
-<section class="courses">
-    <div class="courses-content">
-        <h2>Curso para Barbeiro</h2>
-        <p>
-            Torne-se um barbeiro profissional! Aprenda técnicas modernas de corte, barba e atendimento ao cliente em
-            nosso
-            curso completo e comece sua carreira de sucesso na barbearia.
-        </p>
-        <a href="https://wa.me/41995422355" target="_blank" class="btn-primary">
-            Entre em contato
-        </a>
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" class="active" id="nav-home">Início</a></li> 
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
+
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:block;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section class="hero">
+                    <h1>Bem-vindo à Thon Barbearia</h1>
+                    <p>Seu estilo é nossa paixão; juntos, vamos criar um visual que reflete sua essência.</p>
+                    <a href="agendamento.html" class="btn-primary">Agende seu horário</a>
+                </section>
+
+                <section class="services">
+                    <h2>Nossos Serviços</h2>
+                    <section class="services-list">
+                        </section>
+                </section>
+
+                <section class="courses">
+                    <div class="courses-content">
+                        <h2>Curso para Barbeiro</h2>
+                        <p>
+                            Torne-se um barbeiro profissional! Aprenda técnicas modernas de corte, barba e atendimento ao cliente em
+                            nosso curso completo e comece sua carreira de sucesso na barbearia.
+                        </p>
+                        <a href="https://wa.me/41995422355" target="_blank" class="btn-primary">
+                            Entre em contato
+                        </a>
+                    </div>
+
+                    <div class="courses-image">
+                        <img src="images/curso_barbeiro.jpg" alt="Curso de barbeiro">
+                    </div>
+                </section>
+
+                <section class="reviews">
+                    <h2>Avaliações</h2>
+                    <p class="reviews-summary">⭐ 4.5 / 5 (98 avaliações)</p>
+                    <ul class="reviews-list">
+                        <li class="review-item">
+                            <div class="review-header">
+                                <strong>João S.</strong>
+                                <span class="stars">5⭐</span>
+                            </div>
+                            <p class="review-comment">Excelente atendimento e corte. Recomendo!</p>
+                        </li>
+                        <li class="review-item">
+                            <div class="review-header">
+                                <strong>Maria C.</strong>
+                                <span class="stars">4⭐</span>
+                            </div>
+                            <p class="review-comment">Ótima barbearia, completa e profissional.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="feedback-form">
+                    <h3>Deixe seu feedback</h3>
+                    <form id="feedbackForm" action="#" method="POST" class="form">
+                        <label for="stars">Sua nota (1 a 5):</label>
+                        <select id="stars" name="stars" required>
+                        <option value="">Selecione</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        </select>
+                        <label for="comment">Comentário:</label>
+                        <input type="text" id="comment" name="comment" required>
+                        <button type="submit" class="btn-primary">Enviar</button>
+                    </form>
+                </section>
+
+                <section class="map">
+                    <h2>Localização</h2>
+                    <div class="map-responsive">
+                        <iframe
+                            src="https://www.google.com/maps?q=Thon%20Barbearia%20Curitiba&output=embed"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
     </div>
 
-    <div class="courses-image">
-        <img src="static/images/curso_barbeiro.jpg" alt="Curso de barbeiro">
-    </div>
-</section>
+    <script src="scripts/script.js"></script>
+    </body>
 
-
-<section class="reviews">
-  <h2>Avaliações</h2>
-  <p class="reviews-summary">⭐ 4.8 / 5 (125 avaliações)</p>
-  <ul class="reviews-list">
-    <li class="review-item">
-        <div class="review-header">
-            <strong>João S.</strong>
-            <span class="stars">5⭐</span>
-        </div>
-        <p class="review-comment">Excelente atendimento e corte. Recomendo!</p>
-    </li>
-    <li class="review-item">
-        <div class="review-header">
-            <strong>Maria C.</strong>
-            <span class="stars">4⭐</span>
-        </div>
-        <p class="review-comment">Ótima barbearia, só a espera que foi um pouco longa.</p>
-    </li>
-  </ul>
-</section>
-
-<section class="feedback-form">
-  <h3>Deixe seu feedback</h3>
-  <form action="#" method="POST" class="form">
-    <label for="stars">Sua nota (1 a 5):</label>
-    <select id="stars" name="stars" required>
-      <option value="">Selecione</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <label for="comment">Comentário:</label>
-    <input type="text" id="comment" name="comment" required>
-    <button type="submit" class="btn-primary">Enviar</button>
-  </form>
-</section>
-
-<section class="map">
-  <h2>Localização</h2>
-  <div class="map-responsive">
-    <iframe
-      src="https://www.google.com/maps?q=Thon%20Barbearia%20Curitiba&output=embed"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-</section>
+</html>

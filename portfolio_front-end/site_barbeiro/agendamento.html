@@ -1,38 +1,94 @@
-<title>Agendamento - Thon Barbearia</title>
-<section class="appointment">
-    <h2>Agende seu horário</h2>
-    <form action="confirmacao.html" method="POST" class="form" id="agendamento-form">
-        <label for="name">Nome completo:</label>
-        <input type="text" id="name" name="name" required>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Thon Barbearia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+<body>
 
-        <label for="service">Serviço:</label>
-        <select id="service" name="service" required>
-            <option value="">Selecione</option>
-            <option value="corte">Corte Masculino</option>
-            <option value="barba">Barba Modelada</option>
-            <option value="corte-barba">Corte + Barba</option>
-        </select>
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" class="active" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
 
-        <label for="barber">Barbeiro:</label>
-        <select id="barber" name="barber" required>
-            <option value="">Selecione</option>
-            <option value="everthon">Everthon</option>
-            <option value="dudu">Dudu</option>
-            <option value="qualquer">Sem preferência</option>
-        </select>
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:block;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-        <label for="pessoas">Número de pessoas:</label>
-        <input type="number" id="pessoas" name="pessoas" min="1" max="5" value="1">
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section class="appointment">
+                    <h2>Agende seu horário</h2>
+                    <form action="confirmacao.html" method="POST" class="form" id="agendamento-form">
+                        <label for="name">Nome completo:</label>
+                        <input type="text" id="name" name="name" required>
 
-        <label for="date">Data:</label>
-        <input type="date" id="date" name="date" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
 
-        <label for="time">Horário:</label>
-        <input type="time" id="time" name="time" min="09:00" max="19:00" required>
+                        <label for="service">Serviço:</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione</option>
+                        </select>
 
-        <button type="submit" class="btn-primary">Agendar</button>
-    </form>
-</section>
+                        <label for="barber">Barbeiro:</label>
+                        <select id="barber" name="barber" required>
+                            <option value="">Selecione</option>
+                            <option value="everthon">Everthon</option>
+                            <option value="dudu">Dudu</option>
+                            <option value="qualquer">Sem preferência</option>
+                        </select>
+
+                        <label for="pessoas">Número de pessoas:</label>
+                        <input type="number" id="pessoas" name="pessoas" min="1" max="5" value="1">
+
+                        <label for="date">Data:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="time">Horário:</label>
+                        <input type="time" id="time" name="time" min="09:00" max="19:00" required>
+
+                        <button type="submit" class="btn-primary">Agendar</button>
+                    </form>
+                </section>
+                </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    </body>
+</html>

@@ -383,7 +383,7 @@ header .logo span {
     position: relative;
     text-align: center;
     padding: 4rem 2rem;
-    background: url('./images/hero.png') center/cover no-repeat;
+    background: url('../images/hero.png') center/cover no-repeat;
     color: #fff;
     height: 80vh;
     min-height: 420px;

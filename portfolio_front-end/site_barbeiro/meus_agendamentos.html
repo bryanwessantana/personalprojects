@@ -1,23 +1,75 @@
-<title>Meus Agendamentos - Thon Barbearia</title>
-<section class="appointments">
-    <h2>Meus Agendamentos</h2>
-    <ul class="appointments-list">
-        <li class="appointment-card">
-            <p><strong>Serviço:</strong> Corte Masculino</p>
-            <p><strong>Barbeiro:</strong> Everthon</p>
-            <p><strong>Data:</strong> 25/11/2025</p>
-            <p><strong>Hora:</strong> 10:00</p>
-            <p><strong>Status:</strong> confirmado</p>
-            <form method="POST" action="#" onsubmit="alert('Agendamento cancelado!'); return false;">
-                <button type="submit" class="btn btn-danger">Cancelar</button>
-            </form>
-        </li>
-        <li class="appointment-card cancelado">
-            <p><strong>Serviço:</strong> Barba Modelada</p>
-            <p><strong>Barbeiro:</strong> Dudu</p>
-            <p><strong>Data:</strong> 15/10/2025</p>
-            <p><strong>Hora:</strong> 14:30</p>
-            <p><strong>Status:</strong> cancelado</p>
-        </li>
-    </ul>
-    </section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Agendamentos - Thon Barbearia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
+
+<body>
+
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
+
+        <li class="auth-required" style="display:block;"><a href="meus_agendamentos.html" class="active" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:block;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:none;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section class="appointments">
+                    <h2>Meus Agendamentos</h2>
+                    <ul class="appointments-list">
+                        <li class="appointment-card">
+                            <p><strong>Serviço:</strong> Corte Masculino</p>
+                            <p><strong>Barbeiro:</strong> Everthon</p>
+                            <p><strong>Data:</strong> 25/11/2025</p>
+                            <p><strong>Hora:</strong> 10:00</p>
+                            <p><strong>Status:</strong> confirmado</p>
+                            <form method="POST" action="#" onsubmit="alert('Agendamento cancelado!'); return false;">
+                                <button type="submit" class="btn btn-danger">Cancelar</button>
+                            </form>
+                        </li>
+                    </ul>
+                </section>
+                </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    </body>
+</html>

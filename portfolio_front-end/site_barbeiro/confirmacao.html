@@ -1,27 +1,73 @@
-<title>Agendamento confirmado</title>
-<section class="appointment" style="text-align:center; padding:2rem;">
-    <h2>Agendamento confirmado!</h2>
-    <p>Olá <strong>[Nome do Cliente]</strong>, seu horário foi marcado para <b>[Data]</b> às <b>[Horário]</b>.</p>
-    <p>Você será redirecionado para a página inicial.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento confirmado</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
 
-    <button id="okBtn" class="btn-primary" style="max-width:260px; margin-top:1rem;">Ok</button>
+<body>
 
-    <span id="homeUrl" data-url="home.html"></span>
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const homeUrl = document.getElementById('homeUrl').getAttribute('data-url');
-            const okBtn = document.getElementById('okBtn');
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:block;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-            // Redireciona após 3 segundos
-            setTimeout(() => {
-                window.location.href = homeUrl;
-            }, 3000);
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section class="appointment" style="text-align:center; padding:2rem;">
+                    <p>Olá 
+                        <strong id="clientName">carregando...</strong>, 
+                        seu horário foi marcado para 
+                        <b id="clientDate">carregando...</b> às 
+                        <b id="clientTime">carregando...</b>.
+                    </p>
+                    <p>Você será redirecionado para a página inicial.</p>
 
-            // Redireciona ao clicar no botão
-            okBtn.addEventListener('click', () => {
-                window.location.href = homeUrl;
-            });
-        });
-    </script>
-</section>
+                    <button id="okBtn" class="btn-primary" style="max-width:260px; margin-top:1rem;">Ok</button>
+
+                    <span id="homeUrl" data-url="home.html"></span>
+                </section>
+                </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    </body>
+</html>

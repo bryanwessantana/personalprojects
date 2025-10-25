@@ -1,59 +1,103 @@
-<title>Sobre - Thon Barbearia</title>
-<section>
-    <section class="team">
-        <h2>Sobre a Thon Barbearia</h2>
-        <p>Na Thon Barbearia, nosso objetivo é oferecer cortes modernos e atendimento personalizado para cada cliente. Com
-            anos de experiência, nossa equipe garante qualidade, conforto e estilo.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Thon Barbearia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
 
-        <h3>Nossa Equipe</h3>
-        <div class="team-cards">
-            <div class="team-card">
-                <img src="static/images/everthon.png" alt="Everthon">
-                <h4>Everthon</h4>
-                <p>Fundador e barbeiro chefe, especialista em cortes clássicos e modernos.</p>
-            </div>
-            <div class="team-card">
-                <img src="static/images/dudu.png" alt="Dudu">
-                <h4>Dudu</h4>
-                <p>Barbeiro sênior, especializado em barba e modelagem personalizada.</p>
-            </div>
-        </div>
-    </section>
+<body>
 
-    <hr class="category-divider" />
-
-    <div class="history">
-        <h4>Quem somos?</h4>
-
-        <p>Desde 2015, somos mais do que uma simples barbearia; somos um espaço onde estilo e tradição se encontram. Nossa
-            missão é proporcionar aos nossos clientes uma experiência única e acolhedora, combinando atendimento de
-            qualidade com um ambiente descontraído.</p>
-
-        <p>Aqui, cada corte de cabelo e cada barba feita é uma obra de arte, realizada por profissionais apaixonados pelo
-            que fazem. Valorizamos a individualidade de cada cliente, oferecendo serviços personalizados que refletem a sua
-            personalidade e estilo.</p>
-
-        <p>Na Thon Barbearia, você não é apenas mais um cliente; você faz parte da nossa família. Venha nos visitar e
-            descubra por que somos a escolha certa para quem busca não apenas um visual incrível, mas também um lugar onde
-            se sente em casa.</p>
-
-        <p>Agradecemos por fazer parte da nossa história!</p>
-
-        <p>🧔✂️ Thon Barbearia – Estilo e tradição desde 2015.</p>
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
     </div>
-</section>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" class="active" id="nav-sobre">Sobre</a></li>
 
-<section class="timeline">
-  <div class="event">
-    <h3>2010</h3>
-    <p>Abertura da Thon Barbearia</p>
-  </div>
-  <div class="event">
-    <h3>2015</h3>
-    <p>Primeira expansão com novos barbeiros</p>
-  </div>
-  <div class="event">
-    <h3>2023</h3>
-    <p>Modernização e sistema online de agendamento</p>
-  </div>
-</section>
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:none;"><a href="agenda_barbeiro.html" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:block;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section>
+                    <section class="team">
+                        <h2>Sobre a Thon Barbearia</h2>
+                        <p>Na Thon Barbearia, nosso objetivo é oferecer cortes modernos e atendimento personalizado para cada cliente. Com
+                            anos de experiência, nossa equipe garante qualidade, conforto e estilo.</p>
+
+                        <h3>Nossa Equipe</h3>
+                        <div class="team-cards">
+                            <div class="team-card">
+                                <img src="images/everthon.png" alt="Everthon">
+                                <h4>Everthon</h4>
+                                <p>Fundador e barbeiro chefe, especialista em cortes clássicos e modernos.</p>
+                            </div>
+                            <div class="team-card">
+                                <img src="images/dudu.png" alt="Dudu">
+                                <h4>Dudu</h4>
+                                <p>Barbeiro sênior, especializado em barba e modelagem personalizada.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="category-divider" />
+
+                    <div class="history">
+                        <h4>Quem somos?</h4>
+
+                        <p>Desde 2015, somos mais do que uma simples barbearia; somos um espaço onde estilo e tradição se encontram. Nossa
+                            missão é proporcionar aos nossos clientes uma experiência única e acolhedora, combinando atendimento de
+                            qualidade com um ambiente descontraído.</p>
+
+                        <p>Aqui, cada corte de cabelo e cada barba feita é uma obra de arte, realizada por profissionais apaixonados pelo
+                            que fazem. Valorizamos a individualidade de cada cliente, oferecendo serviços personalizados que refletem a sua
+                            personalidade e estilo.</p>
+
+                        <p>Na Thon Barbearia, você não é apenas mais um cliente; você faz parte da nossa família. Venha nos visitar e
+                            descubra por que somos a escolha certa para quem busca não apenas um visual incrível, mas também um lugar onde
+                            se sente em casa.</p>
+
+                        <p>Agradecemos por fazer parte da nossa história!</p>
+
+                        <p>🧔✂️ Thon Barbearia – Estilo e tradição desde 2015.</p>
+                    </div>
+                </section>
+                </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    </body>
+</html>

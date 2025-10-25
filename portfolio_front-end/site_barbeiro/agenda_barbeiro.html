@@ -1,31 +1,90 @@
-<title>Agenda do Barbeiro - Thon Barbearia</title>
-<section class="appointments">
-    <h2>Agenda de Agendamentos</h2>
-    <table class="appointments-table">
-        <thead>
-            <tr>
-                <th>Cliente</th>
-                <th>Serviço</th>
-                <th>Data</th>
-                <th>Hora</th>
-                <th>Pessoas</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Nome do Cliente 1</td>
-                <td>Corte + Barba</td>
-                <td>26/10/2025</td>
-                <td>09:00</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Nome do Cliente 2</td>
-                <td>Corte Masculino</td>
-                <td>26/10/2025</td>
-                <td>11:00</td>
-                <td>2</td>
-            </tr>
-        </tbody>
-    </table>
-    </section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda do Barbeiro - Thon Barbearia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/thonbarbearia.png" type="image/png">
+    </head>
+
+<body>
+
+<header>
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="home.html" class="logo-link">
+        <img src="images/thonbarbearia2.png" alt="Thon Barbearia" class="logo-img">
+      </a>
+    </div>
+    <div class="nav-center">
+      <a href="home.html" class="brand-name">Thon Barbearia</a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="home.html" id="nav-home">Início</a></li>
+        <li><a href="agendamento.html" id="nav-agendamento">Agendamento</a></li>
+        <li><a href="sobre.html" id="nav-sobre">Sobre</a></li>
+
+        <li class="auth-required" style="display:none;"><a href="meus_agendamentos.html" id="nav-meus-ag">Meus agendamentos</a></li>
+        <li class="barber-required" style="display:block;"><a href="agenda_barbeiro.html" class="active" id="nav-agenda-barbeiro">Agenda</a></li>
+        <li class="auth-required" style="display:none;"><a href="#" id="nav-logout">Sair</a></li>
+        
+        <li class="guest-only" style="display:none;"><a href="login.html" id="nav-login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <main>
+                <section class="appointments">
+                    <h2>Agenda de Agendamentos</h2>
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Hora</th>
+                                <th>Pessoas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nome do Cliente 1</td>
+                                <td>Corte + Barba</td>
+                                <td>26/10/2025</td>
+                                <td>09:00</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Nome do Cliente 2</td>
+                                <td>Corte Masculino</td>
+                                <td>26/10/2025</td>
+                                <td>11:00</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                </main>
+        </div>
+
+        <footer>
+            <p>© <span id="current-year">2025</span> Thon Barbearia <br> Todos os direitos reservados</p>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/thonbarbearia/" target="_blank"><img
+                            src="images/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/thonbarbearia" target="_blank"><img
+                            src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://wa.me/41995422355" target="_blank"><img
+                            src="images/whatsapp.png" alt="WhatsApp"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    </body>
+</html>
