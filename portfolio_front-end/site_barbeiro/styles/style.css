@@ -280,6 +280,8 @@ header .logo span {
     display: flex;
     gap: 1.2rem;
     align-items: center;
+    flex-wrap: wrap; /* Adicionado para permitir o layout de coluna no mobile */
+    justify-content: flex-end;
 }
 
 .nav-links li {
@@ -655,21 +657,23 @@ header .logo span {
 .courses-content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: left;
-    margin-left: 2rem;
+    /* Ajuste para responsividade */
+    text-align: center; 
+    margin-left: 0;
 }
 
 .courses-content p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    margin-left: 2.3rem;
-    text-align: left;
+    /* Ajuste para responsividade */
+    margin-left: 0; 
+    text-align: center;
 }
 
 .courses-content .btn-primary {
-    margin: 0;
-    margin-left: 2rem;
-    display: inline-block;
+    /* Ajuste para responsividade */
+    margin: 1.5rem auto 0 auto; 
+    display: block;
     opacity: 1;
     animation: none;
 }
@@ -751,8 +755,9 @@ form {
     padding: 2.5rem;
     border-radius: 10px;
     max-width: 450px;
-    width: 90%;
-    margin: 3rem auto;
+    /* Ajuste para mobile */
+    width: 95%; 
+    margin: 2rem auto;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -854,8 +859,9 @@ footer .social img:hover {
 }
 
 /* =========================
-   RESPONSIVO
+   RESPONSIVO (MELHORIAS)
 ========================= */
+
 @media (max-width: 992px) {
     .services-list {
         grid-template-columns: repeat(2, 1fr);
@@ -863,13 +869,48 @@ footer .social img:hover {
 }
 
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        gap: 1rem;
+    /* Ajustes para telas de tablets menores e paisagem de celular */
+    
+    /* === NAV: Altera para layout de coluna no mobile === */
+    .main-nav {
+        grid-template-columns: auto 1fr; 
+        gap: 0.5rem 1rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .nav-left {
+        grid-row: 1;
+        grid-column: 1;
     }
 
+    .nav-center {
+        grid-row: 1;
+        grid-column: 2;
+        justify-self: end;
+    }
+    
+    .nav-right {
+        grid-row: 2; 
+        grid-column: 1 / span 2; 
+        justify-self: start;
+        width: 100%;
+    }
+
+    .nav-links {
+        justify-content: space-around; 
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #333; 
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    /* === HERO === */
     .hero {
-        height: 64vh;
+        height: 50vh; 
         padding: 3rem 1.25rem;
     }
 
@@ -880,20 +921,36 @@ footer .social img:hover {
     .hero p {
         font-size: 1rem;
     }
-
+    
+    /* === COURSES === */
     .courses {
         flex-direction: column;
-        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .courses-image img {
+        height: auto;
+        max-height: 200px;
     }
 
-    .courses-content h2,
-    .courses-content p {
-        text-align: center;
-        margin-left: 0;
+    /* === TEAM === */
+    .team-cards {
+        gap: 20px;
+    }
+    
+    .team-card img {
+        width: 150px;
+        height: 150px;
     }
 
-    .courses-content .btn-primary {
-        margin-left: 0;
+    /* === REVIEWS/MAP === */
+    .reviews-list {
+        grid-template-columns: 1fr; 
+        padding: 0 1rem;
+    }
+    
+    .map-responsive {
+        padding-bottom: 50%; 
     }
 
     .login-options {
@@ -906,6 +963,7 @@ footer .social img:hover {
 @media (max-width: 600px) {
     .services-list {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
 
     .card img {
@@ -914,5 +972,23 @@ footer .social img:hover {
 
     .about p {
         margin: 1rem 1rem 0 1rem;
+    }
+    
+    /* Ajustes específicos para smartphones */
+    .nav-links {
+        justify-content: space-between; 
+    }
+    
+    .brand-name {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 220px;
     }
 }
