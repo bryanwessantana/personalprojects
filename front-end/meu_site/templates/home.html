@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Bem-vindo!</h2>
+    {% if "usuario" in session %}
+    <p>Você está logado como <strong>{{ session["usuario"] }}</strong>.</p>
+    <a href="{{ url_for('dashboard') }}" class="btn">Ir para Dashboard</a>
+    {% else %}
+    <p>Você não está logado. Faça login para acessar o Dashboard.</p>
+    <a href="{{ url_for('login') }}" class="btn">Fazer login</a>
+    {% endif %}
+</div>
+{% endblock %}
