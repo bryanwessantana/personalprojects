@@ -1,3 +1,5 @@
+// Press F12, click on "Console" copy and paste this code below,
+// then press "Enter" to run the code
 let nomeDoHeroi = "Aetherion";
 let xpDoHeroi = 8500;
 
