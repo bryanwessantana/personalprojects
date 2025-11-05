@@ -9,7 +9,6 @@ body {
     text-align: center; 
 }
 
-
 .container {
     max-width: 800px;
     margin: 50px auto;
@@ -52,5 +51,5 @@ a {
 
 a:hover {
     background-color: #3348a2;
-    text-decoration: underline;
+    text-decoration: none;
 }
