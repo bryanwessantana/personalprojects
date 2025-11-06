@@ -1,21 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/style.css"> 
     <title>Meus Projetos da DIO</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .texto-dio-gradiente {
+            background: linear-gradient(to right, 
+                #4A90E2 40%, 
+                #9A00B7 70%, 
+                #FF0077 100%
+            );
+            
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            
+            font-size: 2.5em; 
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 5px; 
+        }
+
+        .texto-dio-gradiente img {
+            vertical-align: middle; 
+            margin-left: 5px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 10px; 
+        }
+        
+        .btn-dio-gradiente {
+            background: linear-gradient(to right, 
+                #4A90E2 50%, 
+                #9A00B7 75%, 
+                #FF0077 100%
+            );
+            
+            display: block; 
+            
+            color: white; 
+            text-decoration: none; 
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 8px; 
+            font-weight: bold;
+            transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .btn-dio-gradiente:hover {
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.6); 
+            opacity: 0.95;
+            transform: translateY(-2px); 
+        }
+    </style>
 </head>
 
 <body>
     <div class="container"> 
-        <h1>Projetos feitos na DIO</h1>
+        <h1 class="texto-dio-gradiente">
+            Projetos feitos na <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9_Wer6hxqk_oqXaGCVPR4v6wjyDh2L2vPqQ&s" alt="DIO logo" width="80">
+        </h1> 
         <p>Escolha um para visualizar:</p>
         <ul>
-            <li><a href="landing-page/index.html">Landing Page</a></li>
-            <li><a href="detona-ralph/index.html">Detona Ralph Game</a></li>
-            <li><a href="memory-card/index.html">Memory Card Game</a></li>
-            <li><a href="nivel-de-heroi/script.js">Nível de Herói</a></li>
+            <li><a href="landing-page/index.html" class="btn-dio-gradiente">English School - Landing Page</a></li>
+            <li><a href="detona-ralph/index.html" class="btn-dio-gradiente">Detona Ralph - Game</a></li>
+            <li><a href="memory-card/index.html" class="btn-dio-gradiente">Memory Card - Game</a></li>
+            <li><a href="nivel-de-heroi/script.js" class="btn-dio-gradiente">Nível de Herói - JavaScript</a></li>
         </ul>
+
     </div>
 </body>
 </html>

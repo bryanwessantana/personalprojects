@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles/style.css"> 
     <title>Meus Projetos em C#</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2d;
+            color: #ecf0f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #2c3e50;
+            padding: 35px 45px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            border-left: 5px solid #9b59b6;
+        }
+
+        h1 {
+            font-size: 2.3em;
+            color: #9b59b6;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #3498db;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .container a {
+            display: block; 
+            text-decoration: none;
+            background-color: #34495e; 
+            color: #ecf0f1;
+            padding: 15px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1em;
+            border: 2px solid #9b59b6; 
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .container a:hover {
+            background-color: #9b59b6; 
+            color: #ffffff;
+            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.5);
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 
 <body>
     <div class="container"> 
         <h1>Projetos em C#</h1>
         <p>Escolha um para visualizar:</p>
+        
         <ul>
             <li><a href="advanced/">Advanced</a></li>
             <li><a href="intermediate/">Intermediate</a></li>

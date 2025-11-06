@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{% block title %}Emily Feitosa - Fotógrafa{% endblock %}</title>
+    <title>Emily Feitosa - Fotógrafa</title>
 
     <meta name="description" content="Fotografia profissional para casamentos, ensaios e eventos." />
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWvS2fT2F+KJpYfZ4ZCkxzgv2Fne5+5ZTCDYFzVz1nwK6JqqPiFZ+6A0b+Y1fY8+4z+6JQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,12 +18,12 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="{{ url_for('home') }}" class="logo">Emily Feitosa - Fotógrafa</a>
+            <a href="home.html" class="logo">Emily Feitosa - Fotógrafa</a>
             <ul class="nav-links">
-                <li><a href="{{ url_for('home') }}">Início</a></li>
-                <li><a href="{{ url_for('portfolio') }}">Portfólio</a></li>
-                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
-                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
 
             <div class="menu-toggle" aria-label="Abrir menu" role="button">☰</div>
@@ -35,20 +35,19 @@
     </header>
 
     <main>
-        {% block content %}{% endblock %}
-    </main>
+        </main>
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
-                <a href="{{ url_for('home') }}">Emily Feitosa - Fotógrafa</a>
+                <a href="home.html">Emily Feitosa - Fotógrafa</a>
             </div>
 
             <div class="footer-links">
-                <a href="{{ url_for('home') }}">Início</a>
-                <a href="{{ url_for('portfolio') }}">Portfólio</a>
-                <a href="{{ url_for('sobre') }}">Sobre</a>
-                <a href="{{ url_for('contato') }}">Contato</a>
+                <a href="home.html">Início</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
             </div>
 
             <div class="footer-redes">
@@ -65,11 +64,11 @@
         </div>
 
         <div class="footer-copy">
-            &copy; {{ current_year }} Emily Feitosa. Todos os direitos reservados.
+            &copy; 2025 Emily Feitosa. Todos os direitos reservados.
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
