@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Body Mass Index Calculator (BMI)</h2>
+        
+        <!-- The form submits data back to the same URL ('/') using the POST method -->
+        <form method="POST">
+            <label for="weight">Weight (kg):</label>
+            <!-- Now using the explicit 'weight_input' variable passed from Python -->
+            <input type="number" id="weight" name="weight" step="0.1" required value="{{ weight_input }}">
+
+            <label for="height">Height (m or cm):</label>
+            <p class="input-hint">Enter height in meters (e.g., 1.75) or centimeters (e.g., 175). Conversion is automatic.</p>
+            <!-- Now using the explicit 'height_input' variable passed from Python -->
+            <input type="number" id="height" name="height" step="0.01" required value="{{ height_input }}">
+            
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        <!-- Displays results or errors using Jinja templating -->
+        {% if error_message %}
+            <div class="result error">
+                <p><strong>Error:</strong> {{ error_message }}</p>
+            </div>
+        {% elif bmi_result is not none %}
+            <div class="result success">
+                <p>Your BMI is: <strong>{{ bmi_result }}</strong></p>
+                <p>Category: <strong>{{ category }}</strong></p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

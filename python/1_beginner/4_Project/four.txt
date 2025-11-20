@@ -1,0 +1,32 @@
+🧑‍⚕️ 🔄 Basic Unit Converter
+
+This project focuses on logic branching (if/elif/else statements) 
+to handle different conversion types and data validation to ensure 
+the user inputs numbers.
+
+Key Components
+- Python/Flask:
+    - One route (/) to display the form.
+    - The conversion logic: The Python function will receive the 
+    input value, the source unit, and the target unit. It then uses 
+    conditional logic to perform the specific calculation 
+    (e.g., if converting "km" to "miles," multiply by $0.621371$).
+- HTML:
+    - An input field for the value to be converted.
+    - Two dropdown menus (<select>) for the user to choose the 
+    source unit and the target unit (e.g., km, miles, C, F).
+- CSS: Basic styling for clarity.
+
+Suggested Implementation Steps
+1. Define Conversions: In your app.py, define the conversion factors. 
+A dictionary structure can be useful here to map units 
+(e.g., CONVERSIONS = {'km_to_mi': 0.621371, 
+'c_to_f_multiplier': 1.8, ...}).
+2. Setup the Form: Create a template (converter.html) with the input 
+field and the unit selection dropdowns.
+3. Handle POST: The route receiving the form data validates that the 
+value is a number and checks which conversion was selected 
+(e.g., if source_unit == 'km' and target_unit == 'miles':).
+4. Calculate & Display: Perform the calculation and render the 
+template again, passing the original value, units, and the calculated 
+result to the page.

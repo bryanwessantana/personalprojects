@@ -1,0 +1,87 @@
+/* Style for the BMI Calculator */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #dbdbdb;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    max-width: 400px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #c9d6ff;
+}
+h2 {
+    text-align: center;
+    color: #4b6cb7; /* Blue-grey title */
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #555;
+}
+/* New style for input hint */
+.input-hint {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+input[type="number"]:focus {
+    border-color: #4b6cb7;
+    outline: none;
+}
+button {
+    width: 100%;
+    background-color: #4b6cb7;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+button:hover {
+    background-color: #3e5a96;
+}
+button:active {
+    transform: translateY(1px);
+}
+.result {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
