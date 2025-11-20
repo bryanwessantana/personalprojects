@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Static JS</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Body Mass Index Calculator (JS)</h2>
+        
+        <!-- The form calls the JS function on submit -->
+        <form onsubmit="calculateBMI(event)">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" step="0.1" required>
+
+            <label for="height">Height (m or cm):</label>
+            <p class="input-hint">Enter height in meters (e.g., 1.75) or centimeters (e.g., 175). Conversion is automatic.</p>
+            <input type="number" id="height" step="0.01" required>
+            
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        <!-- Div to display results and errors -->
+        <div id="result-output"></div>
+    </div>
+    
+    <script src="scripts/script.js" defer></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Meus Projetos em Python</title>
+    <title>Meus Projetos em Python - Iniciante</title>
     
     <style>
         body {
@@ -63,9 +63,15 @@
             font-size: 1.1em;
             border: 2px solid #306998; 
             transition: all 0.2s ease-in-out;
+            text-align: left;
+        }
+        
+        .container a.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
-        .container a:hover {
+        .container a:not(.disabled):hover {
             background-color: #306998;
             color: #ffffff;
             border: 2px solid #FFD43B; 
@@ -77,16 +83,18 @@
 
 <body>
     <div class="container"> 
-        <h1>Projetos em Python</h1>
-        <p>Escolha um para visualizar:</p>
+        <h1>Projetos Python - Nível Iniciante</h1>
+        <p>Clique para testar o aplicativo online (requer deploy em serviço como Render):</p>
         
         <ul>
-            <li><a href="1_Project/templates/index.html">One</a></li>
-            <li><a href="2_Project/templates/index.html">Two</a></li>
-            <li><a href="3_Project/templates/index.html">Three</a></li>
-            <li><a href="4_Project/templates/index.html">Four</a></li>
-            <li><a href="5_Project/templates/index.html">Five</a></li>
+            <li><a href="#" class="disabled">1. (Aguardando)</a></li>
+            <li><a href="#" class="disabled">2. (Aguardando)</a></li>
+            <li><a href="#" class="disabled">3. (Aguardando)</a></li>
+            <li><a href="#" class="disabled">4. (Aguardando)</a></li>
+            <li><a href="#" class="disabled">5. (Aguardando)</a></li>
         </ul>
+        
+        <p style="margin-top: 30px;"><a href="../index.html" style="font-size: 0.9em; border: none; background: none; color: #306998;">← Voltar para Projetos Python</a></p>
     </div>
 </body>
 </html>

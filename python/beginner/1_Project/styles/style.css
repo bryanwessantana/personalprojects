@@ -1,8 +1,8 @@
-/* Style for the BMI Calculator */
+/* --- CSS STYLES (Estiliza a interface) --- */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #dbdbdb;
+    background-color: #f0f8ff;
     color: #333;
     display: flex;
     justify-content: center;
@@ -15,12 +15,12 @@ body {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 1px solid #c9d6ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #6495ed;
 }
 h2 {
     text-align: center;
-    color: #4b6cb7; /* Blue-grey title */
+    color: #1e90ff;
     margin-bottom: 25px;
 }
 label {
@@ -29,7 +29,6 @@ label {
     font-weight: 600;
     color: #555;
 }
-/* New style for input hint */
 .input-hint {
     font-size: 0.8em;
     color: #777;
@@ -41,18 +40,18 @@ input[type="number"] {
     padding: 12px;
     margin-top: 8px;
     margin-bottom: 20px;
-    border: 2px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 6px;
     box-sizing: border-box;
     transition: border-color 0.3s;
 }
 input[type="number"]:focus {
-    border-color: #4b6cb7;
+    border-color: #1e90ff;
     outline: none;
 }
 button {
     width: 100%;
-    background-color: #4b6cb7;
+    background-color: #1e90ff;
     color: white;
     padding: 12px;
     border: none;
@@ -63,25 +62,26 @@ button {
     transition: background-color 0.3s, transform 0.1s;
 }
 button:hover {
-    background-color: #3e5a96;
+    background-color: #007bff;
 }
 button:active {
     transform: translateY(1px);
 }
-.result {
+#result-output {
     margin-top: 30px;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
     font-size: 1.1em;
+    display: none;
 }
 .error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    background-color: #ffe0e0;
+    color: #cc0000;
+    border: 1px solid #ffaaaa;
 }
 .success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #e6ffe6;
+    color: #008000;
+    border: 1px solid #c8f5c8;
 }

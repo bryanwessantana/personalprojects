@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meus Projetos em Python - Iniciante</title>
+    
+    <style>
+        body {
+            font-family: 'Roboto Mono', 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            border-top: 5px solid #306998; 
+            border-bottom: 5px solid #FFD43B; 
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #306998;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            font-weight: 700;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .container a {
+            display: block; 
+            text-decoration: none;
+            background-color: #f9f9f9; 
+            color: #306998;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.1em;
+            border: 2px solid #306998; 
+            transition: all 0.2s ease-in-out;
+            text-align: left;
+        }
+        
+        .container a.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .container a:not(.disabled):hover {
+            background-color: #306998;
+            color: #ffffff;
+            border: 2px solid #FFD43B; 
+            box-shadow: 0 5px 15px rgba(48, 105, 152, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"> 
+        <h1>Projetos Python - Nível Iniciante</h1>
+        <p>Clique para testar o aplicativo online (requer deploy em serviço como Render):</p>
+        
+        <ul>
+            <li><a href="1_Project/index.html" target="_blank">1. BMI Calculator (Completo)</a></li>
+            <li><a href="#" class="disabled">2. Simple Password Generator (Aguardando)</a></li>
+            <li><a href="#" class="disabled">3. In-Memory To-Do List (Aguardando)</a></li>
+            <li><a href="#" class="disabled">4. Basic Unit Converter (Aguardando)</a></li>
+            <li><a href="#" class="disabled">5. CSV File Data Viewer (Aguardando)</a></li>
+        </ul>
+        
+        <p style="margin-top: 30px;"><a href="../index.html" style="font-size: 0.9em; border: none; background: none; color: #306998;">← Voltar para Projetos Python</a></p>
+    </div>
+</body>
+</html>
