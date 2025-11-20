@@ -1,12 +1,12 @@
-// MENU MOBILE TOGGLE
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
 
-// FEEDBACK DE ENVIO DO FORMULÁRIO DE CONTATO (usando Formspree)
 const form = document.getElementById("form-contato");
 if (form) {
     form.addEventListener("submit", function (e) {
@@ -34,16 +34,15 @@ if (form) {
     });
 }
 
-// SCROLL ANIMATION SIMPLES
 const elementosAnimados = document.querySelectorAll("[data-anime]");
 
 function animaScroll() {
-    const windowTop = window.scrollY + window.innerHeight * 0.85;
+    const windowTop = window.scrollY + window.innerHeight * 0.8;
     elementosAnimados.forEach(el => {
         if (windowTop > el.offsetTop) {
             el.classList.add("animar");
         } else {
-            el.classList.remove("animar");
+            el.classList.remove("animar"); 
         }
     });
 }

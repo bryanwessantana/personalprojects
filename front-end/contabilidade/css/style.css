@@ -89,11 +89,13 @@ ul {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 .btn {
@@ -286,7 +288,7 @@ button[type="submit"] {
 }
 
 .whatsapp-link i {
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 /* ------------------ FOOTER ------------------ */
@@ -305,11 +307,21 @@ footer {
     right: 25px;
     background-color: #25d366;
     color: white;
-    padding: 12px 15px;
-    font-size: 1.5rem;
+    
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+}
+
+.whatsapp-float i {
+    font-size: 1.8rem;
 }
 
 [data-anime] {
@@ -323,7 +335,7 @@ footer {
     transform: translateY(0);
 }
 
-/* ------------------ RESPONSIVO ------------------ */
+/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
