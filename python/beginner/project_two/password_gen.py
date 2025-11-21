@@ -25,7 +25,6 @@
 # 4. Display: Render the same template, passing the generated password string to be displayed clearly on the page.
 
 # ------------------------------------------------------------------------------------------- #
-
 import random
 import string
 import sys
@@ -126,7 +125,6 @@ def run_cli():
         # Para Windows, usar 'pyperclip' seria mais confiável, mas requer pip install
     except Exception:
         pass
-
 
 if __name__ == '__main__':
     run_cli()

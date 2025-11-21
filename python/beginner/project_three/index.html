@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Memory To-Do List</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>In-Memory To-Do List</h2>
+        <p class="input-hint" style="text-align: center;">(Data is lost when the page is reloaded)</p>
+        
+        <!-- Formulário para adicionar tarefas -->
+        <form onsubmit="addTask(event)">
+            <input type="text" id="task-input" placeholder="Enter a new task..." required>
+            <button type="submit">Add</button>
+        </form>
+
+        <!-- Lista de tarefas será preenchida pelo JavaScript -->
+        <ul id="todo-list">
+            <!-- Tasks will go here -->
+        </ul>
+        
+        <div id="empty-message" class="empty-message">Your to-do list is empty!</div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

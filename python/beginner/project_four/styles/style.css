@@ -1,0 +1,74 @@
+/* --- CSS STYLES --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    max-width: 500px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #6495ed;
+}
+h2 {
+    text-align: center;
+    color: #1e90ff;
+    margin-bottom: 25px;
+}
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.input-group label, .input-group select, .input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+.input-group label {
+    flex-grow: 0;
+    padding: 10px 0;
+    font-weight: bold;
+}
+button {
+    width: 100%;
+    background-color: #1e90ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #007bff;
+}
+#result-output {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.error {
+    background-color: #ffe0e0;
+    color: #cc0000;
+}
+.success {
+    background-color: #e6ffe6;
+    color: #008000;
+}

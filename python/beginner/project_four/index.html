@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Unit Converter</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Unit Converter</h2>
+        
+        <form onsubmit="handleConversion(event)">
+            
+            <div class="input-group">
+                <label for="type-select" style="min-width: 100px;">Type:</label>
+                <select id="type-select" onchange="updateUnitSelects()">
+                    <option value="distance">Distance</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="value-input" style="min-width: 100px;">Value:</label>
+                <input type="number" id="value-input" step="0.01" required placeholder="Enter value">
+            </div>
+
+            <div class="input-group">
+                <label for="unit-from" style="min-width: 100px;">From:</label>
+                <select id="unit-from"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="unit-to" style="min-width: 100px;">To:</label>
+                <select id="unit-to"></select>
+            </div>
+            
+            <button type="submit">Convert</button>
+        </form>
+
+        <div id="result-output"></div>
+    </div>
+
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
