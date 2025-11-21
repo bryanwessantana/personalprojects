@@ -1,3 +1,36 @@
+# 🧑‍⚕️ BMI Calculator (Body Mass Index)
+
+# This project focuses on the core process: receiving user input, performing a simple calculation in Python, and displaying the result.
+
+# Key Components
+
+# - Python/Flask:
+    # - One route (/) to display the initial form (GET request).
+    # - Another route (/calculate_bmi or the same route accepting POST) to handle the form submission.
+    # - The calculation logic: $BMI = \frac{\text{weight (kg)}}{(\text{height (m)})^2}$.
+    # - Logic to categorize the result (e.g., <18.5 is underweight, 18.5-24.9 is normal).
+
+# - HTML: 
+    # A simple form with two input fields (weight and height) and a submit button.
+# - CSS: 
+    # Basic styling for the form and result display.
+
+
+# Suggested Implementation Steps
+
+# 1. Set up Flask: Create your main application file (app.py).
+
+# 2. Create Template: Design the index.html template with the input form.
+
+# 3. Define Routes:
+# Create the main route that just renders index.html.
+# Create the route that receives the POST data from the form.
+
+# 4. Implement Logic: Inside the POST route, grab the data, convert it to numbers, calculate BMI, and pass both the BMI value and the category to the template 
+# for display.
+
+# ------------------------------------------------------------------------------------------- #
+
 import math
 
 def calculate_bmi(weight_kg, height_m):
