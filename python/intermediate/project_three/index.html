@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Forca</h1>
+        
+        <div class="game-area">
+            <!-- Área do desenho da forca (SVG) -->
+            <div class="hangman-draw">
+                <svg height="250" width="200" class="figure-container">
+                    <!-- Estrutura da Forca -->
+                    <line x1="20" y1="230" x2="100" y2="230" class="scaffold" />
+                    <line x1="60" y1="230" x2="60" y2="20" class="scaffold" />
+                    <line x1="60" y1="20" x2="140" y2="20" class="scaffold" />
+                    <line x1="140" y1="20" x2="140" y2="50" class="scaffold" />
+
+                    <!-- Partes do corpo (escondidas inicialmente) -->
+                    <circle cx="140" cy="70" r="20" class="figure-part" id="head" />
+                    <line x1="140" y1="90" x2="140" y2="150" class="figure-part" id="body" />
+                    <line x1="140" y1="120" x2="100" y2="100" class="figure-part" id="arm-l" />
+                    <line x1="140" y1="120" x2="180" y2="100" class="figure-part" id="arm-r" />
+                    <line x1="140" y1="150" x2="100" y2="190" class="figure-part" id="leg-l" />
+                    <line x1="140" y1="150" x2="180" y2="190" class="figure-part" id="leg-r" />
+                </svg>
+            </div>
+
+            <!-- Palavra Secreta -->
+            <div id="word-display" class="word-display"></div>
+
+            <!-- Mensagens de status (Vitória/Derrota) -->
+            <div id="message" class="message"></div>
+        </div>
+
+        <!-- Teclado Virtual -->
+        <div id="keyboard" class="keyboard"></div>
+
+        <button id="reset-btn" onclick="initGame()">Jogar Novamente</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor de RSS Personalizado</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Link para o JS com 'defer' -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📡 Leitor de Notícias RSS</h1>
+            <p>Fique atualizado com seus feeds favoritos</p>
+        </header>
+
+        <div class="controls">
+            <select id="feed-select">
+                <option value="https://feeds.bbci.co.uk/news/technology/rss.xml">BBC Tecnologia</option>
+                <option value="https://rss.nytimes.com/services/xml/rss/nyt/World.xml">NY Times Mundo</option>
+                <option value="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss">NASA Imagem do Dia</option>
+                <option value="https://dev.to/feed">Dev.to (Programação)</option>
+                <option value="custom">URL Personalizada...</option>
+            </select>
+            
+            <input type="text" id="custom-url" placeholder="Cole a URL do RSS aqui" style="display: none;">
+            <!-- Atenção: O botão chama 'loadFeed' que está no script.js -->
+            <button id="load-btn">Carregar Feed</button>
+        </div>
+
+        <div id="loading" class="hidden">Carregando artigos...</div>
+        <div id="error-msg" class="hidden"></div>
+
+        <div id="news-container">
+            <!-- Os artigos aparecerão aqui -->
+        </div>
+    </div>
+</body>
+</html>

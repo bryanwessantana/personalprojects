@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.form-section {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    flex: 1; /* Distribui espaço igualmente */
+}
+
+input:focus, select:focus {
+    outline: 2px solid #3498db;
+    border-color: transparent;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #219150;
+}
+
+/* Filtros */
+.filter-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Lista */
+.media-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.media-card:hover {
+    background-color: #f9f9f9;
+}
+
+.media-info h4 {
+    margin: 0 0 5px 0;
+    color: #34495e;
+}
+
+.media-details {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    color: white;
+    margin-right: 5px;
+}
+
+.badge.Livro { background-color: #e67e22; }
+.badge.Filme { background-color: #9b59b6; }
+.badge.Série { background-color: #e74c3c; }
+
+.rating {
+    font-weight: bold;
+    color: #f1c40f; /* Gold */
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+}
