@@ -58,6 +58,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* Display controlled by JS */
 }
 .weather-detail {
     text-align: left;

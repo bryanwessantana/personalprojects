@@ -1,7 +1,6 @@
-/* --- JAVASCRIPT LOGIC (Fetches real data from OpenWeatherMap) --- */
+/* --- JAVASCRIPT LOGIC (Fetch API Real Data) --- */
 
-// ⚠️ IMPORTANT: Replace this placeholder with your actual API key.
-// Your API key provided earlier: 947a024ed009c5fc686cb57b419dc2e0
+// ⚠️ IMPORTANT: Ensure your API Key is active
 const API_KEY = "947a024ed009c5fc686cb57b419dc2e0"; 
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
@@ -25,13 +24,20 @@ function displayResult(city, data) {
     const cityOutput = document.getElementById('current-city');
     const details = document.getElementById('details-container');
     
+    // Safety check: if elements are missing, stop execution
+    if (!output || !cityOutput || !details) {
+        console.error("Critical HTML elements missing.");
+        return;
+    }
+    
     output.style.display = 'flex'; 
     output.classList.remove('error');
     
     // Processamento dos dados da API
     const temp = data.main.temp;
     const feels_like = data.main.feels_like;
-    const description = data.weather[0].description.toUpperCase();
+    // Safe access to weather description array
+    const description = data.weather && data.weather.length > 0 ? data.weather[0].description.toUpperCase() : "N/A";
     const humidity = data.main.humidity;
     const country = data.sys.country;
     const sunrise = formatTime(data.sys.sunrise);
@@ -48,62 +54,88 @@ function displayResult(city, data) {
         <div class="weather-detail"><strong>Sunset:</strong> ${sunset}</div>
     `;
     
-    const icon = getIconForCondition(description);
+    const icon = getIconForCondition(description.toLowerCase());
     cityOutput.innerHTML = `${icon} ${cityOutput.textContent}`;
 }
 
 function displayError(message) {
     const output = document.getElementById('weather-output');
+    const cityOutput = document.getElementById('current-city');
+    const details = document.getElementById('details-container');
+
+    // Safety check
+    if (!output) {
+        console.error("Error container missing: " + message);
+        return;
+    }
+
     output.style.display = 'flex';
     output.classList.add('error');
     output.style.justifyContent = 'center';
     output.innerHTML = `<p style="color: red; font-weight: bold; text-align: center;">${message}</p>`;
-    document.getElementById('current-city').textContent = '';
-    document.getElementById('details-container').innerHTML = '';
+    
+    // Clean up potentially stale elements inside output if they still exist
+    // Note: InnerHTML above might have removed them, so we recreate structure if needed next search
 }
 
 async function searchWeather(event) {
     event.preventDefault();
-    const cityInput = document.getElementById('city-input').value.trim();
+    const cityInput = document.getElementById('city-input');
     
-    if (cityInput === "") {
+    if (!cityInput) return; // Safety check
+    
+    const cityValue = cityInput.value.trim();
+    
+    if (cityValue === "") {
+        // We recreate the structure if it was overwritten by an error message previously
+        resetOutputStructure();
         return displayError("Please enter a city name.");
     }
-    
-    if (API_KEY === "YOUR_OPENWEATHERMAP_API_KEY" || API_KEY.length !== 32) {
-        return displayError("FATAL: Please set a valid 32-character API key in the JavaScript file.");
-    }
 
-    // 1. Construir a URL da API
-    const url = `${BASE_URL}?q=${encodeURIComponent(cityInput)}&appid=${API_KEY}&units=metric&lang=en`;
-
-    // 2. Exibir loading (opcional, mas bom UX)
+    // 1. Reset output area for new search
+    resetOutputStructure();
     const output = document.getElementById('weather-output');
     output.style.display = 'flex';
     output.innerHTML = '<p>Loading weather data...</p>';
     output.classList.remove('error');
+
+    // 2. Build URL
+    const url = `${BASE_URL}?q=${encodeURIComponent(cityValue)}&appid=${API_KEY}&units=metric&lang=en`;
     
     try {
-        // 3. Realizar a busca usando Fetch API
+        // 3. Fetch Data
         const response = await fetch(url);
         const data = await response.json();
 
-        // 4. Checar por erros de API (como 404 Not Found)
+        // 4. Handle API Errors (e.g., 404 City Not Found, 401 Unauthorized)
         if (response.status !== 200) {
             let errorMessage = `Error fetching data (${response.status}).`;
             if (data.message) {
-                 // Captura mensagens como "city not found"
                 errorMessage = `API Error: ${data.message.charAt(0).toUpperCase() + data.message.slice(1)}`;
             }
+            // Re-render structure to show error cleanly
+            resetOutputStructure();
             return displayError(errorMessage);
         }
 
-        // 5. Exibir o resultado
-        displayResult(cityInput, data);
+        // 5. Success
+        resetOutputStructure(); // Ensure divs exist
+        displayResult(cityValue, data);
 
     } catch (error) {
-        // 6. Tratar erros de rede (CORS, conexão, etc.)
         console.error("Network or Fetch Error:", error);
-        displayError("Connection Error. Ensure your API key is active and you are running on a secure server (HTTPS).");
+        resetOutputStructure();
+        displayError("Connection Error. Check your internet or API key.");
+    }
+}
+
+// Helper to restore the inner divs of weather-output if they were overwritten
+function resetOutputStructure() {
+    const output = document.getElementById('weather-output');
+    if (output) {
+        output.innerHTML = `
+            <div id="current-city"></div>
+            <div id="details-container"></div>
+        `;
     }
 }
