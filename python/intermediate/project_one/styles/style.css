@@ -1,0 +1,98 @@
+/* --- CSS STYLES --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+}
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+.warning-message {
+    font-size: 0.9em;
+    color: #dc3545; /* Red warning color */
+    margin-bottom: 30px;
+}
+
+/* Creation/Edit Form */
+#create-form, #edit-form-container {
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: #f1f7fe;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    font-weight: bold;
+}
+button.primary {
+    background-color: #28a745; /* Green for success */
+    color: white;
+}
+button.primary:hover {
+    background-color: #1e7e34;
+}
+/* Post List */
+.post-card {
+    border: 1px solid #e9ecef;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.post-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+.post-meta {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+.post-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.edit-btn {
+    background-color: #ffc107; /* Yellow */
+    color: #343a40;
+}
+.delete-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}

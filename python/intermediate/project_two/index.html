@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API Viewer (Mock)</title>
+    
+    <!-- Link para o CSS e JS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Public API Data Viewer (Weather)</h2>
+        <p>This demo uses the browser's Fetch API with simulated data.</p>
+        
+        <form onsubmit="searchWeather(event)">
+            <input type="text" id="city-input" placeholder="Enter City Name (e.g., Curitiba)" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="weather-output">
+            <!-- Os resultados serão exibidos aqui -->
+            <div id="current-city"></div>
+            <div id="details-container"></div>
+        </div>
+
+        <p id="mock-status">Note: Data is simulated in JavaScript for GitHub Pages compatibility.</p>
+    </div>
+
+    <!-- Link para o JavaScript -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

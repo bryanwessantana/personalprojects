@@ -1,0 +1,86 @@
+/* --- CSS STYLES --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f7ff; /* Light Cyan */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    max-width: 500px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #0077b6;
+    text-align: center;
+}
+h2 {
+    color: #0077b6;
+    margin-bottom: 25px;
+}
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+button {
+    padding: 12px 20px;
+    background-color: #00b050; /* Green for GO/Search */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #009944;
+}
+#weather-output {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #ddd;
+    min-height: 150px; /* Ensures space for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.weather-detail {
+    text-align: left;
+    margin-bottom: 8px;
+}
+.weather-detail strong {
+    color: #0077b6;
+    min-width: 120px;
+    display: inline-block;
+}
+#current-city {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #005f8b;
+}
+.error {
+    background-color: #ffe0e0;
+    border: 1px solid #ffaaaa;
+    color: #cc0000;
+}
+#mock-status {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 15px;
+}

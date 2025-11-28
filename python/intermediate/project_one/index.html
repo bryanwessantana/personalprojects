@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Manager (CRUD Mock)</title>
+    
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Simple Blog Manager (CRUD Mock)</h2>
+        
+        <p class="warning-message" style="text-align: center;">(Warning: All data is stored in browser memory and will be lost on page reload.)</p>
+        
+        <!-- Creation Form (Create) -->
+        <div id="create-form">
+            <h4 style="color: #007bff; margin-top: 0;">Create New Post</h4>
+            <input type="text" id="title-input" placeholder="Post Title" required>
+            <textarea id="content-input" placeholder="Post Content" rows="4" required></textarea>
+            <input type="text" id="author-input" placeholder="Author Name (Optional)">
+            <button class="primary" onclick="handleCreatePost()">Save Post</button>
+        </div>
+
+        <!-- Edit Form (Update) - Hidden by default -->
+        <div id="edit-form-container" style="display: none;">
+            <h4 style="color: #007bff; margin-top: 0;">Edit Post <span id="editing-id"></span></h4>
+            <input type="text" id="edit-title-input" required>
+            <textarea id="edit-content-input" rows="4" required></textarea>
+            <button class="primary" onclick="handleUpdatePost()">Save Changes</button>
+            <button style="background-color: #6c757d;" onclick="hideEditForm()">Cancel</button>
+        </div>
+
+        <!-- Posts List (Read) -->
+        <div id="posts-container">
+            <!-- Posts will be rendered here by JavaScript -->
+        </div>
+
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
