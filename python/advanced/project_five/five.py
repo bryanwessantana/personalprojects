@@ -7,3 +7,5 @@
 # Front-end: Intensive use of JavaScript to implement the Drag and 
 # Drop functionality and send dynamic updates via AJAX or API to 
 # the Python back-end.
+
+# ------------------------------------------------------------------------------------------- #

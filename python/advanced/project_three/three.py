@@ -5,3 +5,5 @@
 # or black and white filter) before saving and displaying it.
 
 # Front-end: File upload form and display of the processed image.
+
+# ------------------------------------------------------------------------------------------- #
