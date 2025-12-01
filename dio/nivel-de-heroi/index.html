@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível de Herói</title>
+    <link rel="icon" type="image/png" href="../dio.png">
+    <style>
+        /* 1. Estilos Gerais para o Corpo (Body) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e limpa */
+            background-color: #f4f4f9; /* Fundo suave */
+            color: #333; /* Cor de texto principal */
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        /* 2. Estilos para Títulos e Instruções */
+        h1 {
+            color: #1a73e8; /* Cor de destaque (azul Google) */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        ol {
+            max-width: 500px;
+            margin: 10px auto 30px;
+            padding-left: 20px;
+            list-style-type: none; /* Remove marcadores padrão */
+        }
+
+        ol li {
+            padding: 5px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        ol li:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            font-weight: bold;
+            color: #1a73e8;
+            margin-right: 5px;
+        }
+        
+        /* 3. Estilos para a Área de Código */
+        .code-container {
+            /* Design que imita um editor de código */
+            border: 1px solid #ccc;
+            border-radius: 8px; /* Cantos arredondados */
+            background-color: #282c34; /* Fundo escuro (padrão de editores) */
+            padding: 15px;
+            margin: 40px auto;
+            max-width: 700px; /* Limita a largura para melhor leitura */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            overflow-x: auto;
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap; /* Quebra linhas longas se necessário */
+        }
+
+        code {
+            font-family: 'Fira Code', 'Consolas', 'Monaco', monospace; /* Fonte monoespaçada para código */
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+            color: #abb2bf; /* Cor clara para o texto no fundo escuro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Classificador de Nível de Herói</h1>
+    <p>Para executar o código e ver a classificação dos heróis, siga os passos:</p>
+    <ol>
+        <li>Pressione **F12** no seu teclado.</li>
+        <li>Clique na aba **"Console"**.</li>
+        <li>Copie o código abaixo.</li>
+        <li>Cole no **Console** e pressione **Enter**.</li>
+    </ol>
+
+    <div class="code-container">
+        <pre><code>// Pressione F12, clique em "Console", copie e cole o código abaixo,
+// então pressione "Enter" para rodar o código.
+let nomeDoHeroi = "Aetherion";
+let xpDoHeroi = 8500;
+
+let nivelDoHeroi;
+
+if (xpDoHeroi < 1000) {
+    nivelDoHeroi = "Ferro";
+} else if (xpDoHeroi >= 1001 && xpDoHeroi <= 2000) {
+    nivelDoHeroi = "Bronze";
+} else if (xpDoHeroi >= 2001 && xpDoHeroi <= 5000) {
+    nivelDoHeroi = "Prata";
+} else if (xpDoHeroi >= 5001 && xpDoHeroi <= 7000) {
+    nivelDoHeroi = "Ouro";
+} else if (xpDoHeroi >= 7001 && xpDoHeroi <= 8000) {
+    nivelDoHeroi = "Platina";
+} else if (xpDoHeroi >= 8001 && xpDoHeroi <= 9000) {
+    nivelDoHeroi = "Ascendente";
+} else if (xpDoHeroi >= 9001 && xpDoHeroi <= 10000) {
+    nivelDoHeroi = "Imortal";
+} else {
+    nivelDoHeroi = "Radiante";
+}
+
+console.log(`O Herói de nome **${nomeDoHeroi}** está no nível de **${nivelDoHeroi}**`);
+
+console.log("\n--- Classificando Múltiplos Heróis ---");
+
+const herois = [
+    { nome: "Kale", xp: 500 },
+    { nome: "Lyra", xp: 1500 },
+    { nome: "Pylos", xp: 4500 },
+    { nome: "Elgar", xp: 7000 },
+    { nome: "Darken", xp: 8001 },
+    { nome: "Selene", xp: 10000 },
+    { nome: "Nova", xp: 15000 }
+];
+
+for (let heroi of herois) {
+    let nivelAtual;
+
+    if (heroi.xp < 1000) {
+        nivelAtual = "Ferro";
+    } else if (heroi.xp >= 1001 && heroi.xp <= 2000) {
+        nivelAtual = "Bronze";
+    } else if (heroi.xp >= 2001 && heroi.xp <= 5000) {
+        nivelAtual = "Prata";
+    } else if (heroi.xp >= 5001 && heroi.xp <= 7000) {
+        nivelAtual = "Ouro";
+    } else if (heroi.xp >= 7001 && heroi.xp <= 8000) {
+        nivelAtual = "Platina";
+    } else if (heroi.xp >= 8001 && heroi.xp <= 9000) {
+        nivelAtual = "Ascendente";
+    } else if (heroi.xp >= 9001 && heroi.xp <= 10000) {
+        nivelAtual = "Imortal";
+    } else {
+        nivelAtual = "Radiante";
+    }
+
+    console.log(`O Herói de nome ${heroi.nome} (XP: ${heroi.xp}) está no nível de ${nivelAtual}`);
+}</code></pre>
+    </div>
+</body>
+</html>
