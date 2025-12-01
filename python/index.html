@@ -64,9 +64,15 @@
             font-size: 1.1em;
             border: 2px solid #306998; 
             transition: all 0.2s ease-in-out;
+            text-align: left;
+        }
+        
+        .container a.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
-        .container a:hover {
+        .container a:not(.disabled):hover {
             background-color: #306998;
             color: #ffffff;
             border: 2px solid #FFD43B; 
@@ -85,7 +91,7 @@
             <li><a href="beginner/index.html">Beginner</a></li>
             <li><a href="intermediate/index.html">Intermediate</a></li>
             <li><a href="advanced/index.html">Advanced</a></li>
-            <li><a href="brainstorms/index.html">Brainstorms</a></li>
+            <li><a href="brainstorms/index.html" class="disabled">Brainstorms</a></li>
         </ul>
     </div>
 </body>
