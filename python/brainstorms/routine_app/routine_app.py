@@ -509,7 +509,7 @@ def menu_principal():
             sistema.exibir_agenda(rotina_do_dia)
             
         elif escolha == '2':
-            coletar_nova_atividade(sistema) # Permite adicionar customizado
+            coletar_nova_atividade(sistema)
             
         elif escolha == '3':
             exibir_e_marcar_conclusao(sistema)
