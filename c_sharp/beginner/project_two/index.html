@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Palíndromo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verificador de Palíndromo</h1>
+        <p>Digite uma palavra ou frase para saber se ela é lida da mesma forma de trás para frente.</p>
+        
+        <div class="input-group">
+            <input type="text" id="input-text" placeholder="Ex: arara, A torre da derrota" maxlength="100">
+            <button id="check-button">Verificar</button>
+        </div>
+
+        <div class="result-box">
+            <p id="result-message">Aguardando entrada...</p>
+        </div>
+        
+        <div class="example">
+            <p><strong>Exemplos de Palíndromos:</strong></p>
+            <ul>
+                <li>Ovo</li>
+                <li>Socorram-me, subi no ônibus em Marrocos</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

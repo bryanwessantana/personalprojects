@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.conversion-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group, .select-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-group {
+    flex-direction: column;
+}
+
+.input-group label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    color: #343a40;
+    font-weight: 700;
+}
+
+#amount {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+
+.select-group {
+    gap: 10px;
+}
+
+.select-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    font-size: 1.1rem;
+    appearance: none;
+    cursor: pointer;
+}
+
+#swap-button {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #007bff;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 0 10px;
+}
+
+#swap-button:hover {
+    transform: rotate(180deg);
+}
+
+/* Opcional: Estilo para o botão de conversão removido, se você quiser manter */
+/*
+#convert-button {
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#convert-button:hover {
+    background-color: #1e7e34;
+}
+*/
+
+.result-box {
+    text-align: left;
+    background-color: #e9f5ff;
+    border: 1px solid #cce5ff;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#result-output {
+    font-size: 1.5rem;
+    color: #004085;
+    margin-bottom: 5px;
+}
+
+#rate-display {
+    color: #6c757d;
+}
+
+@media (max-width: 500px) {
+    .select-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #swap-button {
+        padding: 10px 0;
+    }
+}

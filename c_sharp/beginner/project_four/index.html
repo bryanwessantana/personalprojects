@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Tabuada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Gerador de Tabuada</h1>
+        <p>Insira um número para visualizar sua tabuada completa (1 a 10).</p>
+        
+        <div class="input-area">
+            <input type="number" id="input-number" placeholder="Digite um número" min="1" max="100">
+            <button id="generate-button">Gerar Tabuada</button>
+        </div>
+
+        <div class="result-container">
+            <h2 id="table-title"></h2> 
+            
+            <ul id="multiplication-list">
+                <li class="placeholder">A tabuada aparecerá aqui.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

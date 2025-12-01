@@ -1,1 +1,0 @@
-// Tabuada Interativa: Solicita um número ao usuário e exibe a tabuada completa desse número (de 1 a 10).

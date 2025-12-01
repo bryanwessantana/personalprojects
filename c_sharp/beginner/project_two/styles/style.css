@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#input-text {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#input-text:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#check-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#check-button:hover {
+    background-color: #0056b3;
+}
+
+.result-box {
+    min-height: 60px;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#result-message {
+    margin: 0;
+    color: #666;
+}
+
+/* Classes dinâmicas adicionadas via JavaScript */
+.is-palindromo {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.not-palindromo {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.example {
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.example ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 5px;
+}

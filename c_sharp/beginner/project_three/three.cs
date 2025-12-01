@@ -1,1 +1,0 @@
-// Conversor de Moedas Simples: Converte um valor em uma moeda (ex: USD) para outra (ex: EUR) com base em uma taxa de câmbio fixa.

@@ -1,1 +1,0 @@
-// Calculadora Simples: Implementa as quatro operações básicas($+$, $-$, $*$, $/$) e talvez a raiz quadrada.

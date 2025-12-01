@@ -1,0 +1,15 @@
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\bin\Debug\net9.0\project_one.exe
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\bin\Debug\net9.0\project_one.deps.json
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\bin\Debug\net9.0\project_one.runtimeconfig.json
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\bin\Debug\net9.0\project_one.dll
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\bin\Debug\net9.0\project_one.pdb
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.AssemblyInfoInputs.cache
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.AssemblyInfo.cs
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.csproj.CoreCompileInputs.cache
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.sourcelink.json
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.dll
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\refint\project_one.dll
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.pdb
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\project_one.genruntimeconfig.cache
+C:\Users\Bryao\OneDrive\Documentos\personal_codes\personalprojects\c_sharp\obj\Debug\net9.0\ref\project_one.dll

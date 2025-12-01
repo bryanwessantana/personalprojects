@@ -37,6 +37,14 @@ html, body {
     margin-right: 0.5rem;
 }
 
+/* NOVO: Estiliza o número de vidas (h2) */
+.menu-lives h2 { 
+    /* Garante que o número de vidas seja estilizado */
+    margin-left: 0.5rem; 
+    color: white; /* Cor do texto de vidas */
+    /* Você pode adicionar mais estilos aqui se necessário */
+}
+
 .menu-time h2:nth-child(2), 
 .menu-score h2:nth-child(2) {
     margin-top: 10px;
