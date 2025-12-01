@@ -1,4 +1,4 @@
-/* --- CSS STYLES --- */
+/* --- CSS STYLES (Base) --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px 10px; /* Adiciona padding horizontal base */
 }
 .container {
     max-width: 500px;
@@ -71,4 +72,84 @@ button:hover {
 .success {
     background-color: #e6ffe6;
     color: #008000;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Smartphones (Foco principal: max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        align-items: flex-start; /* Alinha o conteúdo ao topo */
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        max-width: 100%;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        border-width: 1px;
+    }
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Quebra o layout do input-group para empilhar verticalmente */
+    .input-group {
+        flex-direction: column;
+        gap: 8px; /* Reduz o espaço entre os elementos empilhados */
+        align-items: stretch; /* Garante que os elementos ocupem toda a largura */
+        margin-bottom: 15px;
+    }
+    
+    /* Garante que o label ocupe toda a largura quando empilhado */
+    .input-group label {
+        flex-grow: 1; /* Permite que ele cresça */
+        padding: 0; /* Remove padding vertical extra se for um label simples */
+        text-align: left; /* Garante alinhamento à esquerda */
+    }
+
+    .input-group select, .input-group input {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    
+    button {
+        padding: 11px;
+        font-size: 16px;
+    }
+    
+    #result-output {
+        font-size: 1.1em;
+        margin-top: 20px;
+        padding: 12px;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 400px) */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px;
+        width: calc(100% - 20px);
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .input-group label {
+        font-size: 0.95em;
+    }
+    .input-group select, .input-group input {
+        padding: 8px;
+    }
+    button {
+        font-size: 15px;
+        padding: 10px;
+    }
 }

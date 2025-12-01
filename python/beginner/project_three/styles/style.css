@@ -1,4 +1,4 @@
-/* --- CSS STYLES --- */
+/* --- CSS STYLES (Base) --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px 10px; /* Garante algum espaçamento nas bordas */
 }
 .container {
     max-width: 500px;
@@ -89,4 +90,70 @@ button:hover {
     text-align: center;
     color: #999;
     margin-top: 20px;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Smartphones (Foco principal: max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        align-items: flex-start; 
+        min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        max-width: 100%;
+        width: calc(100% - 30px);
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        border-width: 1px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Quebra o layout do formulário para empilhar Input e Botão */
+    form {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    /* Ajustes na Lista de Tarefas */
+    #todo-list li {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+    .task-actions button {
+        font-size: 1em;
+        padding: 3px;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 380px) */
+@media (max-width: 380px) {
+    .container {
+        padding: 15px;
+        width: calc(100% - 20px);
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    #todo-list li {
+        font-size: 0.9em;
+        padding: 10px;
+    }
 }

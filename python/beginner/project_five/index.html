@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSV Data Viewer</title>
+    <title>CSV Data Uploader & Viewer</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h2>Static CSV Data Viewer</h2>
+        <h2>Upload de Arquivo CSV</h2>
         
-        <p>This data is hardcoded into the HTML file (simulating reading a CSV).</p>
+        <div class="upload-section">
+            <label for="csv-file">Escolha um arquivo CSV:</label>
+            <input type="file" id="csv-file" accept=".csv">
+        </div>
+        
+        <p class="instruction-text">O conteúdo do arquivo será exibido abaixo.</p>
         
         <div id="table-container">
-            <!-- A tabela será inserida aqui pelo JavaScript -->
-            <p>Loading data...</p>
+            <p>Aguardando upload do arquivo CSV...</p>
         </div>
     </div>
 

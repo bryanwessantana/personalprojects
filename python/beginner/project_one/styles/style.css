@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 0 10px; /* Adicionado um padding horizontal padrão */
 }
 .container {
     max-width: 400px;
@@ -84,4 +85,80 @@ button:active {
     background-color: #e6ffe6;
     color: #008000;
     border: 1px solid #c8f5c8;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Tablets em modo paisagem e desktops menores */
+@media (max-width: 900px) {
+    .container {
+        max-width: 480px;
+        padding: 24px;
+    }
+}
+
+/* Smartphones e Tablets em modo retrato (Foco principal em mobile) */
+@media (max-width: 600px) {
+    body {
+        margin: 0; /* Remove a margem lateral */
+        align-items: flex-start; /* Alinha o conteúdo ao topo */
+        min-height: auto; /* Evita problemas com barras de navegação móveis */
+        padding-top: 20px; /* Adiciona um espaço no topo */
+        padding-bottom: 20px; /* Garante que o conteúdo não fique "colado" no rodapé */
+    }
+    .container {
+        max-width: 100%;
+        width: calc(100% - 40px); /* Usa a largura total, mas considera um padding/margin */
+        margin: 0 auto; /* Centraliza o container */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        border-width: 1px;
+    }
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 18px;
+    }
+    label {
+        font-size: 0.95rem;
+        margin-top: 12px;
+    }
+    .input-hint {
+        font-size: 0.75rem;
+    }
+    input[type="number"] {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    button {
+        padding: 11px;
+        font-size: 16px;
+    }
+    #result-output {
+        font-size: 1rem;
+        margin-top: 18px;
+        padding: 12px;
+    }
+}
+
+/* Smartphones pequenos (Ajustes de compactação final) */
+@media (max-width: 400px) {
+    .container {
+        padding: 15px; /* Redução sutil do padding */
+        border-radius: 8px;
+        width: calc(100% - 30px);
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    input[type="number"] {
+        padding: 9px;
+    }
+    button {
+        font-size: 15px;
+        padding: 10px;
+    }
+    label, .input-hint {
+        font-size: 0.9rem;
+    }
 }

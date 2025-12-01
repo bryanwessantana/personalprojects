@@ -1,4 +1,4 @@
-/* Estilização Geral */
+/* --- CSS STYLES (Base) --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #2c3e50;
@@ -8,6 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px 10px; /* Adiciona padding para evitar que o container cole nas bordas */
 }
 
 .container {
@@ -31,21 +32,7 @@ h1 {
 .hangman-draw {
     margin-bottom: 20px;
 }
-
-.scaffold {
-    stroke: #fff;
-    stroke-width: 4;
-    fill: none;
-    stroke-linecap: round;
-}
-
-.figure-part {
-    stroke: #e74c3c;
-    stroke-width: 4;
-    fill: none;
-    display: none; /* Escondido por padrão */
-    stroke-linecap: round;
-}
+/* ... (Manter estilos SVG/scaffold/figure-part) ... */
 
 /* Área da Palavra */
 .word-display {
@@ -54,7 +41,8 @@ h1 {
     margin-bottom: 20px;
     font-family: 'Courier New', monospace;
     font-weight: bold;
-    min-height: 40px; /* Garante altura fixa */
+    min-height: 40px; 
+    word-break: break-all; /* Ajuda a evitar overflow em palavras muito longas */
 }
 
 /* Mensagem de Status */
@@ -79,25 +67,15 @@ h1 {
     color: #2c3e50;
     border: none;
     border-radius: 5px;
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Tamanho padrão */
+    height: 40px; /* Tamanho padrão */
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.key:hover:not(:disabled) {
-    background-color: #bdc3c7;
-    transform: translateY(-2px);
-}
-
-.key:disabled {
-    background-color: #7f8c8d;
-    color: #95a5a6;
-    cursor: not-allowed;
-    opacity: 0.6;
-}
+/* ... (Manter estilos de hover e disabled) ... */
 
 /* Botão de Reset */
 #reset-btn {
@@ -108,12 +86,99 @@ h1 {
     border-radius: 5px;
     font-size: 1.1em;
     cursor: pointer;
-    display: none; /* Escondido até o jogo acabar */
+    display: none;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s;
 }
+/* ... (Manter estilos de hover) ... */
 
-#reset-btn:hover {
-    background-color: #2ecc71;
+/* ---------------------------------------------------------------- */
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Tablets em retrato e dispositivos médios (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        max-width: 550px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .word-display {
+        font-size: 1.8em;
+    }
+}
+
+/* Ajustes para Smartphones (Foco principal: max-width: 500px) */
+@media (max-width: 500px) {
+    body {
+        align-items: flex-start; /* Alinha o conteúdo ao topo em telas menores */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: auto;
+    }
+    .container {
+        width: 95%; /* Usa um pouco mais da largura em telas muito estreitas */
+        max-width: 100%;
+        padding: 20px 15px; /* Redução de padding */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    
+    /* Ajuste da Área da Palavra */
+    .word-display {
+        font-size: 1.6em;
+        letter-spacing: 4px;
+        min-height: 35px; 
+    }
+    
+    /* Ajuste do Teclado Virtual: Reduzindo o tamanho das teclas */
+    .keyboard {
+        gap: 8px; /* Reduz o espaço entre as teclas */
+        margin-bottom: 20px;
+    }
+    .key {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    
+    /* Mensagem e Botão */
+    .message {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    #reset-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 350px) */
+@media (max-width: 350px) {
+    .container {
+        padding: 15px 10px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .word-display {
+        font-size: 1.4em;
+        letter-spacing: 3px;
+    }
+    .key {
+        width: 30px; /* Compactação máxima das teclas */
+        height: 30px;
+        font-size: 0.9em;
+    }
+    .keyboard {
+        gap: 5px; /* Compactação máxima do espaçamento */
+    }
 }

@@ -1,4 +1,4 @@
-/* --- CSS STYLES --- */
+/* --- CSS STYLES (Base) --- */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 0 10px; /* Adicionado padding horizontal base */
 }
 .container {
     max-width: 450px;
@@ -99,4 +100,95 @@ button:hover {
 }
 #copyButton:hover {
     background-color: #00803c;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para telas de tablets em modo retrato ou desktops menores (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 400px;
+        padding: 25px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes para Smartphones (Foco principal: max-width: 500px) */
+@media (max-width: 500px) {
+    body {
+        margin: 0; /* Remove a margem lateral do corpo */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start; /* Alinha o conteúdo ao topo, melhor para rolagem */
+        min-height: auto;
+    }
+    .container {
+        max-width: 100%;
+        width: calc(100% - 30px); /* Garante que haja um espaço de 15px de cada lado */
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+        border-width: 1px;
+    }
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    label {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+    input[type="number"] {
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .checkbox-group {
+        gap: 8px; /* Reduz o espaço entre os checkboxes */
+        margin-bottom: 20px;
+    }
+    .checkbox-item {
+        font-size: 0.9rem; /* Reduz o tamanho do texto do checkbox */
+    }
+    button {
+        padding: 11px;
+        font-size: 16px;
+    }
+    #result-output {
+        font-size: 1.1em;
+        margin-top: 20px;
+        padding: 12px;
+    }
+    .password-display {
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 350px) */
+@media (max-width: 350px) {
+    .container {
+        padding: 15px;
+        width: calc(100% - 20px); /* Container mais próximo das bordas */
+    }
+    h2 {
+        font-size: 1.1rem;
+    }
+    .checkbox-item {
+        font-size: 0.85rem; 
+    }
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #copyButton {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
 }

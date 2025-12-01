@@ -1,4 +1,4 @@
-/* --- CSS STYLES --- */
+/* --- CSS STYLES (Base) --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
@@ -27,7 +27,7 @@ h2 {
 }
 .warning-message {
     font-size: 0.9em;
-    color: #dc3545; /* Red warning color */
+    color: #dc3545;
     margin-bottom: 30px;
 }
 
@@ -57,7 +57,7 @@ button {
     font-weight: bold;
 }
 button.primary {
-    background-color: #28a745; /* Green for success */
+    background-color: #28a745;
     color: white;
 }
 button.primary:hover {
@@ -89,10 +89,95 @@ button.primary:hover {
     font-size: 0.9em;
 }
 .edit-btn {
-    background-color: #ffc107; /* Yellow */
+    background-color: #ffc107;
     color: #343a40;
 }
 .delete-btn {
-    background-color: #dc3545; /* Red */
+    background-color: #dc3545;
     color: white;
+}
+
+/* ---------------------------------------------------------------- */
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Tablets em retrato e dispositivos menores (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 600px;
+        padding: 25px; /* Redução sutil do padding */
+    }
+    h2 {
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+    }
+    #create-form, #edit-form-container {
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Ajustes para Smartphones (Foco principal: max-width: 576px) */
+@media (max-width: 576px) {
+    body {
+        padding: 20px 10px; /* Reduz o padding do corpo */
+    }
+    .container {
+        padding: 15px; /* Padding interno menor */
+        border-width: 1px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+    }
+
+    /* Formulários */
+    #create-form, #edit-form-container {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    input[type="text"], textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 0.95em;
+    }
+    button {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+    
+    /* Cards de Posts */
+    .post-card {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    .post-card h3 {
+        font-size: 1.15rem;
+    }
+    .post-meta {
+        font-size: 0.85em;
+    }
+    .post-actions button {
+        margin-left: 5px; /* Reduz o espaço entre os botões */
+        padding: 4px 8px;
+        font-size: 0.85em;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 380px) */
+@media (max-width: 380px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+    /* Força os botões de ação do post a serem empilhados ou terem 100% de largura se for necessário
+       (Assumindo que os botões não estão em um flex container pai, se estiverem, isso pode ser ajustado) */
+    .post-actions button {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
 }

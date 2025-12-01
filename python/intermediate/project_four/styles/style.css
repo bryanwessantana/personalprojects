@@ -1,10 +1,14 @@
+/* Estilização Geral */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    /* Alinhamento superior em telas grandes, centralizado verticalmente se o conteúdo for curto */
+    align-items: flex-start; 
+    padding: 20px 10px; /* Adicionado padding horizontal base */
+    min-height: 100vh;
 }
 
 .container {
@@ -52,7 +56,7 @@ input, select {
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     font-size: 1em;
-    flex: 1; /* Distribui espaço igualmente */
+    flex: 1; 
 }
 
 input:focus, select:focus {
@@ -116,14 +120,17 @@ input:focus, select:focus {
     color: white;
     margin-right: 5px;
 }
-
+/* ... (Manter cores dos badges) ... */
 .badge.Livro { background-color: #e67e22; }
 .badge.Filme { background-color: #9b59b6; }
 .badge.Série { background-color: #e74c3c; }
 
 .rating {
     font-weight: bold;
-    color: #f1c40f; /* Gold */
+    color: #f1c40f; 
+    /* Adicionando um min-width para o rating e delete button para evitar quebras estranhas */
+    min-width: 70px; 
+    text-align: right;
 }
 
 .btn-delete {
@@ -142,9 +149,86 @@ input:focus, select:focus {
     color: white;
 }
 
-/* Responsividade simples */
-@media (max-width: 600px) {
+
+/* ---------------------------------------------------------------- */
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Tablets em retrato e dispositivos médios (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .form-section {
+        padding: 15px;
+    }
+}
+
+
+/* Ajustes para Smartphones (Foco principal: max-width: 576px) */
+@media (max-width: 576px) {
+    body {
+        padding: 10px; /* Reduz padding lateral do body */
+    }
+    .container {
+        padding: 15px;
+        width: 100%;
+        border-radius: 8px;
+    }
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+
+    /* Formulário - Coluna (já implementado) */
     .input-group {
         flex-direction: column;
+        gap: 8px;
+    }
+    input, select {
+        padding: 12px;
+    }
+
+    /* Filtros - Coluna */
+    .filter-section {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* Cards da Lista */
+    .media-card {
+        flex-direction: column; /* Empilha as informações e as ações/rating */
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .media-info {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    
+    .media-actions {
+        /* Cria um container flexível para rating e delete button na parte de baixo */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .rating {
+        order: 1; /* Coloca o rating à esquerda no novo layout flex */
+        text-align: left;
+    }
+    
+    .btn-delete {
+        order: 2; /* Coloca o botão delete à direita */
+        padding: 8px 12px;
+        font-size: 0.9em;
     }
 }

@@ -46,6 +46,9 @@ select, input, button {
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 1em;
+    /* Ajustes para mobile */
+    box-sizing: border-box; 
+    min-width: 0; 
 }
 
 select, input {
@@ -69,6 +72,10 @@ button:hover {
 #news-container {
     display: grid;
     gap: 20px;
+    /* Define o layout de grid: 
+       Cria colunas automáticas que têm no mínimo 300px, 
+       permitindo que a grade mude de 2 para 1 coluna em telas menores. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
 }
 
 .article-card {
@@ -130,9 +137,67 @@ button:hover {
     border: 1px solid #f5c6cb;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* ---------------------------------------------------------------- */
+
+/* --- Media Queries para Responsividade --- */
+
+/* Ajustes para Smartphones e Tablets em retrato (max-width: 650px) */
+@media (max-width: 650px) {
+    body {
+        padding: 10px; /* Reduz o padding do corpo */
+    }
+    .container {
+        /* O width: 100% já garante o ajuste, mas o padding do body foi reduzido */
+        padding: 0; 
+    }
+    header {
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    
+    /* Controles: Quebra em coluna e compactação */
     .controls {
         flex-direction: column;
+        gap: 15px; /* Aumenta o espaço entre os elementos empilhados */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    select, input, button {
+        padding: 10px;
+        font-size: 0.95em;
+        width: 100%; /* Garante que todos ocupem a largura total */
+    }
+    
+    /* Artigos: Garante que os cards não tenham margem lateral excessiva */
+    #news-container {
+        gap: 15px;
+        /* Força coluna única em telas pequenas para melhor leitura */
+        grid-template-columns: 1fr; 
+    }
+
+    .article-card {
+        padding: 15px;
+    }
+}
+
+/* Ajustes para Smartphones muito pequenos (max-width: 400px) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .controls {
+        padding: 10px;
+    }
+    .article-card {
+        padding: 12px;
+    }
+    .article-card h3 {
+        font-size: 1em;
     }
 }
