@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Imagem Simples</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <h1>Processador de Imagem JS</h1>
+    
+    <input type="file" id="uploadInput" accept="image/*">
+    
+    <div class="controles">
+        <button onclick="aplicarCinza()">P&B</button>
+        <button onclick="aplicarSepia()">Sépia</button>
+        
+        <button onclick="aplicarNegativo()">Inverter Cores</button>
+        <button onclick="aumentarBrilho()">+ Brilho</button>
+        <button onclick="espelharCanvas()">Espelhar</button>
+
+        <button onclick="resetar()" style="background-color: #dc3545;">Resetar</button>
+    </div>
+
+    <canvas id="meuCanvas"></canvas>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

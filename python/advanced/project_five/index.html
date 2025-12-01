@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Moderno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <input type="file" id="bgUpload" accept="image/*" style="display: none;">
+
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <h1>Meu Quadro</h1>
+                <div class="controls">
+                    <button class="btn-secondary" onclick="document.getElementById('bgUpload').click()">
+                        📷 Mudar Fundo
+                    </button>
+                    <button class="btn-secondary" onclick="resetarFundo()">
+                        🔄 Resetar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="inputNovaTarefa" placeholder="✨ Adicionar nova tarefa..." autocomplete="off">
+                <button class="btn-primary" onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+        </header>
+
+        <div class="board">
+            <div class="column" id="todo">
+                <div class="column-header">
+                    <span class="dot todo-dot"></span>
+                    <h2>A Fazer</h2>
+                </div>
+                <div class="task-container" id="col-todo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+
+            <div class="column" id="doing">
+                <div class="column-header">
+                    <span class="dot doing-dot"></span>
+                    <h2>Em Progresso</h2>
+                </div>
+                <div class="task-container" id="col-doing" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+
+            <div class="column" id="done">
+                <div class="column-header">
+                    <span class="dot done-dot"></span>
+                    <h2>Concluído</h2>
+                </div>
+                <div class="task-container" id="col-done" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

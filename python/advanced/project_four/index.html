@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📅 Minha Agenda</h1>
+            <p>Clique e arraste para agendar. Clique no evento para remover.</p>
+        </header>
+
+        <div id='calendar'></div>
+    </div>
+
+    <div id="modalAgendamento" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3>Novo Compromisso</h3>
+            
+            <label>Título:</label>
+            <input type="text" id="tituloEvento" placeholder="Ex: Reunião de Pauta" autocomplete="off">
+
+            <div class="time-inputs">
+                <div>
+                    <label>Início:</label>
+                    <input type="time" id="horaInicio">
+                </div>
+                <div>
+                    <label>Fim:</label>
+                    <input type="time" id="horaFim">
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button id="btnCancelar" class="btn-secondary">Cancelar</button>
+                <button id="btnSalvar" class="btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

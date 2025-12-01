@@ -1,0 +1,28 @@
+body { 
+    font-family: sans-serif; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+canvas { 
+    max-width: 100%; 
+    margin-top: 20px; 
+    border: 1px solid #ccc; 
+}
+        
+.controles { 
+    margin: 20px 0; 
+}
+
+button { 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    background: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+}
+        
+button:hover { 
+    background: #0056b3; 
+}

@@ -1,0 +1,200 @@
+/* Variáveis CSS para cores e fontes */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #28a745;
+    --warning-color: #dc3545;
+    --background-color: #f0f4f8;
+    --text-color: #343a40;
+    --card-bg: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.main-content {
+    display: grid;
+    gap: 30px;
+    /* Layout responsivo: no desktop, catálogo e carrinho lado a lado */
+    grid-template-columns: 2fr 1fr;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+h2 {
+    color: var(--text-color);
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Catálogo */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.product-card strong {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.product-card button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Empurra o botão para baixo */
+}
+
+/* Carrinho */
+.cart-items-list {
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e9ecef;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.item-price {
+    font-size: 0.85em;
+    color: #6c757d;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-controls button {
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-summary {
+    padding-top: 15px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.total-line {
+    font-size: 1.3em;
+    color: var(--warning-color);
+    padding-top: 10px;
+    border-top: 1px dashed #ced4da;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-top: 20px;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #1e7e34;
+}
+
+/* Responsividade (para dispositivos móveis) */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+    .grid-layout {
+        grid-template-columns: 1fr; /* Produtos em lista simples */
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Mínimo - Avançado</title>
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- CORREÇÃO: Usando Font Awesome via CDN público (sem erros CORS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <!-- Icone ajustado para Font Awesome 6 (fas fa-cart-shopping é mais atual) -->
+            <h1><i class="fas fa-cart-shopping"></i> Loja de Produtos Tech</h1>
+            <p class="subtitle">Simulação de Lógica de Carrinho (Advanced JS/LocalStorage)</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Catálogo de Produtos -->
+            <section id="catalog-section" class="card product-catalog">
+                <h2>Catálogo de Produtos</h2>
+                <div id="product-list" class="grid-layout">
+                    <!-- Produtos serão injetados pelo JavaScript -->
+                </div>
+            </section>
+
+            <!-- Carrinho de Compras -->
+            <section id="cart-section" class="card shopping-cart">
+                <h2>Seu Carrinho</h2>
+                
+                <!-- Div para os itens do carrinho -->
+                <div id="cart-items" class="cart-items-list">
+                    <!-- Itens serão injetados aqui -->
+                    <p id="empty-cart-msg">Seu carrinho está vazio. Adicione um item!</p>
+                </div>
+                
+                <!-- Resumo e Checkout -->
+                <div id="cart-summary" class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">R$ 0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Frete (Fixo):</span>
+                        <span id="shipping">R$ 15.00</span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <strong>Total Final:</strong>
+                        <strong id="final-total">R$ 15.00</strong>
+                    </div>
+                </div>
+
+                <button id="checkout-btn" class="checkout-button">
+                    Finalizar Compra e Limpar Memória
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
