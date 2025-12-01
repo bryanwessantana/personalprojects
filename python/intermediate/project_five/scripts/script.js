@@ -33,45 +33,49 @@ function showError(message) {
 
 // Função principal para carregar o feed
 async function loadFeed() {
-    // 1. Determinar qual URL usar
     let rssUrl = feedSelect.value;
     
-    // Se for 'custom', pega do input de texto
     if (rssUrl === 'custom') {
         rssUrl = customUrlInput.value.trim();
     }
 
-    // Validação básica
     if (!rssUrl) {
         showError("Por favor, selecione um feed ou digite uma URL válida.");
         return;
     }
 
-    // 2. Preparar a interface (limpar anterior, mostrar loading)
     newsContainer.innerHTML = '';
     errorDiv.classList.add('hidden');
     loadingDiv.classList.remove('hidden');
 
     try {
-        // 3. Fazer a requisição para a API (rss2json)
-        // encodeURIComponent é crucial para tratar caracteres especiais na URL
-        const response = await fetch(RSS2JSON_API + encodeURIComponent(rssUrl));
+        // --- 3. Fazer a requisição para a API (rss2json) ---
+        const url = RSS2JSON_API + encodeURIComponent(rssUrl);
+        const response = await fetch(url);
+        
+        // 4. Se a resposta não for OK (ex: 404), ainda tentamos ler o JSON se possível
+        if (!response.ok && response.status !== 0) { // status 0 é geralmente erro de CORS/rede no ambiente local
+             throw new Error(`HTTP Error: ${response.status}. O recurso pode estar indisponível ou ser bloqueado pelo CORS.`);
+        }
+        
         const data = await response.json();
-
-        // 4. Esconder o loading
-        loadingDiv.classList.add('hidden');
-
+        
         // 5. Verificar resposta da API
         if (data.status === 'ok') {
             renderNews(data);
         } else {
-            showError("Falha ao carregar o feed. A URL pode ser inválida ou restrita.");
+            showError("Falha ao carregar o feed. A URL pode ser inválida ou o serviço proxy está fora do ar.");
         }
 
     } catch (error) {
+        // Captura erros de rede (CORS) e o erro forçado acima
+        console.error("Network or Fetch Error/CORS:", error);
+        
+        // MENSAGEM DE ERRO ESPECÍFICA PARA AMBIENTE LOCAL
+        showError("Erro de Conexão. **Possível bloqueio CORS/Rede.** Por favor, hospede os arquivos em um servidor real (como GitHub Pages) ou use um ambiente de servidor local para contornar esta limitação do navegador.");
+        
+    } finally {
         loadingDiv.classList.add('hidden');
-        showError("Erro de conexão. Verifique sua internet.");
-        console.error("Erro no fetch:", error);
     }
 }
 
