@@ -1,0 +1,1 @@
+// Simulador de Caixa Eletrônico: Crie um programa que simule as operações básicas de um caixa eletrônico, como saque, depósito e consulta de saldo.

@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px 10px; 
         }
 
         .container {
@@ -62,23 +63,55 @@
             border-radius: 8px;
             font-weight: 500;
             font-size: 1.1em;
-            border: 1px solid rgba(236, 240, 241, 0.2); 
+            border: 1px solid rgba(236, 240, 241, 0.2);
             transition: all 0.3s ease;
             text-align: left;
         }
 
         .container a:hover {
-            background-color: #3498db; 
+            background-color: #3498db;
             color: #ffffff;
             box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
             transform: translateX(5px);
+        }
+        
+        @media (max-width: 550px) {
+            body {
+                align-items: flex-start;
+                padding-top: 30px; 
+                padding-bottom: 30px;
+                min-height: auto;
+            }
+
+            .container {
+                padding: 25px 20px; 
+                max-width: 100%; 
+                width: 100%; 
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                letter-spacing: 1px;
+            }
+
+            p {
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+
+            .container a {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container"> 
-        <h1>Portfólio de Projetos</h1>
+        <h1>Portfolio de Projetos</h1>
         <p>Escolha um projeto para visualizar:</p>
         
         <ul>

@@ -1,0 +1,1 @@
+// Aplicação de Monitoramento de Logs com Filtros Dinâmicos: 

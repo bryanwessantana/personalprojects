@@ -1,0 +1,1 @@
+// Jogo da Velha (Tic-Tac-Toe): Desenvolva um jogo da velha para dois jogadores, onde o tabuleiro é exibido no console e os jogadores alternam turnos até que haja um vencedor ou empate.
