@@ -1,4 +1,3 @@
-/* --- CSS STYLES (Base) --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -7,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px 10px; /* Adiciona padding horizontal base */
+    padding: 20px 10px
 }
 .container {
     max-width: 500px;
@@ -74,15 +73,10 @@ button:hover {
     color: #008000;
 }
 
-/* ---------------------------------------------------------------- */
-
-/* --- Media Queries para Responsividade --- */
-
-/* Ajustes para Smartphones (Foco principal: max-width: 600px) */
 @media (max-width: 600px) {
     body {
         margin: 0;
-        align-items: flex-start; /* Alinha o conteúdo ao topo */
+        align-items: flex-start;
         min-height: auto;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -101,19 +95,17 @@ button:hover {
         margin-bottom: 20px;
     }
     
-    /* Quebra o layout do input-group para empilhar verticalmente */
     .input-group {
         flex-direction: column;
-        gap: 8px; /* Reduz o espaço entre os elementos empilhados */
-        align-items: stretch; /* Garante que os elementos ocupem toda a largura */
+        gap: 8px;
+        align-items: stretch;
         margin-bottom: 15px;
     }
-    
-    /* Garante que o label ocupe toda a largura quando empilhado */
+
     .input-group label {
-        flex-grow: 1; /* Permite que ele cresça */
-        padding: 0; /* Remove padding vertical extra se for um label simples */
-        text-align: left; /* Garante alinhamento à esquerda */
+        flex-grow: 1; 
+        padding: 0;
+        text-align: left; 
     }
 
     .input-group select, .input-group input {
@@ -133,7 +125,6 @@ button:hover {
     }
 }
 
-/* Ajustes para Smartphones muito pequenos (max-width: 400px) */
 @media (max-width: 400px) {
     .container {
         padding: 15px;

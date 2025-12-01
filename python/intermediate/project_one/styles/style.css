@@ -97,15 +97,10 @@ button.primary:hover {
     color: white;
 }
 
-/* ---------------------------------------------------------------- */
-
-/* --- Media Queries para Responsividade --- */
-
-/* Ajustes para Tablets em retrato e dispositivos menores (max-width: 768px) */
 @media (max-width: 768px) {
     .container {
         max-width: 600px;
-        padding: 25px; /* Redução sutil do padding */
+        padding: 25px;
     }
     h2 {
         margin-bottom: 25px;
@@ -117,13 +112,12 @@ button.primary:hover {
     }
 }
 
-/* Ajustes para Smartphones (Foco principal: max-width: 576px) */
 @media (max-width: 576px) {
     body {
-        padding: 20px 10px; /* Reduz o padding do corpo */
+        padding: 20px 10px;
     }
     .container {
-        padding: 15px; /* Padding interno menor */
+        padding: 15px;
         border-width: 1px;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -134,7 +128,6 @@ button.primary:hover {
         padding-bottom: 8px;
     }
 
-    /* Formulários */
     #create-form, #edit-form-container {
         padding: 15px;
         margin-bottom: 20px;
@@ -149,7 +142,6 @@ button.primary:hover {
         font-size: 0.95em;
     }
     
-    /* Cards de Posts */
     .post-card {
         padding: 12px;
         margin-bottom: 10px;
@@ -161,19 +153,16 @@ button.primary:hover {
         font-size: 0.85em;
     }
     .post-actions button {
-        margin-left: 5px; /* Reduz o espaço entre os botões */
+        margin-left: 5px;
         padding: 4px 8px;
         font-size: 0.85em;
     }
 }
 
-/* Ajustes para Smartphones muito pequenos (max-width: 380px) */
 @media (max-width: 380px) {
     h2 {
         font-size: 1.3rem;
     }
-    /* Força os botões de ação do post a serem empilhados ou terem 100% de largura se for necessário
-       (Assumindo que os botões não estão em um flex container pai, se estiverem, isso pode ser ajustado) */
     .post-actions button {
         display: block;
         width: 100%;

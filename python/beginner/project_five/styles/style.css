@@ -1,4 +1,3 @@
-/* --- CSS STYLES --- */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
@@ -8,7 +7,7 @@ body {
     align-items: flex-start; 
     min-height: 100vh;
     padding-top: 50px;
-    padding-bottom: 50px; /* Adicionado para garantir espaço abaixo */
+    padding-bottom: 50px;
 }
 .container {
     max-width: 900px;
@@ -26,7 +25,6 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* Estilo da Seção de Upload */
 .upload-section {
     margin-bottom: 20px;
     padding: 15px;
@@ -53,18 +51,17 @@ input[type="file"] {
     background-color: white;
 }
 
-/* Estilo da Tabela (manter) */
 .data-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    min-width: 600px; /* Garante que a tabela não fique muito estreita em mobile */
+    min-width: 600px;
 }
 .data-table th, .data-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-    white-space: nowrap; /* Impede que o conteúdo da célula quebre linha, forçando a rolagem */
+    white-space: nowrap;
 }
 .data-table th {
     background-color: #1e90ff;
@@ -81,7 +78,6 @@ input[type="file"] {
     background-color: #e0e0ff;
 }
 
-/* --- Responsividade (Ajustes para telas menores) --- */
 @media (max-width: 600px) {
     body {
         padding-top: 20px;

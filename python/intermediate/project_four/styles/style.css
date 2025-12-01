@@ -1,13 +1,11 @@
-/* Estilização Geral */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     display: flex;
     justify-content: center;
-    /* Alinhamento superior em telas grandes, centralizado verticalmente se o conteúdo for curto */
     align-items: flex-start; 
-    padding: 20px 10px; /* Adicionado padding horizontal base */
+    padding: 20px 10px;
     min-height: 100vh;
 }
 
@@ -32,7 +30,6 @@ p {
     margin-bottom: 30px;
 }
 
-/* Formulário */
 .form-section {
     background-color: #ecf0f1;
     padding: 20px;
@@ -81,14 +78,12 @@ input:focus, select:focus {
     background-color: #219150;
 }
 
-/* Filtros */
 .filter-section {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
 }
 
-/* Lista */
 .media-card {
     display: flex;
     justify-content: space-between;
@@ -120,7 +115,6 @@ input:focus, select:focus {
     color: white;
     margin-right: 5px;
 }
-/* ... (Manter cores dos badges) ... */
 .badge.Livro { background-color: #e67e22; }
 .badge.Filme { background-color: #9b59b6; }
 .badge.Série { background-color: #e74c3c; }
@@ -128,7 +122,6 @@ input:focus, select:focus {
 .rating {
     font-weight: bold;
     color: #f1c40f; 
-    /* Adicionando um min-width para o rating e delete button para evitar quebras estranhas */
     min-width: 70px; 
     text-align: right;
 }
@@ -149,11 +142,6 @@ input:focus, select:focus {
     color: white;
 }
 
-
-/* ---------------------------------------------------------------- */
-/* --- Media Queries para Responsividade --- */
-
-/* Ajustes para Tablets em retrato e dispositivos médios (max-width: 768px) */
 @media (max-width: 768px) {
     .container {
         padding: 25px;
@@ -167,10 +155,9 @@ input:focus, select:focus {
 }
 
 
-/* Ajustes para Smartphones (Foco principal: max-width: 576px) */
 @media (max-width: 576px) {
     body {
-        padding: 10px; /* Reduz padding lateral do body */
+        padding: 10px;
     }
     .container {
         padding: 15px;
@@ -185,7 +172,6 @@ input:focus, select:focus {
         margin-bottom: 20px;
     }
 
-    /* Formulário - Coluna (já implementado) */
     .input-group {
         flex-direction: column;
         gap: 8px;
@@ -194,16 +180,14 @@ input:focus, select:focus {
         padding: 12px;
     }
 
-    /* Filtros - Coluna */
     .filter-section {
         flex-direction: column;
         gap: 10px;
         margin-bottom: 15px;
     }
 
-    /* Cards da Lista */
     .media-card {
-        flex-direction: column; /* Empilha as informações e as ações/rating */
+        flex-direction: column;
         align-items: flex-start;
         padding: 10px;
     }
@@ -214,7 +198,6 @@ input:focus, select:focus {
     }
     
     .media-actions {
-        /* Cria um container flexível para rating e delete button na parte de baixo */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -222,12 +205,12 @@ input:focus, select:focus {
     }
     
     .rating {
-        order: 1; /* Coloca o rating à esquerda no novo layout flex */
+        order: 1;
         text-align: left;
     }
     
     .btn-delete {
-        order: 2; /* Coloca o botão delete à direita */
+        order: 2;
         padding: 8px 12px;
         font-size: 0.9em;
     }

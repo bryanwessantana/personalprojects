@@ -8,7 +8,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px 10px; /* Adiciona padding para evitar que o container cole nas bordas */
+    padding: 20px 10px;
 }
 
 .container {
@@ -28,13 +28,10 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* Área do desenho SVG */
 .hangman-draw {
     margin-bottom: 20px;
 }
-/* ... (Manter estilos SVG/scaffold/figure-part) ... */
 
-/* Área da Palavra */
 .word-display {
     font-size: 2em;
     letter-spacing: 5px;
@@ -42,10 +39,9 @@ h1 {
     font-family: 'Courier New', monospace;
     font-weight: bold;
     min-height: 40px; 
-    word-break: break-all; /* Ajuda a evitar overflow em palavras muito longas */
+    word-break: break-all;
 }
 
-/* Mensagem de Status */
 .message {
     height: 30px;
     margin-bottom: 20px;
@@ -53,7 +49,6 @@ h1 {
     font-size: 1.2em;
 }
 
-/* Teclado Virtual */
 .keyboard {
     display: flex;
     flex-wrap: wrap;
@@ -67,17 +62,26 @@ h1 {
     color: #2c3e50;
     border: none;
     border-radius: 5px;
-    width: 40px; /* Tamanho padrão */
-    height: 40px; /* Tamanho padrão */
+    width: 40px;
+    height: 40px;
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-/* ... (Manter estilos de hover e disabled) ... */
+.key:hover {
+    background-color: #ecf0f1;
+    transform: scale(1.1);
+}
 
-/* Botão de Reset */
+.key:disabled {
+    background-color: #95a5a6;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    transform: none;
+}
+
 #reset-btn {
     background-color: #27ae60;
     color: white;
@@ -91,13 +95,10 @@ h1 {
     text-transform: uppercase;
     transition: background-color 0.3s;
 }
-/* ... (Manter estilos de hover) ... */
+#reset-btn:hover {
+    background-color: #2ecc71;
+}
 
-/* ---------------------------------------------------------------- */
-
-/* --- Media Queries para Responsividade --- */
-
-/* Ajustes para Tablets em retrato e dispositivos médios (max-width: 768px) */
 @media (max-width: 768px) {
     .container {
         padding: 25px;
@@ -111,18 +112,17 @@ h1 {
     }
 }
 
-/* Ajustes para Smartphones (Foco principal: max-width: 500px) */
 @media (max-width: 500px) {
     body {
-        align-items: flex-start; /* Alinha o conteúdo ao topo em telas menores */
+        align-items: flex-start;
         padding-top: 20px;
         padding-bottom: 20px;
         min-height: auto;
     }
     .container {
-        width: 95%; /* Usa um pouco mais da largura em telas muito estreitas */
+        width: 95%;
         max-width: 100%;
-        padding: 20px 15px; /* Redução de padding */
+        padding: 20px 15px;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     }
@@ -131,17 +131,13 @@ h1 {
         letter-spacing: 1px;
         margin-bottom: 15px;
     }
-    
-    /* Ajuste da Área da Palavra */
     .word-display {
         font-size: 1.6em;
         letter-spacing: 4px;
         min-height: 35px; 
     }
-    
-    /* Ajuste do Teclado Virtual: Reduzindo o tamanho das teclas */
     .keyboard {
-        gap: 8px; /* Reduz o espaço entre as teclas */
+        gap: 8px;
         margin-bottom: 20px;
     }
     .key {
@@ -149,9 +145,7 @@ h1 {
         height: 35px;
         font-size: 1em;
     }
-    
-    /* Mensagem e Botão */
-    .message {
+        .message {
         font-size: 1.1em;
         margin-bottom: 15px;
     }
@@ -161,7 +155,6 @@ h1 {
     }
 }
 
-/* Ajustes para Smartphones muito pequenos (max-width: 350px) */
 @media (max-width: 350px) {
     .container {
         padding: 15px 10px;
@@ -174,11 +167,11 @@ h1 {
         letter-spacing: 3px;
     }
     .key {
-        width: 30px; /* Compactação máxima das teclas */
+        width: 30px;
         height: 30px;
         font-size: 0.9em;
     }
     .keyboard {
-        gap: 5px; /* Compactação máxima do espaçamento */
+        gap: 5px;
     }
 }

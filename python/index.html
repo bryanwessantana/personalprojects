@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px 10px; 
         }
 
         .container {
@@ -78,6 +79,36 @@
             border: 2px solid #FFD43B; 
             box-shadow: 0 5px 15px rgba(48, 105, 152, 0.3);
             transform: translateY(-2px);
+        }
+        
+        @media (max-width: 500px) {
+            body {
+                align-items: flex-start;
+                padding-top: 30px; 
+                padding-bottom: 30px;
+                min-height: auto;
+            }
+
+            .container {
+                max-width: 100%; 
+                width: 95%; 
+                padding: 20px 15px; 
+            }
+
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .container a {
+                padding: 12px 15px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>

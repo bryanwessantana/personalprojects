@@ -1,4 +1,3 @@
-/* Variáveis CSS para cores e fontes */
 :root {
     --primary-color: #007bff;
     --secondary-color: #28a745;
@@ -49,7 +48,6 @@ body {
 .main-content {
     display: grid;
     gap: 30px;
-    /* Layout responsivo: no desktop, catálogo e carrinho lado a lado */
     grid-template-columns: 2fr 1fr;
 }
 
@@ -69,7 +67,6 @@ h2 {
     font-size: 1.5rem;
 }
 
-/* Catálogo */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -109,10 +106,9 @@ h2 {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: auto; /* Empurra o botão para baixo */
+    margin-top: auto;
 }
 
-/* Carrinho */
 .cart-items-list {
     min-height: 50px;
     margin-bottom: 20px;
@@ -189,12 +185,11 @@ h2 {
     background-color: #1e7e34;
 }
 
-/* Responsividade (para dispositivos móveis) */
 @media (max-width: 768px) {
     .main-content {
-        grid-template-columns: 1fr; /* Coluna única em telas menores */
+        grid-template-columns: 1fr;
     }
     .grid-layout {
-        grid-template-columns: 1fr; /* Produtos em lista simples */
+        grid-template-columns: 1fr;
     }
 }

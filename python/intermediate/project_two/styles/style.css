@@ -1,13 +1,13 @@
 /* --- CSS STYLES (Base) --- */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e6f7ff; /* Light Cyan */
+    background-color: #e6f7ff;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px 10px; /* Adiciona padding horizontal base */
+    padding: 20px 10px;
 }
 .container {
     max-width: 500px;
@@ -37,7 +37,7 @@ input[type="text"] {
 }
 button {
     padding: 12px 20px;
-    background-color: #00b050; /* Green for GO/Search */
+    background-color: #00b050;
     color: white;
     border: none;
     border-radius: 8px;
@@ -64,7 +64,6 @@ button:hover {
     text-align: left;
     margin-bottom: 8px;
 }
-/* Importante: Ajustar o min-width do strong para evitar quebras de linha em mobile */
 .weather-detail strong { 
     color: #0077b6;
     min-width: 120px; 
@@ -87,21 +86,17 @@ button:hover {
     margin-top: 15px;
 }
 
-/* ---------------------------------------------------------------- */
-/* --- Media Queries para Responsividade --- */
-
-/* Ajustes para Smartphones (Foco principal: max-width: 500px) */
 @media (max-width: 500px) {
     body {
         margin: 0;
-        align-items: flex-start; /* Alinha o conteúdo ao topo para melhor rolagem */
+        align-items: flex-start;
         min-height: auto;
         padding-top: 20px;
         padding-bottom: 20px;
     }
     .container {
         max-width: 100%;
-        width: calc(100% - 30px); /* Garante 15px de margem em cada lado */
+        width: calc(100% - 30px);
         margin: 0 auto;
         padding: 20px;
         border-radius: 12px;
@@ -113,7 +108,6 @@ button:hover {
         margin-bottom: 20px;
     }
     
-    /* Quebra o layout do formulário para empilhar Input e Botão */
     form {
         flex-direction: column;
         gap: 15px; 
@@ -128,7 +122,6 @@ button:hover {
         font-size: 1rem;
     }
 
-    /* Ajustes na Saída de Clima */
     #weather-output {
         padding: 15px;
         min-height: 120px;
@@ -140,7 +133,6 @@ button:hover {
     .weather-detail {
         font-size: 0.95em;
     }
-    /* Reduz o min-width da label forte para deixar mais espaço para o valor */
     .weather-detail strong {
         min-width: 100px; 
     }
@@ -149,7 +141,6 @@ button:hover {
     }
 }
 
-/* Ajustes para Smartphones muito pequenos (max-width: 380px) */
 @media (max-width: 380px) {
     .container {
         padding: 15px;
@@ -166,6 +157,6 @@ button:hover {
         font-size: 0.9em;
     }
     .weather-detail strong {
-        min-width: 85px; /* Compactação final do rótulo */
+        min-width: 85px;
     }
 }
