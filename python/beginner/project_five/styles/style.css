@@ -17,7 +17,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     border: 2px solid #6495ed;
-    overflow-x: auto; 
+    /* Allows for both horizontal and vertical scrolling if content exceeds padding */
+    overflow: auto; 
 }
 h2 {
     text-align: center;
@@ -55,13 +56,13 @@ input[type="file"] {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    min-width: 600px;
+    /* REMOVED: min-width: 600px; to allow the table to shrink */
 }
 .data-table th, .data-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-    white-space: nowrap;
+    /* REMOVED: white-space: nowrap; to allow text inside cells to wrap */
 }
 .data-table th {
     background-color: #1e90ff;
