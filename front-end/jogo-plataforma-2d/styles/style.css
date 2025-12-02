@@ -1,0 +1,66 @@
+body {
+    /* Remove margens padrão do navegador */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+    background-color: #333;
+    font-family: sans-serif;
+}
+
+#game-container {
+    /* Define o limite da área de jogo */
+    position: relative; 
+    width: 800px;
+    height: 450px;
+    background-color: #87ceeb; /* Cor do céu */
+    border: 5px solid #000;
+    overflow: hidden; /* Tudo que sair desta área não será visível */
+}
+
+#player {
+    /* Estilo do personagem */
+    position: absolute; 
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 0, 100);
+    border: 2px solid #000;
+    /* Posição inicial será definida pelo JavaScript (ou pode ser definida aqui temporariamente) */
+    top: 400px; /* Posição inicial visual, mas o JS irá sobrescrever */
+    left: 100px;
+}
+
+.platform {
+    /* Estilo básico de todas as plataformas */
+    position: absolute;
+    background-color: #006400; /* Verde escuro */
+    border-top: 5px solid #333;
+}
+
+/* Definições específicas de tamanho e posição das plataformas */
+
+#ground {
+    /* Plataforma do chão (ocupa toda a base) */
+    width: 100%;
+    height: 20px;
+    bottom: 0; /* Fixa no fundo */
+    left: 0;
+    background-color: #694a12; /* Cor de terra */
+}
+
+#platform-1 {
+    /* Plataforma no meio-esquerda */
+    width: 200px;
+    height: 20px;
+    bottom: 120px; 
+    left: 50px;
+}
+
+#platform-2 {
+    /* Plataforma no topo-direita */
+    width: 150px;
+    height: 20px;
+    bottom: 250px; 
+    right: 100px;
+}
