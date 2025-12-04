@@ -43,7 +43,7 @@ import csv
 import sys
 import os
 
-FILE_NAME = "sample_data.csv"
+FILE_NAME = "all_business_cards.csv"
 
 def read_csv(filename):
     """Lê o arquivo CSV e retorna as linhas como uma lista de listas."""
