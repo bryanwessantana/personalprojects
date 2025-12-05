@@ -73,9 +73,6 @@ public class AdivinheONumero
         Console.ReadKey();
     }
 
-    /// <summary>
-    /// Lê e valida se a entrada é um número inteiro dentro do intervalo.
-    /// </summary>
     public static int LerChuteValido(string prompt, int min, int max)
     {
         int chute;

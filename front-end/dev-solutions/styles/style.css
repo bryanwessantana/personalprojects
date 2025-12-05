@@ -1,0 +1,745 @@
+/* Paleta de Cores e Tipografia */
+:root {
+    --color-primary: #007bff; /* Azul vibrante (Destaque) */
+    --color-secondary: #0056b3; /* Azul escuro (Hover) */
+    --color-dark-bg: #2c2f33; /* Cinza escuro/Preto suave (Fundo principal) */
+    --color-card-bg: #36393f; /* Fundo dos cartões */
+    --color-light: #ffffff; /* Branco puro */
+    --color-text-on-dark: #f0f0f0; /* Branco suave para texto */
+    --color-border: #424549; /* Borda sutil */
+    --color-light-bg: #f4f4f4; /* Fundo claro para contraste sutil (Portfólio/Contato) */
+    --color-bot-bg: #212529; /* Fundo mais escuro para o corpo do chat */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-on-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tipografia */
+h1, h2, h3, h4 {
+    margin-bottom: 0.6em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3em;
+    color: var(--color-light);
+}
+
+h2.section-title strong {
+    color: var(--color-primary);
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Cartões Genéricos */
+.card {
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.primary-btn {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.primary-btn:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.primary-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    transform: translateY(-2px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Header/Navbar */
+.navbar {
+    background-color: var(--color-dark-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* Seções */
+.section-padding {
+    padding: 100px 0;
+}
+
+.bg-dark {
+    background-color: var(--color-dark-bg);
+}
+
+/* NOVO: Classe para o fundo claro de contraste (Portfólio e Contato) */
+.bg-light-contrast {
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-bg); 
+}
+
+.bg-light-contrast .section-title {
+    color: var(--color-dark-bg);
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('../img/hero.jpg') center center no-repeat;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 120px 0 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.hero h2 {
+    color: var(--color-light); 
+    font-size: 3.5em;
+    margin-bottom: 25px;
+}
+
+.hero h2 strong {
+    color: var(--color-primary);
+}
+
+.tagline {
+    font-size: 1.1em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Cards de Destaque no Hero */
+.hero-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-border);
+}
+
+.hero-card {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid var(--color-primary);
+}
+
+.hero-card i {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.hero-card h4 {
+    margin-bottom: 5px;
+}
+
+.hero-card p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+
+/* Seção de Serviços Detalhada */
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.service-detail-card {
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+    border: none;
+}
+
+.service-detail-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.service-detail-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.card-body a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.card-body a:hover {
+    color: var(--color-secondary);
+}
+
+/* Seção Portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.9);
+    color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.5em;
+    font-weight: 600; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Seção Sobre e Testemunhos */
+.about-flex {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    font-size: 1.1em;
+}
+
+.about-text strong {
+    color: var(--color-primary);
+}
+
+.testimonials {
+    flex: 1;
+    display: grid;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.testimonial-card {
+    border-left: 5px solid var(--color-primary);
+    padding: 25px;
+    font-style: italic;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card i {
+    color: var(--color-primary);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid var(--color-primary);
+}
+
+.client-info h4 {
+    margin: 0;
+    color: var(--color-primary);
+}
+
+.client-info small {
+    color: #999;
+}
+
+/* Seção de Contato e Métricas */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.trust-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.trust-metric {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    background-color: var(--color-card-bg);
+}
+
+.trust-metric span {
+    display: block;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.trust-metric p {
+    color: var(--color-text-on-dark);
+}
+
+.contact-form {
+    background-color: var(--color-card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+/* Inputs do Formulário: Fundo Branco para Contraste */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--color-light); 
+    color: var(--color-dark-bg);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+/* Estilo para as mensagens de feedback do formulário */
+.form-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.form-message.show {
+    opacity: 1;
+}
+
+.form-message.success {
+    background-color: #1abc9c;
+    color: var(--color-dark-bg);
+}
+
+.form-message.error {
+    background-color: #e74c3c;
+    color: var(--color-light);
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--color-dark-bg);
+    color: #999;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 3px solid var(--color-primary);
+    font-size: 0.9em;
+}
+
+.social-links {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--color-text-on-dark);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+
+/* --- ANIMAÇÕES (Scroll-Reveal) --- */
+
+.fade-in, .slide-up {
+    opacity: 0;
+    transition: opacity 1.2s ease-out;
+}
+
+.slide-up {
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Botão Flutuante de Chat (FAB) --- */
+
+.chat-fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.chat-fab-btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-fab-btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- Janela de Chat Customizada --- */
+
+.chat-window-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    /* Estado inicial: Fechado (invisível) */
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.chat-window-container.open {
+    /* Estado Aberto */
+    transform: scale(1);
+    opacity: 1;
+}
+
+.chat-header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+.chat-header .close-btn {
+    background: none;
+    border: none;
+    color: var(--color-light);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.chat-header .close-btn:hover {
+    color: var(--color-text-on-dark);
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: var(--color-bot-bg); /* Fundo sutilmente mais escuro */
+}
+
+/* Estilos das Mensagens */
+.chat-message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+.chat-message.bot {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.chat-message.user {
+    background-color: var(--color-light);
+    color: var(--color-dark-bg);
+    margin-left: auto;
+}
+
+/* Área de Input */
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-card-bg);
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-on-dark);
+}
+
+.chat-input-area button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-input-area button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 992px) {
+    /* ... (Regras de responsividade anteriores) ... */
+}
+
+@media (max-width: 768px) {
+    /* ... (Regras de responsividade anteriores) ... */
+    .chat-window-container {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        transform: scale(0);
+        transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    }
+}
+
+/* Ajustes de Responsividade */
+@media (max-width: 992px) {
+    h2.section-title {
+        font-size: 2.5em;
+    }
+    .hero h2 {
+        font-size: 2.8em;
+    }
+    .hero-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-card {
+        max-width: 90%;
+    }
+    .about-flex, .contact-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about-text, .testimonials {
+        max-width: 100%;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .trust-metrics {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none;
+    }
+    .hero {
+        padding: 80px 0;
+    }
+    .trust-metrics {
+        grid-template-columns: 1fr;
+    }
+    .service-detail-grid, .portfolio-grid {
+        gap: 20px;
+    }
+}
