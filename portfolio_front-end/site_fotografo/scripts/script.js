@@ -4,7 +4,11 @@ async function loadComponents() {
         const headerRes = await fetch('components/header.html');
         const headerHtml = await headerRes.text();
         const headerPlace = document.getElementById('header-placeholder');
-        if(headerPlace) headerPlace.innerHTML = headerHtml;
+        if(headerPlace) {
+            headerPlace.innerHTML = headerHtml;
+            // ESSENCIAL: Inicia o menu logo após o HTML aparecer
+            initMobileMenu(); 
+        }
 
         // Carregar Footer
         const footerRes = await fetch('components/footer.html');
@@ -12,20 +16,59 @@ async function loadComponents() {
         const footerPlace = document.getElementById('footer-placeholder');
         if(footerPlace) footerPlace.innerHTML = footerHtml;
 
-        // Re-inicializa funções que dependem do header (como o menu mobile)
-        if (typeof initMobileMenu === "function") initMobileMenu();
-
     } catch (error) {
         console.error("Erro ao carregar os componentes:", error);
     }
 }
 
+function initMobileMenu() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const body = document.body;
+
+    if (menuToggle && navLinks) {
+        menuToggle.onclick = () => {
+            navLinks.classList.toggle("active");
+            menuToggle.innerHTML = navLinks.classList.contains("active") ? "✕" : "☰";
+            body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "auto";
+        };
+
+        // Fecha o menu ao clicar em links
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.onclick = () => {
+                navLinks.classList.remove("active");
+                menuToggle.innerHTML = "☰";
+                body.style.overflow = "auto";
+            };
+        });
+    }
+}
+
+// Função para observar elementos e ativar a animação
+function initScrollReveal() {
+    const observerOptions = {
+        threshold: 0.15 // Ativa quando 15% do elemento aparece
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    // Seleciona todos os elementos que devem ser animados
+    const elementsToReveal = document.querySelectorAll('.reveal');
+    elementsToReveal.forEach(el => observer.observe(el));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     loadComponents();
-    console.log("DOM carregado, iniciando loadPortfolio...");
     loadPortfolio(); 
+    initScrollReveal(); 
 
-    // Efeito do Header
+    // Efeito de scroll no Header
     window.addEventListener("scroll", () => {
         const header = document.querySelector(".header");
         if (header) {
@@ -52,15 +95,12 @@ async function loadPortfolio() {
             item.className = "masonry-item";
             item.dataset.category = imgData.category;
 
-            // Detecta se é vídeo ignorando maiúsculas/minúsculas
             const isVideo = imgData.src.toLowerCase().trim().endsWith('.mp4');
 
             if (isVideo) {
-                // Adicionamos 'preload="auto"' para ajudar no carregamento
                 item.innerHTML = `
                     <video autoplay loop muted playsinline preload="auto" class="portfolio-video">
                         <source src="${imgData.src}" type="video/mp4">
-                        Seu navegador não suporta vídeos.
                     </video>`;
             } else {
                 item.innerHTML = `<img src="${imgData.src}" alt="${imgData.alt}" loading="lazy">`;
@@ -69,7 +109,6 @@ async function loadPortfolio() {
             grid.appendChild(item);
         });
 
-        // Inicializa os filtros e força a exibição inicial
         setTimeout(() => {
             applyFilter("todos"); 
             initPortfolioFilters();
@@ -80,13 +119,10 @@ async function loadPortfolio() {
     }
 }
 
-// Função isolada para aplicar filtros com animação
 function applyFilter(filter) {
     const items = document.querySelectorAll(".masonry-item");
-
     items.forEach(item => {
-        item.classList.remove("is-visible"); // Esconde para re-animar
-        
+        item.classList.remove("is-visible");
         setTimeout(() => {
             const category = item.dataset.category;
             if (filter === "todos" || category === filter) {

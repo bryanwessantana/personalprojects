@@ -65,37 +65,6 @@
         "category": "casal" 
     },
     { 
-        "src": "images/emily.png", 
-        "alt": "emily feitosa fotógrafa em curitiba ensaio editorial campo", 
-        "category": "emily" 
-    },
-    { 
-        "src": "images/emily2.png", 
-        "alt": "emily feitosa retrato feminino com chapéu luz dourada outono", 
-        "category": "emily" 
-    },
-    { 
-        "src": "images/emily3.jpg", 
-        "alt": "fotógrafa profissional emily feitosa manuseando câmera em estúdio", 
-        "category": "emily" 
-    },
-    { 
-        "src": "images/emily4.jpg", 
-        "alt": "ensaio artístico emily feitosa composição criativa com espelhos", 
-        "category": "emily" 
-    },
-    { 
-        "src": "images/emily5.JPG", 
-        "alt": "retrato corporativo fotógrafa emily feitosa sorrindo com câmera", 
-        "category": "emily" 
-    },
-    { 
-        "src": "images/emily6.jpeg", 
-        "alt": "emily feitosa fotografando em locação externa arquitetura urbana", 
-        "category": "emily" 
-    },
-
-    { 
         "src": "images/portfolio/familia/familia.png", 
         "alt": "ensaio de família lifestyle ao ar livre com flores e sorrisos", 
         "category": "familia" 
@@ -300,30 +269,5 @@
         "src": "images/portfolio/urbano/urbano7.PNG", 
         "alt": "ensaio feminino em escadaria de mármore arquitetura urbana sofisticada", 
         "category": "urbano" 
-    },
-    { 
-        "src": "images/portfolio/pmpr/pmpr.jpeg", 
-        "alt": "fotografia institucional PMPR operação de drone pela polícia militar", 
-        "category": "pm-pr" 
-    },
-    { 
-        "src": "images/portfolio/pmpr/pmpr2.jpeg", 
-        "alt": "detalhe da viatura da Polícia Militar do Paraná BPTran em Curitiba", 
-        "category": "pm-pr" 
-    },
-    { 
-        "src": "images/portfolio/pmpr/pmpr3.jpeg", 
-        "alt": "close de controle remoto de drone em operação da polícia militar PMPR", 
-        "category": "pm-pr" 
-    },
-    { 
-        "src": "images/portfolio/pmpr/pmpr4.jpeg", 
-        "alt": "detalhe frontal de viatura policial antiga restaurada da PMPR", 
-        "category": "pm-pr" 
-    },
-    { 
-        "src": "images/portfolio/pmpr/pmpr5.jpeg", 
-        "alt": "policial militar do Paraná em uniforme operacional PMPR durante evento", 
-        "category": "pm-pr" 
     }
 ]
