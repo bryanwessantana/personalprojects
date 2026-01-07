@@ -1,72 +1,329 @@
 [
-    {
-        "src": "images/portfolio/casal.png",
-        "alt": "Conexão Real",
-        "category": "casal"
+    { 
+        "src": "images/portfolio/casal/casal.png", 
+        "alt": "ensaio de casal romântico abraço em frente ao carlo bistrô", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/urbano.png",
-        "alt": "Ruas de Curitiba",
-        "category": "urbano"
+    { 
+        "src": "images/portfolio/casal/elisaejacson.jpeg", 
+        "alt": "casal elisa e jacson de mãos dadas em campo aberto preto e branco", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/urbano2.jpg",
-        "alt": "Dezesseis anos",
-        "category": "urbano"
+    { 
+        "src": "images/portfolio/casal/elisaejacson2.jpg", 
+        "alt": "detalhe mãos dadas casal elisa e jacson ensaio lifestyle", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/feminino.png",
-        "alt": "Ensaio Feminino - Carro",
-        "category": "feminino"
+    { 
+        "src": "images/portfolio/casal/gustavoeana.jpg", 
+        "alt": "ensaio casal gustavo e ana beijo romântico em jardim", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/familia2.jpg",
-        "alt": "Criando Memórias",
-        "category": "familia"
+    { 
+        "src": "images/portfolio/casal/gustavoeana2.jpg", 
+        "alt": "momentos conexão casal gustavo e ana ensaio externo", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/historia.png",
-        "alt": "Histórias de Vida",
-        "category": "eventos"
+    { 
+        "src": "images/portfolio/casal/julianaematheus.jpg", 
+        "alt": "making of noiva juliana maquiagem de casamento", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/feminino2.png",
-        "alt": "Criando Estilo",
-        "category": "feminino"
+    { 
+        "src": "images/portfolio/casal/julianaematheus2.jpg", 
+        "alt": "noiva juliana lendo votos de casamento no altar", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/urbano3.jpg",
-        "alt": "Cidade em Movimento",
-        "category": "urbano"
+    { 
+        "src": "images/portfolio/casal/julianaematheus3.jpg", 
+        "alt": "detalhe porta alianças bordado casamento juliana e matheus", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/familia.png",
-        "alt": "Laços de Família",
-        "category": "familia"
+    { 
+        "src": "images/portfolio/casal/julianaematheus4.jpg", 
+        "alt": "noivos juliana e matheus sorrindo com buquê de flores", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/feminino3.png",
-        "alt": "Pôr do Sol",
-        "category": "feminino"
+    { 
+        "src": "images/portfolio/casal/julianaematheus5.jpg", 
+        "alt": "close rosto noivos juliana e matheus em momento íntimo preto e branco", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/historia2.jpg",
-        "alt": "Rústica e Elegante",
-        "category": "eventos"
+    { 
+        "src": "images/portfolio/casal/julianaematheus6.jpg", 
+        "alt": "retrato noivos sob o véu juliana e matheus luz suave", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/eventos.png",
-        "alt": "Cena de Evento",
-        "category": "eventos"
+    { 
+        "src": "images/portfolio/casal/julianaematheus7.jpg", 
+        "alt": "noivos juliana e matheus posando no jardim da recepção", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/historia3.jpg",
-        "alt": "Ventos de Mudança",
-        "category": "eventos"
+    { 
+        "src": "images/portfolio/casal/casal2.JPG",
+        "alt": "colagem de fotos de casamento ao ar livre sob luzes de varal", 
+        "category": "casal" 
     },
-    {
-        "src": "images/portfolio/video.mp4",
-        "alt": "Amor ao Ar Livre",
-        "category": "feminino"
+    { 
+        "src": "images/emily.png", 
+        "alt": "emily feitosa fotógrafa em curitiba ensaio editorial campo", 
+        "category": "emily" 
+    },
+    { 
+        "src": "images/emily2.png", 
+        "alt": "emily feitosa retrato feminino com chapéu luz dourada outono", 
+        "category": "emily" 
+    },
+    { 
+        "src": "images/emily3.jpg", 
+        "alt": "fotógrafa profissional emily feitosa manuseando câmera em estúdio", 
+        "category": "emily" 
+    },
+    { 
+        "src": "images/emily4.jpg", 
+        "alt": "ensaio artístico emily feitosa composição criativa com espelhos", 
+        "category": "emily" 
+    },
+    { 
+        "src": "images/emily5.JPG", 
+        "alt": "retrato corporativo fotógrafa emily feitosa sorrindo com câmera", 
+        "category": "emily" 
+    },
+    { 
+        "src": "images/emily6.jpeg", 
+        "alt": "emily feitosa fotografando em locação externa arquitetura urbana", 
+        "category": "emily" 
+    },
+
+    { 
+        "src": "images/portfolio/familia/familia.png", 
+        "alt": "ensaio de família lifestyle ao ar livre com flores e sorrisos", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia2.jpg", 
+        "alt": "mãe e filha caminhando em escadaria de pedra arquitetura clássica", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia3.PNG", 
+        "alt": "registro afetivo de família sentada sob árvore ensaio externo", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia4.PNG", 
+        "alt": "fotografia de bebê dando os primeiros passos ensaio documental", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia5.PNG", 
+        "alt": "mãe e criança correndo e brincando no gramado liberdade", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia6.jpg", 
+        "alt": "retrato de família numerosa reunida no sofá em ambiente acolhedor", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia7.jpg", 
+        "alt": "ensaio de família em casa estilo lifestyle com avós e netos", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia8.jpg", 
+        "alt": "família reunida em momento de leitura e carinho luz natural", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia9.jpg", 
+        "alt": "família deitada no gramado vista de cima conexão e alegria", 
+        "category": "familia" 
+    },
+    { 
+        "src": "images/portfolio/familia/familia10.jpg", 
+        "alt": "close de bebê sorrindo e brincando com as mãos dos pais", 
+        "category": "familia" 
+    },
+
+    { 
+        "src": "images/portfolio/historia/historia.png", 
+        "alt": "fotografia de mulher deitada em ambiente rústico com luz natural suave", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia2.jpg", 
+        "alt": "mulher lendo livro em poltrona vintage cenário histórico e acolhedor", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia3.jpg", 
+        "alt": "retrato artístico feminino sob luz dourada de pôr do sol em campo", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia4.JPG", 
+        "alt": "ensaio lifestyle feminino em apartamento moderno luz de janela", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia5.PNG", 
+        "alt": "composição de fotos femininas em campo de flores amarelas luz quente", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos.png", 
+        "alt": "equipamento fotográfico profissional nikon e ilustrações em mesa de madeira", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos2.jpg", 
+        "alt": "detalhes de sapatos de noiva e perfume para making of de casamento", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos3.jpg", 
+        "alt": "acessórios de luxo e perfume floral para fotografia de casamento rústico", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos4.jpg", 
+        "alt": "decoração floral sofisticada com flores brancas para cerimônia de evento", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos5.jpg", 
+        "alt": "mulher deitada em tapete rústico em momento descontraído de evento", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos6.png", 
+        "alt": "buquê de noiva com rosas vermelhas e sapatos brancos clássicos", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos7.jpg", 
+        "alt": "fotografia externa de chalé rústico em meio à natureza para eventos", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos8.jpg", 
+        "alt": "detalhe de poltrona aconchegante junto à janela em locação para eventos", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos9.jpg", 
+        "alt": "iluminação vintage com luminárias pendentes em ambiente de festa", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos10.jpg", 
+        "alt": "canto de leitura relaxante com pele de carneiro e luz natural em evento", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/eventos/eventos11.jpg", 
+        "alt": "detalhe de coleção de livros antigos em estante de madeira para eventos", 
+        "category": "eventos" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino.png", 
+        "alt": "ensaio feminino editorial de moda urbana dentro de veículo", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino2.png", 
+        "alt": "retrato feminino street style em arquitetura clássica urbana", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino3.png", 
+        "alt": "ensaio feminino luz de outono dourada em parque", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino4.jpeg", 
+        "alt": "retrato artístico feminino com flores e efeito de movimento", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino5.jpeg", 
+        "alt": "ensaio feminino sofisticado com flor branca estilo clássico", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino6.jpeg", 
+        "alt": "fotografia feminina editorial com lírios rosa em estúdio", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/feminino/feminino7.jpeg", 
+        "alt": "close de rosto feminino com flor amarela e luz natural", 
+        "category": "feminino" 
+    },
+    { 
+        "src": "images/portfolio/video.mp4", 
+        "alt": "vídeo de ensaio feminino em movimento luz suave urbana", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano.png", 
+        "alt": "ensaio street style feminino no calçadão da rua xv de novembro em curitiba", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano2.jpg", 
+        "alt": "modelo em ensaio urbano segurando flores em parque de curitiba luz suave", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano3.jpg", 
+        "alt": "retrato feminino urbano sorrindo com luz do sol contra luz e brilho", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano4.jpeg", 
+        "alt": "ensaio de moda urbana em frente ao paço da liberdade arquitetura clássica", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano5.jpeg", 
+        "alt": "perfil feminino artístico em cenário urbano com árvores e luz natural", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano6.PNG", 
+        "alt": "modelo em vestido longo rosa posando em fachada de prédio histórico urbano", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano7.PNG", 
+        "alt": "ensaio feminino em escadaria de mármore arquitetura urbana sofisticada", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/pmpr/pmpr.jpeg", 
+        "alt": "fotografia institucional PMPR operação de drone pela polícia militar", 
+        "category": "pm-pr" 
+    },
+    { 
+        "src": "images/portfolio/pmpr/pmpr2.jpeg", 
+        "alt": "detalhe da viatura da Polícia Militar do Paraná BPTran em Curitiba", 
+        "category": "pm-pr" 
+    },
+    { 
+        "src": "images/portfolio/pmpr/pmpr3.jpeg", 
+        "alt": "close de controle remoto de drone em operação da polícia militar PMPR", 
+        "category": "pm-pr" 
+    },
+    { 
+        "src": "images/portfolio/pmpr/pmpr4.jpeg", 
+        "alt": "detalhe frontal de viatura policial antiga restaurada da PMPR", 
+        "category": "pm-pr" 
+    },
+    { 
+        "src": "images/portfolio/pmpr/pmpr5.jpeg", 
+        "alt": "policial militar do Paraná em uniforme operacional PMPR durante evento", 
+        "category": "pm-pr" 
     }
 ]

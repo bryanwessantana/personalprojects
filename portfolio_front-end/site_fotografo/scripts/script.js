@@ -52,17 +52,17 @@ async function loadPortfolio() {
             item.className = "masonry-item";
             item.dataset.category = imgData.category;
 
-            // Verifica se o arquivo termina com .mp4
-            const isVideo = imgData.src.toLowerCase().endsWith('.mp4');
+            // Detecta se é vídeo ignorando maiúsculas/minúsculas
+            const isVideo = imgData.src.toLowerCase().trim().endsWith('.mp4');
 
             if (isVideo) {
-                // Se for vídeo, cria a tag <video>
+                // Adicionamos 'preload="auto"' para ajudar no carregamento
                 item.innerHTML = `
-                    <video autoplay loop muted playsinline class="portfolio-video">
+                    <video autoplay loop muted playsinline preload="auto" class="portfolio-video">
                         <source src="${imgData.src}" type="video/mp4">
+                        Seu navegador não suporta vídeos.
                     </video>`;
             } else {
-                // Se for imagem, mantém a tag <img>
                 item.innerHTML = `<img src="${imgData.src}" alt="${imgData.alt}" loading="lazy">`;
             }
 
