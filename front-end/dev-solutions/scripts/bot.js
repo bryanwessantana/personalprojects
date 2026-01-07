@@ -1,5 +1,4 @@
 // =================================================================
-// scripts/bot.js
 // Lógica central do chatbot (processamento de mensagens)
 // =================================================================
 
@@ -30,16 +29,14 @@ function getContextualGreeting() {
 }
 
 // 🎯 BANCO DE DADOS DE PERGUNTAS E RESPOSTAS (FAQ) DA DEVSOLUTIONS
-// Os links são formatados com [Texto](URL) para a função `appendMessage` do script.js poder identificá-los.
-// TODO: O link do portfólio no HTML é '/portfolio.html' - usei o link com # no chat, mas se for uma página separada, use a URL completa.
 // -----------------------------------------------------------------
 const FAQ_RESPONSES = {
     // A saudação inicial será gerada dinamicamente, mas a chave é mantida para fallback
     "saudacao_inicial": "Eu sou o Dev Bot, seu assistente virtual da DevSolutions. Posso responder sobre nossos Serviços, Orçamento ou Projetos.",
     
     // --- SERVIÇOS ---
-    "serviços": "Nós dominamos Software, Hardware e Soluções Web. Qual área te interessa mais? Diga: 'Software', 'Hardware' ou 'Websites'.",
-    "servicos": "Nós dominamos Software, Hardware e Soluções Web. Qual área te interessa mais? Diga: 'Software', 'Hardware' ou 'Websites'.",
+    "serviços": "Nós dominamos Software, Hardware, Soluções Web e Business Intelligence. Qual área te interessa mais? Diga: 'Software', 'Hardware', 'Websites' ou 'BI'.",    "servicos": "Nós dominamos Software, Hardware e Soluções Web. Qual área te interessa mais? Diga: 'Software', 'Hardware' ou 'Websites'.",
+    "servicos": "Nós dominamos Software, Hardware, Soluções Web e Business Intelligence. Qual área te interessa mais? Diga: 'Software', 'Hardware', 'Websites' ou 'BI'.",
     "software": "Desenvolvemos sistemas sob medida (ERP, CRM, Mobile) com foco em metodologia ágil, performance e escalabilidade.",
     "hardware": "Criamos soluções de Hardware customizado, IoT e Sistemas Embarcados para automação e produtos inteligentes.",
     "sites": "Construímos Websites e E-commerces de alto tráfego com design moderno e otimização para buscas (SEO).",
@@ -48,6 +45,9 @@ const FAQ_RESPONSES = {
     "aplicativos": "Desenvolvemos aplicativos mobile nativos (iOS/Android) e híbridos, focados na experiência do usuário e alta performance.",
     "consultoria": "Oferecemos consultoria especializada em segurança de dados e planejamento de infraestrutura de TI.",
     "projetos": "Para ver nossos trabalhos mais recentes, visite nosso [Portfólio](#portfolio). Você também pode perguntar sobre 'Websites' ou 'Hardware'.",
+    "bi": "Oferecemos serviços completos de Business Intelligence (BI), incluindo análise de dados, criação de dashboards e implementação da plataforma **Power BI**.",
+    "power bi": "Somos especialistas na implementação do Power BI para transformar seus dados em insights acionáveis e estratégicos.",
+    "dashboards": "Desenvolvemos dashboards interativos e relatórios inteligentes, que fornecem uma visão clara da performance do seu negócio.",
 
     // --- ORÇAMENTO E CONTATO (Aprimorado para WhatsApp/Telefone) ---
     "orçamento": "Nossos projetos são customizados. Para um orçamento detalhado, preencha a seção [Contato](#contact) no nosso site.",
@@ -55,7 +55,7 @@ const FAQ_RESPONSES = {
     "preços": "Os preços dependem da complexidade. Para estimarmos o custo, preencha o formulário em [Contato](#contact).",
     "precos": "Os preços dependem da complexidade. Para estimarmos o custo, preencha o formulário em [Contato](#contact).",
     
-    // NOVO: Chave central para todas as formas de contato (WhatsApp, Telefone, Form)
+    // Chave central para todas as formas de contato (WhatsApp, Telefone, Form)
     "contato": "Você pode usar nosso [formulário de contato](#contact) ou falar com a equipe de vendas em nosso [WhatsApp](https://wa.me/41988939608).",
     "whatsapp": "Nosso contato via [WhatsApp](https://wa.me/41988939608) está disponível para agilizar o seu atendimento. Clique para conversar!",
     "zap": "Nosso contato via [WhatsApp](https://wa.me/41988939608) está disponível para agilizar o seu atendimento. Clique para conversar!",

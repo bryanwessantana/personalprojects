@@ -36,7 +36,7 @@ Aqui estão alguns trabalhos reais que entreguei para clientes:
 - 🧮 **Site de Contabilidade** - Design simples e moderno, focado em mostrar o serviço e formalidade da empresa.
 - 💈 **Site de Barbearia** – Design moderno e focado em apresentar serviços de forma clara.  
 - 📸 **Site para Fotógrafa** – Portfólio digital com destaque para fotos e identidade visual.  
-- 🛒 **Site de Loja Online com Checkout** – Sistema completo de e-commerce com carrinho e finalização de compras.  
+- 🛒 **Site de Loja Online com Checkout** – Sistema completo de e-commerce com carrinho e finalização de compras para a loja de bijuterias.  
 
 ---
 
