@@ -1,112 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Contato - Fotógrafa</title>
-
-    <meta name="description" content="Fotografia profissional para casamentos, ensaios e eventos." />
+    <title>Contato | Emily Feitosa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" href="images/logo.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWvS2fT2F+KJpYfZ4ZCkxzgv2Fne5+5ZTCDYFzVz1nwK6JqqPiFZ+6A0b+Y1fY8+4z+6JQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="home.html" class="logo">Emily Feitosa - Fotógrafa</a>
-            <ul class="nav-links">
-                <li><a href="home.html">Início</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-
-            <div class="menu-toggle" aria-label="Abrir menu" role="button">☰</div>
-
-            <button id="theme-toggle" aria-label="Alternar tema" aria-pressed="false" title="Tema escuro">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
-        <section class="contato">
-            <div class="contato-container">
-                <div class="contato-info">
-                    <h2>Informações de Contato</h2>
-                    <p><strong>Email:</strong> emilyfotografa@gmail.com</p>
-                    <p><strong>Telefone/WhatsApp:</strong> (41) 98728-6273</p>
-                    <p><strong>Localização:</strong> Curitiba - PR</p>
-                    <p>Siga também nas redes sociais para ver os bastidores e novidades:</p>
-                    <div class="redes">
-                        <a href="https://www.instagram.com/emilyfeitosa.ph/"><i class="fa-brands fa-instagram"></i>
-                            Instagram</a>
-                        <a href="https://www.threads.com/@emilyfeitosa.ph"><i class="fa-solid fa-hashtag"></i>
-                            Threads</a>
-                        <a href="https://wa.me/41987286273"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <section class="page-header contact-intro">
+            <h1 class="reveal">Vamos conversar?</h1>
+            <p class="reveal">Agende seu ensaio ou tire suas dúvidas sobre projetos autorais.</p>
+            
+            <div class="contato-info-short reveal">
+                <div class="info-item">
+                    <span>E-mail</span>
+                    <p>emilyfotografa@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <span>WhatsApp</span>
+                    <p>(41) 98728-6273</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dark-section contact-form-section">
+            <div class="about-grid contact-grid">
+                <div class="contact-text-side reveal">
+                    <h2><em>Mande uma mensagem</em></h2>
+                    <p>Preencha os campos ao lado e retornarei em até 24 horas úteis.</p>
+                    
+                    <div class="social-icons-container">
+                        <h2>Redes sociais</h2>
+                        <div class="social-icons-row">
+                            <a href="https://www.instagram.com/emilyfeitosa.ph/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://wa.me/41987286273"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="contato-form">
-                    <h2>Envie sua Mensagem</h2>
-
-                    <form method="POST">
-                        <input type="text" name="nome" placeholder="Seu nome" required>
-                        <input type="email" name="email" placeholder="Seu e-mail" required>
-                        <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-                        <button type="submit" class="btn">Enviar Mensagem</button>
+                <div class="contato-form-container reveal">
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="4" placeholder="Como posso te ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-outline white-btn">Enviar Mensagem</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="mapa">
-            <h2>Onde Atendo</h2>
-            <div class="mapa-container">
-                <iframe src="https://maps.app.goo.gl" width="600" height="450" style="border:0;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <section class="mapa-section reveal">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115348.64173815338!2d-49.36610264132863!3d-25.389952044820614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce353517037d5%3A0x904338904df9877!2sCuritiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1710000000000" 
+                width="100%" height="450" style="border:0; filter: grayscale(100%) contrast(1.2) invert(90%);" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <a href="home.html">Emily Feitosa - Fotógrafa</a>
-            </div>
+    <div id="footer-placeholder"></div>
 
-            <div class="footer-links">
-                <a href="home.html">Início</a>
-                <a href="portfolio.html">Portfólio</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html">Contato</a>
-            </div>
-
-            <div class="footer-redes">
-                <a href="https://www.instagram.com/emilyfeitosa.ph/" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-                <a href="https://www.threads.com/@emilyfeitosa.ph" target="_blank" rel="noopener">
-                    <i class="fa-solid fa-hashtag"></i> Threads
-                </a>
-                <a href="https://wa.me/41987286273" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-copy">
-            &copy; 2025 Emily Feitosa. Todos os direitos reservados.
-        </div>
-    </footer>
-
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
-
 </html>

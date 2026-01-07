@@ -1,116 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Sobre - Fotógrafa</title>
-
-    <meta name="description" content="Fotografia profissional para casamentos, ensaios e eventos." />
+    <title>Sobre | Emily Feitosa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="icon" href="images/logo.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWvS2fT2F+KJpYfZ4ZCkxzgv2Fne5+5ZTCDYFzVz1nwK6JqqPiFZ+6A0b+Y1fY8+4z+6JQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="home.html" class="logo">Emily Feitosa - Fotógrafa</a>
-            <ul class="nav-links">
-                <li><a href="home.html">Início</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-
-            <div class="menu-toggle" aria-label="Abrir menu" role="button">☰</div>
-
-            <button id="theme-toggle" aria-label="Alternar tema" aria-pressed="false" title="Tema escuro">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
-        <section class="sobre">
-            <div class="sobre-container">
-                <img src="images/emily2.png" alt="Fotógrafa" class="sobre-img">
-                <div class="sobre-texto">
-                    <h2>Minha História</h2>
-                    <p>Olá! Sou apaixonada por eternizar momentos através da fotografia. Há mais de 5 anos atuo em
-                        casamentos,
-                        ensaios e eventos especiais.</p>
-                    <p>Meu objetivo é capturar emoções reais e transformar memórias em arte. Cada foto é única, assim
-                        como cada
-                        cliente. Quero que você se sinta parte dessa história.</p>
-                    <p>Além de fotógrafa, sou uma contadora de histórias visuais. Acredito que a fotografia tem o poder
-                        de
-                        eternizar sentimentos e guardar lembranças para sempre.</p>
-                    <a href="contato.html" class="btn">Agende Seu Ensaio</a>
+        <section class="about-hero dark-section">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="images/emily2.png" alt="Emily Feitosa">
+                </div>
+                <div class="about-text">
+                    <span class="reveal">A mente por trás da lente</span>
+                    <h1 class="reveal">Emily Feitosa</h1>
+                    <p class="reveal">
+                        A minha jornada com a fotografia começou na curiosidade pelas texturas da cidade. O que muitos veem como concreto, eu vejo como luz e geometria. 
+                    </p>
+                    <p class="reveal">
+                        Especializada em capturar momentos com uma alma <strong>old-school</strong>, acredito que a beleza reside na imperfeição e na autenticidade de um segundo que nunca se repetirá.
+                    </p>
+                    <div class="about-stats reveal">
+                        <div class="stat-item">
+                            <strong>+5</strong>
+                            <span>Anos de Experiência</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>100%</strong>
+                            <span>Destaque Urbano</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="diferenciais">
-            <h2>Por que me escolher?</h2>
-            <div class="diferenciais-grid">
-                <div class="card">
-                    <h3>+5 anos de experiência</h3>
-                    <p>Centenas de ensaios e eventos registrados com sensibilidade e dedicação.</p>
-                </div>
-                <div class="card">
-                    <h3>Estilo Autêntico</h3>
-                    <p>Fotos naturais, espontâneas e que refletem sua verdadeira essência.</p>
-                </div>
-                <div class="card">
-                    <h3>Atendimento Personalizado</h3>
-                    <p>Cada cliente recebe atenção exclusiva para que o resultado seja único.</p>
-                </div>
+        <section class="philosophy">
+            <div class="philosophy-content reveal">
+                <h2>A minha filosofia</h2>
+                <p>
+                    Não procuro a pose perfeita. Procuro o olhar que diz algo, o detalhe da rua que passa despercebido, a luz "low-key" que molda o rosto. O meu trabalho é sobre sentir o momento.
+                </p>
             </div>
-        </section>
-
-        <section class="cta">
-            <h2>Vamos contar sua história?</h2>
-            <p>Entre em contato e planeje o ensaio perfeito para você.</p>
-            <a href="contato.html" class="btn">Fale Comigo</a>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <a href="home.html">Emily Feitosa - Fotógrafa</a>
-            </div>
+    <div id="footer-placeholder"></div>
 
-            <div class="footer-links">
-                <a href="home.html">Início</a>
-                <a href="portfolio.html">Portfólio</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="contato.html">Contato</a>
-            </div>
-
-            <div class="footer-redes">
-                <a href="https://www.instagram.com/emilyfeitosa.ph/" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-                <a href="https://www.threads.com/@emilyfeitosa.ph" target="_blank" rel="noopener">
-                    <i class="fa-solid fa-hashtag"></i> Threads
-                </a>
-                <a href="https://wa.me/41987286273" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <div class="footer-copy">
-            &copy; 2025 Emily Feitosa. Todos os direitos reservados.
-        </div>
-    </footer>
-
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </body>
-
 </html>

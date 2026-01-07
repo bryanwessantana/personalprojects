@@ -1,0 +1,72 @@
+[
+    {
+        "src": "images/portfolio/casal.png",
+        "alt": "Conexão Real",
+        "category": "casal"
+    },
+    {
+        "src": "images/portfolio/urbano.png",
+        "alt": "Ruas de Curitiba",
+        "category": "urbano"
+    },
+    {
+        "src": "images/portfolio/urbano2.jpg",
+        "alt": "Dezesseis anos",
+        "category": "urbano"
+    },
+    {
+        "src": "images/portfolio/feminino.png",
+        "alt": "Ensaio Feminino - Carro",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/familia2.jpg",
+        "alt": "Criando Memórias",
+        "category": "familia"
+    },
+    {
+        "src": "images/portfolio/historia.png",
+        "alt": "Histórias de Vida",
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/feminino2.png",
+        "alt": "Criando Estilo",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/urbano3.jpg",
+        "alt": "Cidade em Movimento",
+        "category": "urbano"
+    },
+    {
+        "src": "images/portfolio/familia.png",
+        "alt": "Laços de Família",
+        "category": "familia"
+    },
+    {
+        "src": "images/portfolio/feminino3.png",
+        "alt": "Pôr do Sol",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/historia2.jpg",
+        "alt": "Rústica e Elegante",
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/eventos.png",
+        "alt": "Cena de Evento",
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/historia3.jpg",
+        "alt": "Ventos de Mudança",
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/video.mp4",
+        "alt": "Amor ao Ar Livre",
+        "category": "feminino"
+    }
+]
