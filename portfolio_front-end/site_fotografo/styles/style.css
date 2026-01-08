@@ -85,14 +85,28 @@ a, a:visited {
 .hero { height: 90vh; padding: 0rem 4rem; display: flex; align-items: center; }
 .hero-container {
     width: 100%; height: 85vh; background: url('../images/hero.png') center/cover no-repeat;
-    display: flex; align-items: center; justify-content: center; position: relative; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center; position: relative;
 }
 .hero-container::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.2); }
 
-.hero-content { text-align: center; color: white; z-index: 2; max-width: 800px; }
+.hero-content { 
+    text-align: center; 
+    color: white; 
+    z-index: 2; 
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hero-content h1 { 
+    font-size: 5rem; 
+    line-height: 1.1; 
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
 .hero-content span { text-transform: uppercase; letter-spacing: 5px; font-size: 0.75rem; margin-bottom: 1.5rem; display: block; }
-.hero-content h1 { font-size: 5rem; line-height: 1.1; margin-bottom: 1.5rem; }
-.hero-content em { font-style: italic; }
+.hero-content em { font-style: italic; width: fit-content; }
 
 .btn-outline {
     display: inline-block; padding: 1.2rem 3rem; border: 1px solid white;
@@ -691,19 +705,21 @@ textarea:-webkit-autofill:focus {
         margin-top: 80px;
     }
 
+    .hero-content {
+        max-width: 700px;
+    }
     .hero-content h1 {
         font-size: 3.5rem;
     }
 
     .feature-row, 
     .feature-row.reverse {
-        flex-direction: row; /* Mantém lado a lado em tablets largos */
+        flex-direction: row;
         padding: 4rem 3rem;
-        gap: 3rem; /* Gap menor para não apertar o conteúdo */
+        gap: 3rem;
         justify-content: space-between;
     }
 
-    /* Inverter a ordem apenas no reverse para manter a consistência visual */
     .feature-row.reverse {
         flex-direction: row-reverse;
     }
@@ -742,7 +758,7 @@ textarea:-webkit-autofill:focus {
         }
 
         .feature-image {
-            width: 100%;
+            width: 50%;
             height: 350px;
             order: 1;
         }
@@ -845,8 +861,25 @@ textarea:-webkit-autofill:focus {
         margin-top: 60px;
     }
 
+    .hero-content {
+        width: 85%;
+    }
     .hero-content h1 {
         font-size: 3rem;
+    }
+    .hero-content span {
+        letter-spacing: 3px;
+    }
+
+    .hero {
+        padding: 0;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .hero-container {
+        border-radius: 0;
+        height: 80vh;
     }
 
     .feature-row, .feature-row.reverse {
@@ -861,7 +894,7 @@ textarea:-webkit-autofill:focus {
     }
 
     .feature-image {
-        width: 100%;
+        width: 50%;
         height: 350px;
     }
 
@@ -985,7 +1018,7 @@ textarea:-webkit-autofill:focus {
     }
 
     .feature-image {
-        width: 100%;
+        width: 50%;
         height: 400px;
         order: 1;
     }
@@ -993,6 +1026,14 @@ textarea:-webkit-autofill:focus {
     .feature-text h2 {
         font-size: 2rem;
         line-height: 1.2;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+        padding: 0 10%;
     }
 }
 
@@ -1012,8 +1053,16 @@ textarea:-webkit-autofill:focus {
         padding: 3rem 1.5rem;
     }
     
+    .hero-content {
+        width: 90%;
+    }
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    .hero-content span {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
     }
 
     .about-image {
@@ -1030,7 +1079,8 @@ textarea:-webkit-autofill:focus {
     }
 
     .feature-image {
-        height: 300px;
+        width: 80%;
+        height: 400px;
     }
 
     .feature-text h2 {
@@ -1044,6 +1094,17 @@ textarea:-webkit-autofill:focus {
 
     .btn-outline {
         padding: 1rem 2rem;
-        width: 100%;
+        width: fit-content;
+    }
+
+    .hero {
+        padding: 0;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .hero-container {
+        border-radius: 0;
+        height: 80vh;
     }
 }
