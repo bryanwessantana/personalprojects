@@ -21,11 +21,24 @@
             <div class="contato-info-short reveal delay-2">
                 <div class="info-item">
                     <span>E-mail</span>
-                    <p>emilyfotografa@gmail.com</p>
+                    <p>
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:emilyfotografa@gmail.com" class="contact-link">
+                            emilyfotografa@gmail.com
+                        </a>
+                    </p>
                 </div>
+
                 <div class="info-item">
                     <span>WhatsApp</span>
-                    <p>(41) 98728-6273</p>
+                    <p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5541987286273?text=Olá%20Emily,%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho!" 
+                        target="_blank" 
+                        class="contact-link">
+                            (41) 98728-6273
+                        </a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -46,11 +59,15 @@
                 </div>
 
                 <div class="contato-form-container reveal delay-1">
-                    <form id="contact-form">
-                        <div class="input-group"><input type="text" placeholder="Seu nome" required></div>
-                        <div class="input-group"><input type="email" placeholder="Seu e-mail" required></div>
+                    <form action="https://formspree.io/f/xqearnqa" method="POST" id="contact-form">
                         <div class="input-group">
-                            <textarea rows="4" placeholder="Conte um pouco sobre o que você deseja registrar..." required></textarea>
+                            <input type="text" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="mensagem" rows="4" placeholder="Conte um pouco sobre o que você deseja registrar..." required></textarea>
                         </div>
                         <button type="submit" class="btn-outline white-btn">Enviar Mensagem</button>
                     </form>
@@ -65,5 +82,6 @@
     </main>
     <div id="footer-placeholder"></div>
     <script src="scripts/script.js" defer></script>
+    <div id="toast-message" class="toast">Mensagem enviada com sucesso!</div>
 </body>
 </html>

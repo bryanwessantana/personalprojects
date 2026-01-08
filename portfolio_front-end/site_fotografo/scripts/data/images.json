@@ -24,6 +24,11 @@
         "alt": "momentos conexão casal gustavo e ana ensaio externo", 
         "category": "casal" 
     },
+    {
+        "src": "images/portfolio/casal/gustavoeana3.jpg", 
+        "alt": "retrato casal gustavo e ana olhando pra estátua de Jesus Cristo", 
+        "category": "casal"
+    },
     { 
         "src": "images/portfolio/casal/julianaematheus.jpg", 
         "alt": "making of noiva juliana maquiagem de casamento", 
@@ -63,6 +68,16 @@
         "src": "images/portfolio/casal/casal2.JPG",
         "alt": "colagem de fotos de casamento ao ar livre sob luzes de varal", 
         "category": "casal" 
+    },
+    {
+        "src": "images/portfolio/casal/casalaliancas.PNG", 
+        "alt": "alianças na mão da noiva detalhe do casamento", 
+        "category": "casal"
+    },
+    {
+        "src": "images/portfolio/casal/casalnotemplo.jpg", 
+        "alt": "casal se casando no templo de Curitiba", 
+        "category": "casal"
     },
     {
         "src": "images/portfolio/videos/video1.mp4", 
@@ -129,7 +144,11 @@
         "alt": "close de bebê sorrindo e brincando com as mãos dos pais", 
         "category": "familia" 
     },
-
+    {
+        "src": "images/portfolio/familia/familia11.PNG", 
+        "alt": "familia rindo na rua de mãos dadas ensaio externo", 
+        "category": "familia"
+    },
     { 
         "src": "images/portfolio/historia/historia.png", 
         "alt": "fotografia de mulher deitada em ambiente rústico com luz natural suave", 
@@ -156,6 +175,31 @@
         "category": "historia" 
     },
     { 
+        "src": "images/portfolio/historia/historia6.jpg", 
+        "alt": "mulher sentada na cama olhando pela janela luz natural suave", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia7.jpg", 
+        "alt": "modelo na capa de revista com seu nome destaque editorial de moda", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia8.PNG", 
+        "alt": "ensaio de modelo feminina em fundo preto com luz dramática e expressão forte", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia9.JPG", 
+        "alt": "ensaio externo com modelo feminina com jardim botânico ao fundo luz natural", 
+        "category": "historia" 
+    },
+    { 
+        "src": "images/portfolio/historia/historia10.jpg", 
+        "alt": "composição de fotos femininas com flores rosas e tom de luz dramática", 
+        "category": "historia" 
+    },
+    { 
         "src": "images/portfolio/eventos/eventos.png", 
         "alt": "equipamento fotográfico profissional nikon e ilustrações em mesa de madeira", 
         "category": "eventos" 
@@ -176,8 +220,8 @@
         "category": "eventos" 
     },
     { 
-        "src": "images/portfolio/eventos/eventos5.jpg", 
-        "alt": "mulher deitada em tapete rústico em momento descontraído de evento", 
+        "src": "images/portfolio/eventos/eventos5.jpeg", 
+        "alt": "câmera antiga com filtros e rolos de câmera para fotografia de eventos", 
         "category": "eventos" 
     },
     { 
@@ -221,13 +265,18 @@
         "category": "eventos"
     },
     {
+        "src": "images/portfolio/eventos/eventos14.jpeg",
+        "alt": "campo de flores amarelas onde o evento foi realizado",
+        "category": "eventos"
+    },
+    {
         "src": "images/portfolio/videos/video2.mp4", 
-        "alt": "nos detalhes é onde deus se revela - vídeo de evento", 
+        "alt": "nos detalhes é onde deus se revela - video de evento", 
         "category": "eventos"
     },
     {
         "src": "images/portfolio/videos/video5.mp4", 
-        "alt": "evento florescer, nos bastidores", 
+        "alt": "video do evento florescer, nos bastidores", 
         "category": "eventos"
     },
     { 
@@ -266,9 +315,29 @@
         "category": "feminino" 
     },
     { 
-        "src": "images/portfolio/video.mp4", 
-        "alt": "vídeo de ensaio feminino em movimento luz suave urbana", 
-        "category": "urbano" 
+        "src": "images/portfolio/feminino/feminino8.jpg", 
+        "alt": "mulher deitada em tapete rústico em momento descontraído de evento", 
+        "category": "feminino" 
+    },
+    {
+        "src": "images/portfolio/feminino/feminino9.jpg",
+        "alt": "mulher em ensaio olhando pela janela com luz suave",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/feminino/feminino10.PNG",
+        "alt": "modelo em ensaio externo com flores em frente ao rosto",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/feminino/feminino11.PNG",
+        "alt": "modelo feminina em ensaio externo deitada no gramado com flores",
+        "category": "feminino"
+    },
+    {
+        "src": "images/portfolio/feminino/feminino12.PNG",
+        "alt": "modelo feminina em ensaio externo sorrindo com luz suave",
+        "category": "feminino"
     },
     { 
         "src": "images/portfolio/urbano/urbano.png", 
@@ -303,6 +372,21 @@
     { 
         "src": "images/portfolio/urbano/urbano7.PNG", 
         "alt": "ensaio feminino em escadaria de mármore arquitetura urbana sofisticada", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano8.PNG", 
+        "alt": "composição de fotos modelo feminina em estilo editorial urbano", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano9.PNG", 
+        "alt": "modelo em vestido longo rosa sentada em frente ao prédio histórico urbano", 
+        "category": "urbano" 
+    },
+    { 
+        "src": "images/portfolio/urbano/urbano10.PNG", 
+        "alt": "modelo feminina em vestido longo azul marinho em cenário urbano clássico", 
         "category": "urbano" 
     }
 ]
