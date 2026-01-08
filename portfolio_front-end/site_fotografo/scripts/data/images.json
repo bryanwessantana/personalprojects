@@ -64,6 +64,21 @@
         "alt": "colagem de fotos de casamento ao ar livre sob luzes de varal", 
         "category": "casal" 
     },
+    {
+        "src": "images/portfolio/videos/video1.mp4", 
+        "alt": "video de casamento na natureza", 
+        "category": "casal"
+    },
+    {
+        "src": "images/portfolio/videos/video3.mp4", 
+        "alt": "video da noiva se arrumando para o casamento", 
+        "category": "casal"
+    },
+    {
+        "src": "images/portfolio/videos/video4.mp4", 
+        "alt": "video do casal na igreja durante a cerimônia de casamento", 
+        "category": "casal"
+    },
     { 
         "src": "images/portfolio/familia/familia.png", 
         "alt": "ensaio de família lifestyle ao ar livre com flores e sorrisos", 
@@ -194,6 +209,26 @@
         "src": "images/portfolio/eventos/eventos11.jpg", 
         "alt": "detalhe de coleção de livros antigos em estante de madeira para eventos", 
         "category": "eventos" 
+    },
+    {
+        "src": "images/portfolio/eventos/eventos12.jpeg", 
+        "alt": "câmera que foi usada para o evento", 
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/eventos/eventos13.jpeg", 
+        "alt": "preparação da câmera para o evento", 
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/videos/video2.mp4", 
+        "alt": "nos detalhes é onde deus se revela - vídeo de evento", 
+        "category": "eventos"
+    },
+    {
+        "src": "images/portfolio/videos/video5.mp4", 
+        "alt": "evento florescer, nos bastidores", 
+        "category": "eventos"
     },
     { 
         "src": "images/portfolio/feminino/feminino.png", 
